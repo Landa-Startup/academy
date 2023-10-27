@@ -1,6 +1,7 @@
-import Image from 'next/image';
-import React from 'react';
-import PhoneInput from './PhoneNumberInput';
+import Image from "next/image";
+import React from "react";
+import PhoneInput from "./PhoneNumberInput";
+import ContactUsDropdown from "./ContactUsDropdown";
 
 export default function ContactUs() {
   return (
@@ -13,17 +14,17 @@ export default function ContactUs() {
           Contact Us
         </div>
       </div>
-      <div className="md:w-[1199px] md:h-[304px] relative flex-col justify-start items-center flex space-y-4">
-        <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between md:w-[794px]">
-          <input
-            className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
-            placeholder="First Name"
-          ></input>
-          <input
-            className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
-            placeholder="Last Name"
-          ></input>
-        </div>
+      <div className="relative grid grid-cols-2 items-center gap-2">
+        <input
+          className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+          placeholder="First Name"
+        ></input>
+        <input
+          className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+          placeholder="Last Name"
+        ></input>
+
+        <ContactUsDropdown />
         <PhoneInput />
       </div>
       <button className="bg-yellow-400 h-[36px] md:h-14 w-[160px] md:w-60 mx-auto text-white">
@@ -32,7 +33,7 @@ export default function ContactUs() {
       <Image
         loading="lazy"
         className="-mb-4 md:absolute md:-left-16 md:-bottom-[5px]"
-        src={'/static/images/Academy/Collab-pana 1.svg'}
+        src={"/static/images/Academy/Collab-pana 1.svg"}
         alt="Academy Contact Us"
         width={522}
         height={348}
