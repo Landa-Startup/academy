@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import React from 'react';
-import ScrollButton from './ScrollButton';
+import Image from "next/image";
+import React from "react";
+import ScrollButton from "./ScrollButton";
 
 export default function Third() {
   return (
@@ -12,7 +12,7 @@ export default function Third() {
         <Image
           loading="lazy"
           alt="Landa academy"
-          src={'static/images/Academy/Roadmap/At the office-amico 2.svg'}
+          src={"static/images/Academy/Roadmap/At the office-amico 2.svg"}
           width={500}
           height={500}
         />
@@ -20,7 +20,7 @@ export default function Third() {
           <div className="md:w-[592px] text-4xl mt-28 mb-10 md:text-5xl font-normal tracking-wider leading-snug text-[#3D5656]">
             Joining Landa Academy and benefiting from its facilities.
           </div>
-          <ul className="hidden text-[#3D5656] font-barlow text-lg font-medium leading-[25px] md:leading-[50px] tracking-[1px] space-y-3">
+          <ul className="text-[#FFFBE6] font-barlow text-lg font-medium leading-[25px] md:leading-[50px] tracking-[1px]">
             <li>1.Personalized mentoring by industry professionals</li>
             <li>2.Co-working spaces</li>
             <li>3.Free participation at the next courses</li>
@@ -38,7 +38,7 @@ export default function Third() {
       <ScrollButton
         scrollTo="Roadmap-3"
         color="white"
-        addedClass="mx-auto md:ml-auto md:mr-28"
+        addedClass="absolute bottom-[70px] right-[140px]"
       />
       <svg
         className="absolute top-0 left-[620px] hidden md:block"

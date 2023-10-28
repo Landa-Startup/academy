@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import React from 'react';
-import ScrollButton from './ScrollButton';
+import Image from "next/image";
+import React from "react";
+import ScrollButton from "./ScrollButton";
 
 export default function Fifth() {
   return (
@@ -15,7 +15,7 @@ export default function Fifth() {
         loading="lazy"
         className="md:mt-28 md:mb-16 z-10 order-1"
         alt="Landa academy"
-        src={'static/images/Academy/Roadmap/Selecting team-cuate (1) 1.svg'}
+        src={"static/images/Academy/Roadmap/Selecting team-cuate (1) 1.svg"}
         width={645}
         height={430}
       />
@@ -23,8 +23,9 @@ export default function Fifth() {
         <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3 flex-shrink-0" />
         <div className="md:w-[500px] text-black font-barlow text-xl font-medium leading-10 tracking-[1px]">
           Following a year of active participation within Landa, you will
-          receive a credible and verifiable Canadian work experience certificate
-          from us.
+          receive a credible and verifiable
+          <span className="font-semibold mx-1">Canadian work experience</span>
+          certificate from us.
         </div>
       </div>
       <div className="order-4">
