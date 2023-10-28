@@ -1,9 +1,9 @@
-'use client';
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { useState, useRef, useEffect } from 'react';
-import Logo from '../common/Logo';
-import { usePathname } from 'next/navigation';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState, useRef, useEffect } from "react";
+import Logo from "../common/Logo";
+import { usePathname } from "next/navigation";
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
@@ -12,10 +12,12 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
   const router = usePathname();
 
   const menuItems = [
-    { label: 'HOME', href: '/' },
-    { label: 'ABOUT', href: '/about' },
-    { label: 'CONTACT', href: '/contact' },
-    { label: 'OUR TEAM', href: '/our-team' },
+    { label: "HOME", href: "/" },
+    { label: "COURSES", href: "/courses" },
+    { label: "CONTACT", href: "/contact" },
+    { label: "ABOUT", href: "/about" },
+    { label: "OUR TEAM", href: "/our-team" },
+    { label: "VERIFICATION", href: "/verification" },
   ];
 
   const handleLinkClick = () => {
@@ -44,7 +46,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         ref={drawerRef}
       />
       <div className="relative flex flex-col drawer-content md:px-32 md:pt-5">
-        <div className="flex items-center justify-between w-full text-white bg-transparent navbar">
+        <div className="flex items-center justify-between w-full text-black bg-transparent navbar">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -65,12 +67,15 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               </svg>
             </label>
           </div>
-          <Logo route={router === '/academy' ? 'academy' : 'holding'} />
+          <Logo />
           <div className="justify-start hidden ml-32 xl:flex-1 xl:flex">
             <ul className="flex justify-center space-x-10 text-xl menu menu-horizontal font-condensed">
               {menuItems.map((item) => (
                 <li className="text-2xl h-9" key={item.label}>
-                  <Link href={item.href} className="hover:bg-white">
+                  <Link
+                    href={item.href}
+                    className="hover:bg-black hover:text-white"
+                  >
                     {item.label}
                   </Link>
                 </li>
