@@ -46,19 +46,19 @@ export default function ContactUsDescription() {
           <li className="min-h-12">
             <Link className="space-x-1" href="tel:+14165577622">
               <span>Toronto:</span>
-              <span className="text-[#AA8453]">+1 (416) 557-7622</span>
+              <span className="text-[#FDD30A]">+1 (416) 557-7622</span>
             </Link>
           </li>
           <li className="min-h-12">
             <Link className="space-x-1" href="tel:+14165577622">
               <span>Tehran:</span>
-              <span className="text-[#AA8453]">02188030167</span>
+              <span className="text-[#FDD30A]">02188030167</span>
             </Link>
           </li>
           <li className="min-h-12">
             <Link className="space-x-1" href="tel:+14165577622">
               <span>Isfahan:</span>
-              <span className="text-[#AA8453]">03131311914</span>
+              <span className="text-[#FDD30A]">03131311914</span>
             </Link>
           </li>
         </ul>
@@ -68,7 +68,7 @@ export default function ContactUsDescription() {
         <ul className="mx-4">
           <li className="font-semibold">Email info</li>
           <li>
-            <a className="text-[#AA8453]" href="mailto:info@landaholding.com">
+            <a className="text-[#FDD30A]" href="mailto:info@landaholding.com">
               info@landaholding.com
             </a>
           </li>

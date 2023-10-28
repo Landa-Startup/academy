@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 export default function Phone() {
   return (
-    <div className='self-center'>
+    <div className="self-center">
       <svg
         width="50"
         height="50"
