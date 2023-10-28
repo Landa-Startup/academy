@@ -70,7 +70,7 @@ export default function Gallery() {
         </div>
         <div className="mx-auto">
           <Button
-            size="visit"
+            size="notvisit"
             bgColor="Yellow"
             text="Visit Now"
             goto="/academy/gallery"
