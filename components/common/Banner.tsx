@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function Banner({
   image,
@@ -12,8 +12,8 @@ export default function Banner({
       <div
         style={{
           backgroundImage: `url(${image})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
+          backgroundPosition: "center",
+          backgroundSize: "cover",
         }}
         className="h-[250px] lg:h-[512px] absolute inset-0"
       ></div>
@@ -27,6 +27,7 @@ export default function Banner({
             {title}
           </p>
         </div>
+        <div className="absolute w-full h-full bg-gradient-to-t from-[#3D5656D9] to-[#80C5554D] opacity-50"></div>
       </div>
     </div>
   );
