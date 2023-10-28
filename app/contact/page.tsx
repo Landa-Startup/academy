@@ -1,13 +1,13 @@
-import React from 'react';
-import ContactUsForm from '@/components/common/form/ContactUsForm';
-import ContactUsDescription from '@/components/common/ContactUsDescription';
-import Banner from '@/components/common/Banner';
-import { Metadata } from 'next';
+import React from "react";
+import ContactUsForm from "@/components/common/form/ContactUsForm";
+import ContactUsDescription from "@/components/common/ContactUsDescription";
+import Banner from "@/components/common/Banner";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Landa Holding | Contact',
+  title: "Landa Holding | Contact",
   description:
-    'Contact Landa Holding to get in touch with our dedicated team. Whether you have questions, inquiries, or partnership opportunities, we are here to assist you. Reach out to us today.',
+    "Contact Landa Holding to get in touch with our dedicated team. Whether you have questions, inquiries, or partnership opportunities, we are here to assist you. Reach out to us today.",
 };
 
 export default function ContactUsPage() {
@@ -16,7 +16,7 @@ export default function ContactUsPage() {
     <div>
       {/* Banner Component */}
       <Banner
-        image="/static/images/Contact/37b76f28c1c41b4ea18163cf2fba85ab.png"
+        image="/static/images/Academy/Contact/banner.jpg"
         title="Contact Us"
       />
 
