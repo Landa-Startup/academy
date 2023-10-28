@@ -14,7 +14,7 @@ export default function ContactUs() {
           Contact Us
         </div>
       </div>
-      <div className="relative grid grid-cols-2 items-center gap-2">
+      <div className="relative grid grid-cols-2 items-center gap-5">
         <input
           className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
           placeholder="First Name"
