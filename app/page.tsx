@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import RoadmapContainer from "@/components/academy/Roadmap/RoadmapContainer";
 // import PromoteCourse from '@/components/academy/PromoteCourse';
 import Gallery from "@/components/academy/Gallery";
