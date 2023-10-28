@@ -4,6 +4,10 @@ import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import Logo from "../common/Logo";
 import { usePathname } from "next/navigation";
+import Instagram from "../icons/footer/Instagram";
+import Envelope from "../icons/footer/Envelope";
+import Whatsapp from "../icons/footer/Whatsapp";
+import LinkedIn from "../icons/footer/LinkedIn";
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
@@ -117,27 +121,34 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="h-full p-4 text-xl menu w-80 bg-base-200">
-          {menuItems.map((item) => (
-            <li key={item.label} onClick={() => handleLinkClick()}>
-              <Link href={item.href} className="">
-                {item.label}
-              </Link>
-            </li>
-          ))}
-          {/* <li>
-            <Link href={'#'}>WORK WITH US</Link>
+        <div className="flex flex-col h-full text-xl menu w-80 bg-[#CFFDE1] justify-between">
+          <div className="p-4">
+            <div className="flex justify-center items-center pt-3 pb-7 border-b-2 border-[#3D5656] mb-4">
+              <span className="font-barlow font-bold text-xl tracking-[1px] text-[#3D5656]">
+                Landa Academy
+              </span>
+            </div>
             <ul>
-              {submenuItems.map((item) => (
-                <li key={item.label} onClick={() => handleLinkClick()}>
-                  <Link href={item.href} className="">
-                    {item.label}{' '}
+              {menuItems.map((item) => (
+                <li
+                  className="first:text-[#80C555]"
+                  key={item.label}
+                  onClick={() => handleLinkClick()}
+                >
+                  <Link href={item.href} className="text-2xl font-medium">
+                    {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
-          </li> */}
-        </ul>
+          </div>
+          <div className="flex justify-center text-white gap-5 p-4 bg-[#3D5656]">
+            <Instagram />
+            <Envelope />
+            <Whatsapp />
+            <LinkedIn />
+          </div>
+        </div>
       </div>
       <style jsx>{`
         .children {
