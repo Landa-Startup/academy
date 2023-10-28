@@ -23,35 +23,27 @@ export default function Hero({
   showButton?: boolean;
 }) {
   return (
-    <div className="flex h-[calc(100vh-144px)] justify-between mt-36 pb-20 bg-white">
+    <div className="flex flex-col md:flex-row h-[calc(100vh-144px)] md:justify-between mt-36 md:pb-20 bg-white relative overflow-hidden">
       <Image
         loading="lazy"
-        className="hidden md:block w-1/3 object-contain"
+        className="object-cover md:object-contain absolute md:static w-full md:w-[461px] h-full md:h-[600px] blur-sm opacity-40 md:opacity-100 md:blur-none"
         src={"/static/images/Academy/Hero/Hero.png"}
         width={481}
         height={501}
         alt="Hero Illustration"
       />
-      <Image
-        loading="lazy"
-        className="md:hidden"
-        src={"/static/images/Academy/Hero/leadership-amico 1.svg"}
-        width={214}
-        height={214}
-        alt="Hero Illustration"
-      />
-      <div className="flex flex-col ml-6 w-2/3">
-        <div className="flex flex-col">
-          <div className="font-gilda text-4xl md:text-6xl text-black">
+      <div className="flex flex-col justify-between items-center md:ml-6 md:w-2/3 h-full z-10 md:z-0">
+        <div className="flex flex-col gap-1 mx-5">
+          <div className="font-gilda w-[365px] md:w-[724px] text-3xl md:text-6xl text-black text-center md:text-start">
             {title}
           </div>
-          <div className="w-[800px] font-condensed text-black text-opacity-95 text-xl md:text-2xl font-semibold leading-normal md:leading-10 tracking-[2px] ">
+          <div className="w-[330px] md:w-[800px] ml-5 text-justify font-condensed text-black text-opacity-95 text-xl md:text-2xl font-normal md:font-semibold leading-normal md:leading-10 tracking-[2px] ">
             {subTitle}
           </div>
         </div>
         <Image
           loading="lazy"
-          className="h-[400px] md:h-[560px] self-end"
+          className="h-[400px] md:h-[560px] self-end -mr-20 md:mr-0"
           src={`/static/images/Academy/Logo.svg`}
           alt="Landa"
           width={344}
