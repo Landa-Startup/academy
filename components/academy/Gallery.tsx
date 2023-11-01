@@ -72,8 +72,8 @@ export default function Gallery() {
           <Button
             size="notvisit"
             bgColor="Yellow"
-            text="Visit Now"
-            goto="/academy/gallery"
+            text="See More"
+            goto="/gallery"
           />
         </div>
       </div>
