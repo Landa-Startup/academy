@@ -17,7 +17,7 @@ export default function Third() {
           height={500}
         />
         <div className="flex flex-col justify-evenly">
-          <div className="md:w-[592px] text-4xl mt-28 mb-10 md:text-5xl font-normal tracking-wider leading-snug text-[#3D5656]">
+          <div className="md:w-[592px] text-2xl md:text-4xl md:mt-28 mb-10 md:text-5xl font-normal tracking-wider leading-snug text-[#3D5656]">
             Joining Landa Academy and benefiting from its facilities.
           </div>
           <ul className="text-[#FFFBE6] font-barlow text-lg font-medium leading-[25px] md:leading-[50px] tracking-[1px]">
@@ -29,16 +29,16 @@ export default function Third() {
             <li>6.Teaching Fundamentals of Entrepreneurship</li>
             <li>7.How to work in international markets</li>
           </ul>
-          <div className="justify-start items-start gap-2 inline-flex">
+          {/* <div className="justify-start items-start gap-2 inline-flex">
             <div className="w-5 h-5 bg-[#80C555] rounded-full mt-3" />
             <div className="w-[454px] text-xl font-normal font-barlow leading-10"></div>
-          </div>
+          </div> */}
         </div>
       </div>
       <ScrollButton
         scrollTo="Roadmap-3"
         color="white"
-        addedClass="absolute bottom-[70px] right-[140px]"
+        addedClass="absolute bottom-[20px] right-[160px]"
       />
       <svg
         className="absolute top-0 left-[620px] hidden md:block"
