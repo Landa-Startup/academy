@@ -45,7 +45,7 @@ export default function ScrollMenu() {
       date: '27/Dec/2023',
     },
     {
-      title: 'Icdl workshop',
+      title: 'ICDL Workshop',
       image: '/static/images/Academy/courses/Rectangle 3011 (1).png',
       date: '27/Dec/2023',
     },

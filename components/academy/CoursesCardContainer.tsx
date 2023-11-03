@@ -26,7 +26,7 @@ export default function CoursesCardContainer() {
       date: '27/Dec/2023',
     },
     {
-      title: 'Icdl workshop',
+      title: 'ICDL workshop',
       image: '/static/images/Academy/CoursesCards/5.jpg',
       date: '27/Dec/2023',
     },
