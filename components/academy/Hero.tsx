@@ -37,7 +37,7 @@ export default function Hero({
           <div className="font-gilda w-[365px] md:w-[724px] text-3xl md:text-6xl text-black text-center md:text-start">
             {title}
           </div>
-          <div className="w-[330px] md:w-[800px] ml-5 text-justify font-condensed text-black text-opacity-95 text-xl md:text-2xl font-normal md:font-semibold leading-normal md:leading-10 tracking-[2px] ">
+          <div className="w-[330px] md:w-[800px] md:ml-2 ml-5 text-justify font-condensed text-black text-opacity-95 text-xl md:text-2xl font-normal md:font-semibold leading-normal md:leading-10 tracking-[2px] ">
             {subTitle}
           </div>
         </div>

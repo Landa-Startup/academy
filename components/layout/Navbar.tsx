@@ -17,9 +17,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
 
   const menuItems = [
     { label: "HOME", href: "/" },
-    { label: "COURSES", href: "/courses" },
+    // { label: "COURSES", href: "/courses" },
     { label: "CONTACT", href: "/contact" },
-    { label: "ABOUT", href: "/about" },
+    // { label: "ABOUT", href: "/about" },
     { label: "OUR TEAM", href: "/our-team" },
     // { label: "VERIFICATION", href: "/verification" },
   ];
@@ -72,7 +72,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </label>
           </div>
           <Logo />
-          <div className="justify-start hidden ml-32 xl:flex-1 xl:flex">
+          <div className="hidden xl:flex">
             <ul className="flex justify-center space-x-10 text-xl menu menu-horizontal font-condensed">
               {menuItems.map((item) => (
                 <li className="text-2xl h-9" key={item.label}>
