@@ -11,7 +11,7 @@ export default function Logo() {
           <Image
             loading="lazy"
             className="w-10 h-10 md:w-12 md:h-14"
-            src={"static/images/Academy/logo.svg"}
+            src={"/static/images/Academy/Logo.svg"}
             alt="Logo"
             width={125}
             height={106}

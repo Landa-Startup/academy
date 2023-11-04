@@ -149,7 +149,7 @@ export default function ContactUs() {
         <PhoneInput phone={phone} setPhone={setPhone} />
       </div>
       <button type="submit" onSubmit={handleSubmit(onSubmit)} className="bg-yellow-400 h-[36px] md:h-14 w-[160px] md:w-60 mx-auto text-white">
-        {send ? 'Submitting ....' : 'Visit Now'}
+        {send ? 'Submitting ....' : 'Submit'}
       </button>
       <Image
         loading="lazy"

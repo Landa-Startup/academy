@@ -251,7 +251,7 @@ export default function TeamPage() {
   return (
     <div>
       <Banner
-        image="/static/images/Academy/Academy/Banner/OurTeam.jpg"
+        image="/static/images/Academy/Banner/OurTeam.jpg"
         title="Our Team"
       />
       {/* <TeamRolesContainer /> */}
