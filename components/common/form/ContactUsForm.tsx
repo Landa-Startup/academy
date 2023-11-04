@@ -90,7 +90,7 @@ export default function ContactUsForm() {
               {...register('name', {
                 required: 'Your Name is required.',
                 pattern: {
-                  value: /^[a-z ,.'-]+$/i,
+                  value: /^[a-z ]+$/i,
                   message: 'Enter a valid Name.',
                 },
               })}
