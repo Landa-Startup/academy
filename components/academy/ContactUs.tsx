@@ -74,7 +74,7 @@ export default function ContactUs() {
 
       const response = await apiClient.post("common/contactUs-form", sendFormData, {
         headers: {
-          "content-type": "application/json",
+          "content-type": "application/x-www-form-urlencoded",
           "X-CSRFToken": csrfToken,
         },
       });
@@ -89,6 +89,7 @@ export default function ContactUs() {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
     } catch (error) {
+      console.log(error)
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
