@@ -111,7 +111,7 @@ export default function ContactUsForm() {
               {...register('email', {
                 required: 'Your Email is required.',
                 pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  value: /^(\d{10}|\d{11}|\d{12})$/i,
                   message: 'Enter a valid email address.',
                 },
               })}
@@ -132,7 +132,7 @@ export default function ContactUsForm() {
               {...register('number', {
                 required: 'Your Number is required.',
                 pattern: {
-                  value: /^\d{11}$/,
+                  value: /^(\d{10}|\d{11}|\d{12})$/,
                   message: 'Enter a valid number.',
                 },
               })}
