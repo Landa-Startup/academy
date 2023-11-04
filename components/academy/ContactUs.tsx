@@ -8,6 +8,8 @@ import { useForm } from "react-hook-form";
 import GetCsrfToken from "@/utils/get-csrf-token";
 import NotificationSendForm from "../common/form/NotificationSendForm";
 import apiClient from "@/utils/api";
+import PhoneInputWithCountrySelect from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 interface ContactUsType {
   firstName: string;
@@ -34,8 +36,9 @@ export default function ContactUs() {
     defaultValues: initialContactUsData,
   });
 
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState<string | undefined>();
   const [selectedOption, setSelectedOption] = useState("");
+
   const [formData, setFormData] = useState<ContactUsType>(initialContactUsData);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -62,10 +65,12 @@ export default function ContactUs() {
     setIsSubmitting(true);
     setSend(true);
     const sendFormData = new FormData();
+    formData.phoneNumber = String(phone);
+    formData.contactReason = String(selectedOption);
     sendFormData.append("first_name", formData.firstName);
     sendFormData.append("last_name", formData.lastName);
-    sendFormData.append("contact_reason", selectedOption);
-    sendFormData.append("phone_number", String(phone));
+    sendFormData.append("contact_reason", formData.contactReason);
+    sendFormData.append("phone_number", formData.phoneNumber);
     console.log(phone)
     console.log(selectedOption)
 
@@ -146,7 +151,15 @@ export default function ContactUs() {
           selectedOption={selectedOption}
           handleOptionChange={handleOptionChange}
         />
-        <PhoneInput phone={phone} setPhone={setPhone} />
+        <PhoneInputWithCountrySelect
+        value={phone}
+        onChange={setPhone}
+        name="phoneNumber"
+        defaultCountry="IR"
+        international
+        countryCallingCodeEditable={false}
+        className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex [&>*:nth-child(2)]:bg-yellow-50 !important] [&>*:nth-child(1)]:border-r-2 !important]"
+      />
       </div>
       <button type="submit" onSubmit={handleSubmit(onSubmit)} className="bg-yellow-400 h-[36px] md:h-14 w-[160px] md:w-60 mx-auto text-white">
         {send ? 'Submitting ....' : 'Submit'}
