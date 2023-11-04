@@ -17,12 +17,12 @@ export default function Fourth() {
           height={500}
         />
         <div className="flex flex-col justify-evenly">
-          <div className="md:w-[480px] text-4xl md:text-5xl font-normal tracking-wider leading-snug">
+          <div className="md:w-[480px] text-2xl md:text-4xl font-normal tracking-wider leading-snug">
             Employment opportunities
           </div>
           <div className="justify-start items-start gap-2 inline-flex">
-            <div className="w-5 h-5 bg-[#80C555] rounded-full mt-3" />
-            <div className="w-[454px] text-xl font-normal font-barlow leading-10">
+            <div className="w-5 h-5 bg-[#80C555] rounded-full mt-6" />
+            <div className="mt-5 w-[454px] md:text-2xl font-normal font-barlow leading-7">
               After completing the intensive 6-month academy program, you will
               have the opportunity to officially work alongside experienced
               mentors on startups and international projects to gain valuable
@@ -34,7 +34,7 @@ export default function Fourth() {
       <ScrollButton
         scrollTo="Roadmap-4"
         color="white"
-        addedClass="mx-auto md:ml-28 mt-2 md:mt-0"
+        addedClass="mx-auto md:ml-28 mt-32 md:mt-0 "
       />
       <svg
         className="absolute top-0 left-[550px] hidden md:block"
