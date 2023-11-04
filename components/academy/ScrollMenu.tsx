@@ -116,7 +116,7 @@ export default function ScrollMenu() {
             <ArrowUp />
           </button>
           <div
-            className="flex overflow-x-scroll md:overflow-x-hidden whitespace-nowrap mx-2 gap-4 md:gap-12 md:h-[486px]"
+            className="flex overflow-x-hidden md:overflow-x-hidden whitespace-nowrap mx-2 gap-4 md:gap-12 md:h-[486px]"
             ref={scrollContainerRef}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
