@@ -36,7 +36,7 @@ export default function CoursesCard({
         Register Now
       </div>
       <div className="absolute w-full h-full bg-gradient-to-t from-[#FDD30A57] to-[#80C555B2]"></div>
-      <div className="w-[400px] h-[400px] bg-black opacity-50 z-auto text-white hidden group-hover:block transition-all duration-500">
+      <div className="w-[400px] h-[430px] bg-black opacity-50 z-auto text-white hidden group-hover:md:block transition-all duration-500">
         <ul className="flex flex-col p-5 gap-6">
           <li>
             Elevate your online impact with our SEO course at Landa Academy!
@@ -57,7 +57,7 @@ export default function CoursesCard({
           size="not"
           text="Register"
           goto="/"
-          bgColor="White"
+          bgColor="Yellow"
           addedClass="mt-0 mx-auto"
         />
       </div>
