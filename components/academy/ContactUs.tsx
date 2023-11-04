@@ -74,8 +74,8 @@ export default function ContactUs() {
 
       const response = await apiClient.post("common/contactUs-form", sendFormData, {
         headers: {
-          "content-type": "application/x-www-form-urlencoded",
-          "X-CSRFToken": csrfToken,
+          "content-type": "multipart/form-data",
+          // "X-CSRFToken": csrfToken,
         },
       });
 

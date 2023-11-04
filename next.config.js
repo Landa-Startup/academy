@@ -3,8 +3,12 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/common/contactUs-form',
-        destination: 'http://127.0.0.1/',
+        source: '/common/:path*',
+        destination: 'http://127.0.0.1/:path*',
+      },
+      {
+        source: '/get-csrf-token/:path*',
+        destination: 'http://127.0.0.1/:path*',
       },
     ]
   },
