@@ -19,7 +19,7 @@ export default function Banner({
       ></div>
 
       <div className="h-[250px] lg:h-[512px] justify-center lg:justify-start flex items-stretch relative ">
-        <div className="flex flex-col justify-center items-center text-center lg:m-auto md:m-auto">
+        <div className="flex flex-col justify-center items-center text-center lg:m-auto md:m-auto z-10">
           <p className="text-neutral-50 text-base font-normal tracking-[5.60px] font-condensed ">
             LANDA HOLDING
           </p>
