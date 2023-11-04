@@ -10,7 +10,7 @@ export default function RoadmapContainer() {
     <div className="flex flex-col">
       <First />
       <Second />
-      <Mobile />
+      {/* <Mobile /> */}
       <Third />
       <Fourth />
     </div>

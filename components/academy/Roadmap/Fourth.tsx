@@ -8,7 +8,7 @@ export default function Fifth() {
       className="flex flex-col h-[850px] items-center relative px-10 py-10 bg-[#FFFBE6] space-y-7"
       id="Roadmap-4"
     >
-      <div className="order-2 md:w-[420px] text-black font-barlow text-3xl md:text-5xl font-normal leading-snug static md:absolute left-40 top-16">
+      <div className="mt-4 order-2 md:w-[420px] text-black font-barlow text-2xl md:text-4xl font-normal leading-snug static md:absolute left-40 top-16">
         Work experience at the Canadian company
       </div>
       <Image
@@ -21,7 +21,7 @@ export default function Fifth() {
       />
       <div className="justify-start items-start gap-2 inline-flex pb-5 order-3">
         <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3 flex-shrink-0" />
-        <div className="md:w-[500px] text-black font-barlow text-xl font-medium leading-10 tracking-[1px]">
+        <div className="md:w-[500px] text-black font-barlow md:text-2xl font-medium leading-7">
           Following a year of active participation within Landa, you will
           receive a credible and verifiable
           <span className="font-semibold mx-1">Canadian work experience</span>
@@ -29,7 +29,7 @@ export default function Fifth() {
         </div>
       </div>
       <div className="order-4">
-        <ScrollButton scrollTo="Courses" addedClass="mx-auto mt-5 md:-mt-5" />
+        <ScrollButton scrollTo="Courses" addedClass="mx-auto mt-36 md:-mt-5" />
       </div>
       <svg
         className="absolute -top-7 left-[683px] hidden md:block"
