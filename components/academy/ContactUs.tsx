@@ -54,7 +54,7 @@ export default function ContactUs() {
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken(
-        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
+        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}get-csrf-token`
       );
       setCsrfToken(token);
     }
