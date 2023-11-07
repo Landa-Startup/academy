@@ -65,19 +65,23 @@ export default function ContactUs() {
     sendFormData.append("first_name", formData.firstName);
     sendFormData.append("last_name", formData.lastName);
     sendFormData.append("contact_reason", selectedOption);
-    sendFormData.append("phone_number", String(phone));
-    console.log(phone)
-    console.log(selectedOption)
+    sendFormData.append("phone_number", phone);
 
     try {
       console.log("new form data ", formData);
 
-      const response = await apiClient.post("common/contactUs-form", sendFormData, {
-        headers: {
-          "content-type": "application/json",
-          "X-CSRFToken": csrfToken,
-        },
-      });
+      const response = await apiClient.post(
+        "common/contactUs-form",
+        sendFormData,
+        {
+          headers: {
+            "content-type": "application/json",
+            "X-CSRFToken": csrfToken,
+          },
+        }
+      );
+
+      console.log(phone);
 
       setIsSuccess(true);
       setShowNotification(true);
@@ -103,7 +107,10 @@ export default function ContactUs() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="relative md:w-[1440px] md:h-[694px] md:pl-[121px] md:pr-[120px] md:pt-[38px] md:pb-[104px] pt-5 bg-[#F1F8EC] flex-col justify-start items-center gap-[37px] flex mx-auto">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="relative md:w-[1440px] md:h-[694px] md:pl-[121px] md:pr-[120px] md:pt-[38px] md:pb-[104px] pt-5 bg-[#F1F8EC] flex-col justify-start items-center gap-[37px] flex mx-auto"
+    >
       <div className="self-center flex-col  items-center inline-flex">
         <div className="font-gilda md:w-[413px] md:h-[58px] text-center text-lime-400 text-base md:text-2xl md:text-[32px] font-normal leading-[50px] tracking-[5.6px] md:tracking-[11.20px]">
           LANDA ACADEMY
@@ -147,8 +154,12 @@ export default function ContactUs() {
         />
         <PhoneInput phone={phone} setPhone={setPhone} />
       </div>
-      <button type="submit" onSubmit={handleSubmit(onSubmit)} className="bg-yellow-400 h-[36px] md:h-14 w-[160px] md:w-60 mx-auto text-white">
-        {send ? 'Submitting ....' : 'Submit'}
+      <button
+        type="submit"
+        onSubmit={handleSubmit(onSubmit)}
+        className="bg-yellow-400 h-[36px] md:h-14 w-[160px] md:w-60 mx-auto text-white"
+      >
+        {send ? "Submitting ...." : "Submit"}
       </button>
       <Image
         loading="lazy"

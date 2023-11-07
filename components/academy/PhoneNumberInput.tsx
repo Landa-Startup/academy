@@ -3,8 +3,13 @@ import { useState } from "react";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
-export default function PhoneInput({phone,setPhone}:{phone:any;setPhone:any;}) {
-
+export default function PhoneInput({
+  phone,
+  setPhone,
+}: {
+  phone: any;
+  setPhone: any;
+}) {
   return (
     <div>
       <PhoneInputWithCountrySelect
