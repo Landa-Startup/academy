@@ -1,5 +1,4 @@
 import GalleryButtonsContainer from '@/components/academy/GalleryButtonsContainer';
-import GalleryImageCardContainer from '@/components/academy/GalleryImageCardContainer';
 import Banner from '@/components/common/Banner';
 import { Metadata } from 'next';
 import React from 'react';
@@ -18,7 +17,7 @@ export default function page() {
         title="Gallery"
       />
       <GalleryButtonsContainer />
-      <GalleryImageCardContainer />
+      
     </div>
   );
 }
