@@ -13,6 +13,7 @@ type ButtonProps = DetailedHTMLProps<
   addedClass?: string;
   bgColor?: "Primary" | "Yellow" | "White";
   goto?: string;
+  onClick?: () => void;
 };
 
 export default function Button({
@@ -22,6 +23,7 @@ export default function Button({
   addedClass,
   bgColor,
   goto,
+  onClick,
 }: ButtonProps) {
   // Determine the button size and apply appropriate styles
   const isVisitSize = size === "visit";
@@ -30,7 +32,7 @@ export default function Button({
 
   return (
     <button
-      onClick={() => router.push(goto || "/")}
+      onClick={onClick ? onClick : () => () => router.push(goto || "/")}
       className={`btn2 ${
         isVisitSize
           ? "w-[135px] md:w-[219px] h-[32px] md:h-[60px] pl-[72px] pr-[71px] pt-[15px] pb-4 mt-[19px]"
