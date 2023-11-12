@@ -16,13 +16,13 @@ export default function Second() {
           width={500}
           height={500}
         />
-        <div className="flex flex-col justify-evenly font-barlow">
-          <div className="md:w-[500px] text-gray-600 text-4xl md:text-5xl font-barlow font-normal tracking-wider leading-snug">
-            Registration and participation in Optional courses
+        <div className="flex flex-col justify-evenly">
+          <div className="mt-8 md:w-[500px] text-gray-600 text-2xl md:text-4xl font-barlow  tracking-wider leading-snug">
+            Registration and Participation in Optional Courses
           </div>
           <div className="justify-start items-start gap-2 inline-flex">
-            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-2.5" />
-            <div className="w-[280px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify md:w-[500px]">
+            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-5" />
+            <div className="mt-4 w-[280px] font-barlow text-gray-600 text-base md:text-2xl font-normal  md:w-[500px]">
               Embark on your adventurous journey at Landa Academy by
               participating in our tailored crash courses designed by mentors
               from the Landa Holding.
@@ -31,7 +31,7 @@ export default function Second() {
           <div className="justify-start items-start gap-2 inline-flex ">
             <div className="w-5 h-5 bg-yellow-400 rounded-full mt-2.5" />
             <div className="md:w-[500px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify">
-              Obtain A valid Certificate of achievement
+              Obtain a valid certificate of achievement
             </div>
           </div>
         </div>

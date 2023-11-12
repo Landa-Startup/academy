@@ -5,9 +5,9 @@ import Banner from "@/components/common/Banner";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Landa Holding | Contact",
+  title: "Landa Academy | Contact",
   description:
-    "Contact Landa Holding to get in touch with our dedicated team. Whether you have questions, inquiries, or partnership opportunities, we are here to assist you. Reach out to us today.",
+    "Contact Landa Academy to get in touch with our dedicated team. Whether you have questions, inquiries, or partnership opportunities, we are here to assist you. Reach out to us today.",
 };
 
 export default function ContactUsPage() {
