@@ -1,8 +1,28 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import ScrollButton from "./ScrollButton";
+import Button from "@/components/common/Button";
+import ModalForm from "../ModalForm";
 
 export default function Fifth() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleFormSubmit = (formData: any) => {
+    // Handle the form data, for example, you can log it to the console
+    console.log("Form Data:", formData);
+
+    // Close the modal
+    closeModal();
+  };
   return (
     <div
       className="flex flex-col h-[850px] items-center relative px-10 py-10 bg-[#FFFBE6] space-y-7"
@@ -29,6 +49,16 @@ export default function Fifth() {
         </div>
       </div>
       <div className="order-4">
+        <Button onClick={openModal} size="not" text="Register" />
+        <div>
+          <ModalForm
+            isOpen={isModalOpen}
+            onRequestClose={closeModal}
+            onSubmit={handleFormSubmit}
+            closeModal={closeModal}
+          />
+        </div>
+        {/* <ScrollButton scrollTo="Courses" addedClass="mx-auto mt-5 md:-mt-5" /> */}
         <ScrollButton scrollTo="Courses" addedClass="mx-auto mt-36 md:-mt-5" />
       </div>
       <svg

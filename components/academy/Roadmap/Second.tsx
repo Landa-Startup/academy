@@ -17,7 +17,7 @@ export default function Third() {
           height={500}
         />
         <div className="flex flex-col justify-evenly">
-          <div className="md:w-[592px] text-2xl md:text-4xl md:mt-28 mb-10 md:text-5xl font-normal tracking-wider leading-snug text-[#3D5656]">
+          <div className="md:w-[592px] text-2xl md:mt-28 mb-10 md:text-5xl font-normal tracking-wider leading-snug text-[#3D5656]">
             Joining Landa Academy and benefiting from its facilities.
           </div>
           <ul className="text-[#FFFBE6] font-barlow md:text-2xl font-medium leading-[25px] md:leading-[50px] tracking-[1px]">

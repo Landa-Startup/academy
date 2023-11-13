@@ -1,46 +1,23 @@
-import React from 'react';
-import CoursesCard from './CoursesCard';
+"use client";
+import React, { useEffect, useState } from "react";
+import CoursesCard from "./CoursesCard";
+
+interface Course {
+  title: string;
+  image: string;
+  date: string;
+  active?: boolean;
+}
 
 export default function CoursesCardContainer() {
-  const courses = [
-    {
-      title: 'SEO course',
-      image: '/static/images/Academy/CoursesCards/1.jpg',
-      date: '27/Dec/2023',
-    },
-    {
-      title: 'Digital Marketing',
-      image: '/static/images/Academy/CoursesCards/2.jpg',
-      date: '27/Dec/2023',
-    },
-    {
-      title: 'AI webinar',
-      image: '/static/images/Academy/CoursesCards/3.jpg',
-      date: '27/Dec/2023',
-
-      active: true,
-    },
-    {
-      title: 'Python course',
-      image: '/static/images/Academy/CoursesCards/4.jpg',
-      date: '27/Dec/2023',
-    },
-    {
-      title: 'ICDL workshop',
-      image: '/static/images/Academy/CoursesCards/5.jpg',
-      date: '27/Dec/2023',
-    },
-    {
-      title: 'UX Workshop',
-      image: '/static/images/Academy/CoursesCards/6.jpg',
-      date: '27/Dec/2023',
-    },
-    {
-      title: 'Front-end course',
-      image: '/static/images/Academy/CoursesCards/7.jpg',
-      date: '27/Dec/2023',
-    },
-  ];
+  const [courses, setCourses] = useState<Course[]>([]);
+  useEffect(() => {
+    // Fetch data from the API when the component mounts
+    fetch("https://apigenerator.dronahq.com/api/kVDULu7p/courses")
+      .then((response) => response.json())
+      .then((data) => setCourses(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []); // The empty dependency array ensures this effect runs once when the component mounts
   return (
     <div className="grid grid-cols-2 md:gap-16 gap-y-5 justify-items-center md:px-32 mx-2">
       {courses.map((course, index) => (

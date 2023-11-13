@@ -1,12 +1,42 @@
-import React from 'react';
-import Image from 'next/image';
-import IconPhoneAcademy from '../icons/IconPhoneAcademy';
-import IconYellow from '../icons/IconYellow';
-import IconStar from '../icons/IconStar';
+"use client";
+import React, { useEffect, useState } from "react";
+import IconPhoneAcademy from "../icons/IconPhoneAcademy";
+import IconYellow from "../icons/IconYellow";
+import IconStar from "../icons/IconStar";
+import Banner from "../common/Banner";
+
+interface Course {
+  title: string;
+  description: string;
+  price: string;
+  discount: string;
+  discountPercent: string;
+  duration: string;
+  sessions: string;
+  sessionDuration: string;
+  sessionDurationType: string;
+  payUrl: string;
+}
 
 export default function SeoCourses() {
+  const [course, setCourse] = useState<Course | null>(null);
+
+  useEffect(() => {
+    // Fetch data from the API when the component mounts
+    fetch("https://apigenerator.dronahq.com/api/NkgQThFP/course")
+      .then((response) => response.json())
+      .then((data) => setCourse(data[0]))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []); // The empty dependency array ensures this effect runs once when the component mounts
+
+  if (!course) {
+    // You can add a loading state here
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
+      <Banner image="/static/images/Academy/Banner/seo.jpg" title="Course" />
       <div className="container px-5 mx-auto my-10 font-normal text-black lg:p-10 font-barlow">
         <div className="text-center">
           <p className="text-4xl text-[#FDD30A] tracking-widest	mb-10">
@@ -19,16 +49,15 @@ export default function SeoCourses() {
               <div>
                 <div>
                   <p className="text-2xl">
-                    A two-day SEO course consisting of two sessions, each
-                    lasting 9 hours, will be conducted.
+                    {`A two-day ${course.title} course consisting of ${course.sessions} sessions, each lasting ${course.sessionDuration} ${course.sessionDurationType}, will be conducted.`}
                   </p>
                 </div>
                 <div className="bg-[#F1F8EC] my-5 mx-20 py-5">
                   <p className="my-1 text-2xl">Course Price</p>
                   <p className="text-3xl my-1 line-through decoration-wavy decoration-[#FDD30A]">
-                    4,200,000T
+                    {`${course.discount}T`}
                   </p>
-                  <p className="my-1 text-3xl">2,900,000T</p>
+                  <p className="my-1 text-3xl">{`${course.price}T`}</p>
                 </div>
                 <div className="bg-[#F1F8EC]  my-5 mx-20 py-5">
                   <p className="my-1 text-2xl">Contact Us</p>
@@ -54,29 +83,27 @@ export default function SeoCourses() {
                 <div className="mt-10">
                   <a
                     role="button"
-                    className="btn border-0 text-xl text-white bg-[#FDD30A] hover:bg-[#fcda30] rounded-none	px-14  mb-10"
-                    href="https://zarinp.al/527792"
+                    className="btn border-0 text-xl text-white bg-[#FDD30A] hover-bg-[#fcda30] rounded-none	px-14  mb-10"
+                    href={course.payUrl}
                   >
                     Buy Now
                   </a>
                 </div>
                 <div>
                   <p className="text-2xl font-medium ">
-                    Benefits of participating in the SEO course
+                    Benefits of participating in the {course.title} course
                   </p>
                 </div>
                 <div className="flex bg-[#FFFBE6] px-3 py-5 mx-10 my-10">
                   <IconStar />
                   <span className="ml-3 text-xl">
-                    At the end of the course, a valid and questionable
-                    certificate will be awarded to you by Landa Academy.
+                    {`At the end of the ${course.title} course, a valid and questionable certificate will be awarded to you by Landa Academy.`}
                   </span>
                 </div>
                 <div className="flex bg-[#FFFBE6] px-3 py-5 mx-10 my-10">
                   <IconStar />
                   <span className="ml-3 text-xl">
-                    Also for the best of this course There is an employment
-                    condition.
+                    {`Also for the best of this course There is an employment condition.`}
                   </span>
                 </div>
               </div>
@@ -86,24 +113,11 @@ export default function SeoCourses() {
                 <div className="flex">
                   <IconYellow />
                   <span className="ml-3 text-4xl">
-                    Overview of SEO Training Course
+                    Overview of {course.title} Course
                   </span>
                 </div>
                 <div>
-                  <p className="my-5 text-xl leading-8">
-                    Learning SEO is an acquired skill. Therefore, you must bear
-                    in mind that in this journey, even the smallest misguided
-                    learning source can lead you astray from the path of proper
-                    education. Cultivating the right mindset necessitates a
-                    correct form of instruction, which undoubtedly evolves from
-                    initially mastering the skill and subsequently gaining
-                    experience through trial and error. <br /> The comprehensive
-                    SEO course conducted by Landa Academy and authored and
-                    recorded by Iman Nasr. In the SEO Manager course, you will
-                    effortlessly acquire all the skills required to become an
-                    SEO specialist and proficiently perform website SEO
-                    services.
-                  </p>
+                  <p className="my-5 text-xl leading-8">{course.description}</p>
                 </div>
                 <div className="flex mt-16 mb-10">
                   <IconYellow />
