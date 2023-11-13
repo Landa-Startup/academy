@@ -90,7 +90,7 @@ function ModalForm({ isOpen, onRequestClose, onSubmit, closeModal }: any) {
           </select>
         </div>
       </form>
-      <Button text="Submit" size="not" type="submit" addedClass="mx-auto" />
+      <Button text="Submit" size="not" type="submit" addedClass="mx-auto" goto={""} />
     </Modal>
   );
 }

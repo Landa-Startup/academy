@@ -48,8 +48,8 @@ export default function Fifth() {
           certificate from us.
         </div>
       </div>
-      <div className="order-4">
-        <Button onClick={openModal} size="not" text="Register" />
+      <div className="order-4  ">
+        <Button onClick={openModal} size="not" text="Register" goto={""} />
         <div>
           <ModalForm
             isOpen={isModalOpen}
