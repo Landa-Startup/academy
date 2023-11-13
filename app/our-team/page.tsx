@@ -10,30 +10,30 @@ export const metadata: Metadata = {
 };
 
 export default function TeamPage() {
-  const jobLinks = [
-    'all',
-    'Manager',
-    'Word Press Developer',
-    'Programmer',
-    'Graphic Designer',
-    'Content Creator',
-    'Accountant',
-    'Public Relations Officer',
-    'Digital Marketer',
-    'CEO',
-    'COTB',
-    'Secretary',
-    'CTO',
-    'Full stack',
-    'Manager',
-    'Case Manager',
-    'UX/UI Designer',
-    'Junior Back-end',
-    'Application Developer',
-    'UI designer',
-    'Front-end',
-    'Back-end',
-  ];
+  // const jobLinks = [
+  //   'all',
+  //   'Manager',
+  //   'Word Press Developer',
+  //   'Programmer',
+  //   'Graphic Designer',
+  //   'Content Creator',
+  //   'Accountant',
+  //   'Public Relations Officer',
+  //   'Digital Marketer',
+  //   'CEO',
+  //   'COTB',
+  //   'Secretary',
+  //   'CTO',
+  //   'Full stack',
+  //   'Manager',
+  //   'Case Manager',
+  //   'UX/UI Designer',
+  //   'Junior Back-end',
+  //   'Application Developer',
+  //   'UI designer',
+  //   'Front-end',
+  //   'Back-end',
+  // ];
 
   const persons = [
     {
