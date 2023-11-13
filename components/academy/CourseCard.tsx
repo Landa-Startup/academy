@@ -28,7 +28,7 @@ export default function CourseCard({
         {title}
       </div>
       <div className="text-yellow-50 text-xl font-medium leading-[50px] tracking-wide hidden z-10 md:group-hover:block">
-        {date}
+        {}
       </div>
       <div className="z-10 md:hidden md:w-[396px] left-[45px] top-[80px] origin-top-left text-white text-xl font-medium leading-[50px] tracking-widest md:group-hover:animate-spin md:group-hover:transition-all md:group-hover:duration-500">
         {title}
