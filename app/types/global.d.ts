@@ -4,7 +4,7 @@ enum Type {
   MVP = 'MVP',
   TRIAL = 'TRIAL',
   FisrtSale = 'FisrtSale', // Typo: Should be "FirstSale"
-  SaleDevelopment = 'SaleDevelopment',
+  SaleDevelopment = 'SaleDevelopment'
 }
 
 // Define an interface for business partnership form data
@@ -151,7 +151,6 @@ interface TableData {
   date: string;
   time: string;
 }
-
 
 export {
   ContactUSFormData,

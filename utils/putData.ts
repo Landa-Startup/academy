@@ -1,5 +1,5 @@
-import { DecodedToken } from 'app/types/global'
-import { parseCookies } from 'nookies'
+import { DecodedToken } from 'app/types/global';
+import { parseCookies } from 'nookies';
 
 export async function postData(url: string, body: object): Promise<Response> {
   const cookies = parseCookies();
@@ -10,9 +10,9 @@ export async function postData(url: string, body: object): Promise<Response> {
       method: 'PUT',
       headers: {
         Authorization: `Bearer ${jwt}`,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(body),
+      body: JSON.stringify(body)
     });
     if (!fetchResponse.ok) {
       throw new Error('Network response was not ok');
