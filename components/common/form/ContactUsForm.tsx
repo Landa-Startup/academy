@@ -89,10 +89,6 @@ export default function ContactUsForm() {
               type="text"
               {...register('name', {
                 required: 'Your Name is required.',
-                pattern: {
-                  value: /^[a-z ]+$/i,
-                  message: 'Enter a valid Name.',
-                },
               })}
               placeholder="Your Name*"
               className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.name ? 'border-red-500' : ''
@@ -152,10 +148,6 @@ export default function ContactUsForm() {
               type="text"
               {...register('subject', {
                 required: 'Your Subject is required.',
-                pattern: {
-                  value: /^[a-z ,.'-]+$/i,
-                  message: 'Enter a valid Subject.',
-                },
               })}
               placeholder="Your Subject*"
               className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.subject ? 'border-red-500' : ''
