@@ -71,8 +71,8 @@ export default function ContactUs() {
     sendFormData.append("last_name", formData.lastName);
     sendFormData.append("contact_reason", formData.contactReason);
     sendFormData.append("phone_number", formData.phoneNumber);
-    console.log(phone)
-    console.log(selectedOption)
+    console.log(phone);
+    console.log(selectedOption);
 
     try {
       console.log("new form data ", formData);
@@ -100,7 +100,7 @@ export default function ContactUs() {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
     } catch (error) {
-      console.log(error)
+      console.log(error);
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
@@ -117,7 +117,7 @@ export default function ContactUs() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="relative md:w-[1440px] md:h-[694px] md:pl-[121px] md:pr-[120px] md:pt-[38px] md:pb-[104px] pt-5 bg-[#F1F8EC] flex-col justify-start items-center gap-[37px] flex mx-auto"
+      className="relative md:w-[1440px] py-28 bg-[#F1F8EC] flex-col justify-start items-center gap-[37px] flex mx-auto h-screen snap-start"
     >
       <div className="self-center flex-col  items-center inline-flex">
         <div className="font-gilda md:w-[413px] md:h-[58px] text-center text-lime-400 text-base md:text-2xl md:text-[32px] font-normal leading-[50px] tracking-[5.6px] md:tracking-[11.20px]">
@@ -127,7 +127,7 @@ export default function ContactUs() {
           Contact Us
         </div>
       </div>
-      <div className="relative grid grid-cols-1 md:grid-cols-2 items-center gap-5">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 items-center gap-5 z-10">
         <Input
           register={register}
           errors={errors}
@@ -161,14 +161,14 @@ export default function ContactUs() {
           handleOptionChange={handleOptionChange}
         />
         <PhoneInputWithCountrySelect
-        value={phone}
-        onChange={setPhone}
-        name="phoneNumber"
-        defaultCountry="IR"
-        international
-        countryCallingCodeEditable={false}
-        className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex [&>*:nth-child(2)]:bg-yellow-50 !important] [&>*:nth-child(1)]:border-r-2 !important]"
-      />
+          value={phone}
+          onChange={setPhone}
+          name="phoneNumber"
+          defaultCountry="IR"
+          international
+          countryCallingCodeEditable={false}
+          className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex [&>*:nth-child(2)]:bg-yellow-50 !important] [&>*:nth-child(1)]:border-r-2 !important]"
+        />
       </div>
       <button
         type="submit"
@@ -179,7 +179,7 @@ export default function ContactUs() {
       </button>
       <Image
         loading="lazy"
-        className="-mb-4 md:absolute md:-left-16 md:-bottom-[5px]"
+        className="md:absolute md:-left-16 -bottom-5"
         src={"/static/images/Academy/Collab-pana 1.svg"}
         alt="Academy Contact Us"
         width={522}

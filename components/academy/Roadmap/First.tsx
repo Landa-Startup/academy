@@ -5,7 +5,7 @@ import ScrollButton from './ScrollButton';
 export default function Second() {
   return (
     <div
-      className="flex flex-col h-[850px] bg-[#FFFBE6] relative"
+      className="flex flex-col bg-[#FFFBE6] relative h-screen snap-start"
       id="Roadmap-1"
     >
       <div className="flex flex-col px-10 md:flex-row-reverse justify-evenly pt-16 pb-10 z-10">
