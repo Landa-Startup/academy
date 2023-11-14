@@ -43,7 +43,7 @@ function PhotoModal({ isOpen, onRequestClose, imageUrl, closeModal }: any) {
         {/* <div onClick={handlePrevClick}>
           <Chevron direction="left" />
         </div> */}
-        <div className="relative">
+        <div className="relative w-[350px] md:w-[700px] h-[240px] md:h-[480px]">
           <Image
             className="rounded-md"
             src={imageUrl}
