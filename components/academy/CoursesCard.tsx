@@ -7,11 +7,13 @@ export default function CoursesCard({
   title,
   isActive,
   backgroundImage,
+  price,
 }: {
   id: number;
   title: string;
   isActive?: boolean;
   backgroundImage: string;
+  price: string;
 }) {
   return (
     <Link
@@ -42,7 +44,7 @@ export default function CoursesCard({
             A two-day SEO course consisting of two sessions, each lasting 9
             hours, will be conducted.
           </li>
-          <li>3،900،000T</li>
+          <li>{price}T</li>
         </ul>
         <Button
           size="not"
