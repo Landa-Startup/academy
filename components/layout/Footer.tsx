@@ -79,7 +79,7 @@ export default function Footer() {
             Contact
             <br />
           </div>
-          <div className="flex flex-col divide-y-2 gap-2">
+          <div className="flex flex-col divide-y-2 w-[225px] divide-green-200 gap-2">
             <div>
               <div className="text-base font-normal text-justify text-white">
                 Young street, Toronto, Canada
@@ -104,7 +104,7 @@ export default function Footer() {
                 03131311914
               </div>
             </div>
-            <div className="w-[126px] h-[22px] flex flex-row justify-between items-center pt-4 text-white">
+            <div className="w-[226px] h-[22px] flex flex-row justify-between items-center pt-4 text-white">
               <Link
                 aria-label="Instagram"
                 href={
@@ -142,9 +142,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="self-stretch pt-4 text-center text-white border-t">
+      <div className="self-stretch pt-4 text-center text-green-200 border-t border-green-200">
         © Copyright {GetYear()} by{" "}
-        <Link href={"/"} className="text-primary">
+        <Link href={"/"} className="text-primary text-green-200">
           LandaHolding
         </Link>
       </div>
