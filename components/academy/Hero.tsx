@@ -23,7 +23,7 @@ export default function Hero({
   showButton?: boolean;
 }) {
   return (
-    <div className="flex flex-col md:flex-row h-[calc(100vh-144px)] md:justify-between mt-24 md:mt-36 md:pb-20 bg-white relative overflow-hidden">
+    <div className="flex flex-col md:flex-row md:justify-between pt-24 md:pt-36 bg-white relative overflow-hidden h-screen snap-start">
       <Image
         loading="lazy"
         className="object-cover md:object-contain absolute md:static w-full md:w-[461px] h-full md:h-[600px] blur-sm opacity-40 md:opacity-100 md:blur-none"

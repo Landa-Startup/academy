@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import React from 'react';
-import Button from '../common/Button';
+import Image from "next/image";
+import React from "react";
+import Button from "../common/Button";
 
 export default function Gallery() {
   return (
-    <div className="py-5 relative bg-neutral-50 bg-opacity-95">
+    <div className="py-5 relative bg-neutral-50 bg-opacity-95 h-screen snap-start">
       <div className="flex flex-col">
         <div className="text-center text-lime-400 text-base md:text-[32px] font-normal leading-[50px] tracking-[5.6px] md:tracking-[11.20px]">
           LANDA ACADEMY
@@ -12,7 +12,7 @@ export default function Gallery() {
         <div className="text-center text-black text-3xl md:text-[64px] font-normal leading-[50px] tracking-[1.6px] md:tracking-[3.20px]">
           Our Gallery
         </div>
-        <div className="grid grid-cols-2 mx-8 md:mx-32 md:grid-cols-3 justify-items-center gap-2 my-5">
+        <div className="grid grid-cols-2 mx-8 md:mx-32 md:grid-cols-3 justify-items-center gap-2 my-2">
           <Image
             loading="lazy"
             width={389}
