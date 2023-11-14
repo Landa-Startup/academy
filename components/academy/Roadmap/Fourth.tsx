@@ -49,7 +49,7 @@ export default function Fifth() {
         </div>
       </div>
       <div className="order-4">
-        <Button onClick={openModal} size="not" text="Register" />
+        <Button goto="/" onClick={openModal} size="not" text="Register" />
         <div>
           <ModalForm
             isOpen={isModalOpen}
@@ -58,9 +58,8 @@ export default function Fifth() {
             closeModal={closeModal}
           />
         </div>
-        {/* <ScrollButton scrollTo="Courses" addedClass="mx-auto mt-5 md:-mt-5" /> */}
-        <ScrollButton scrollTo="Courses" addedClass="mx-auto mt-36 md:-mt-5" />
       </div>
+      <ScrollButton scrollTo="Courses" addedClass="absolute bottom-3" />
       <svg
         className="absolute -top-7 left-[683px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
