@@ -144,7 +144,7 @@ export default function Footer() {
       </div>
       <div className="self-stretch pt-4 text-center text-green-200 border-t border-green-200">
         © Copyright {GetYear()} by{" "}
-        <Link href={"/"} className="text-primary text-green-200">
+        <Link href={"/"} className=" text-green-200">
           LandaHolding
         </Link>
       </div>
