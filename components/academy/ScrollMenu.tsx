@@ -100,7 +100,7 @@ export default function ScrollMenu() {
   ];
 
   return (
-    <div className="bg-[#3D5656] py-10 md:h-screen" id="Courses">
+    <div className="bg-[#3D5656] py-10 h-screen snap-start" id="Courses">
       <div className="container mx-auto">
         <div className="font-condensed text-center text-white text-2xl md:text-3xl font-normal leading-[50px] tracking-[11.20px]">
           LANDA ACADEMY

@@ -6,7 +6,12 @@ import ContactUs from "@/components/academy/ContactUs";
 import ScrollMenu from "@/components/academy/ScrollMenu";
 import { Metadata } from "next";
 import Hero from "@/components/academy/Hero";
+<<<<<<< HEAD
 // import Video from "@/components/academy/Video";
+=======
+import Video from "@/components/academy/Video";
+import Footer from "@/components/layout/Footer";
+>>>>>>> cb9c9722207470bcb5a9f2e7e9ab3516ee9abc67
 
 export const metadata: Metadata = {
   title: "Landa Academy",
@@ -15,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <div className="bg-[#F1F8EC]">
+    <div className="bg-[#F1F8EC] scroll-smooth overflow-auto snap-y snap-mandatory h-screen">
       {/* Hero Section */}
       <Hero
         title="Landa Business Academy"
@@ -31,6 +36,7 @@ export default function page() {
       <Gallery />
 
       <ContactUs />
+      <Footer/>
     </div>
   );
 }

@@ -1,25 +1,45 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import ScrollButton from "./ScrollButton";
+import Button from "@/components/common/Button";
+import ModalForm from "../ModalForm";
 
 export default function Fifth() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleFormSubmit = (formData: any) => {
+    // Handle the form data, for example, you can log it to the console
+    console.log("Form Data:", formData);
+
+    // Close the modal
+    closeModal();
+  };
   return (
     <div
-      className="flex flex-col h-[850px] items-center relative px-10 py-10 bg-[#FFFBE6] space-y-7"
+      className="flex flex-col items-center relative px-10 py-10 bg-[#FFFBE6] h-screen snap-start"
       id="Roadmap-4"
     >
-      <div className="mt-4 order-2 md:w-[420px] text-black font-barlow text-2xl md:text-4xl font-normal leading-snug static md:absolute left-40 top-16">
+      <div className="mt-4 order-2 md:w-[420px] text-black font-barlow text-2xl md:text-4xl font-normal leading-snug static md:absolute left-40 top-28">
         Work experience at the Canadian company
       </div>
       <Image
         loading="lazy"
-        className="md:mt-28 md:mb-16 z-10 order-1"
+        className="z-10 order-1"
         alt="Landa academy"
         src={"static/images/Academy/Roadmap/Selecting team-cuate (1) 1.svg"}
         width={645}
         height={430}
       />
-      <div className="justify-start items-start gap-2 inline-flex pb-5 order-3">
+      <div className="justify-start items-start inline-flex order-3">
         <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3 flex-shrink-0" />
         <div className="md:w-[500px] text-black font-barlow md:text-2xl font-medium leading-7">
           Following a year of active participation within Landa, you will
@@ -29,8 +49,17 @@ export default function Fifth() {
         </div>
       </div>
       <div className="order-4">
-        <ScrollButton scrollTo="Courses" addedClass="mx-auto mt-36 md:-mt-5" />
+        <Button goto="/" onClick={openModal} size="not" text="Register" />
+        <div>
+          <ModalForm
+            isOpen={isModalOpen}
+            onRequestClose={closeModal}
+            onSubmit={handleFormSubmit}
+            closeModal={closeModal}
+          />
+        </div>
       </div>
+      <ScrollButton scrollTo="Courses" addedClass="absolute bottom-3" />
       <svg
         className="absolute -top-7 left-[683px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
