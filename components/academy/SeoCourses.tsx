@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import IconPhoneAcademy from '../icons/IconPhoneAcademy';
 import IconYellow from '../icons/IconYellow';
 import IconStar from '../icons/IconStar';

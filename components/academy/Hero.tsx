@@ -1,26 +1,15 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import Button from "../common/Button";
+import React from "react";
 import ArrowDown from "../icons/hero/ArrowDown";
 
 export default function Hero({
-  showLanda,
   title,
   subTitle,
-  buttonBg,
-  backgroundImage,
-  leftImage,
-  showButton,
 }: {
-  showLanda: boolean;
   title: string;
   subTitle: string;
-  buttonBg?: string;
-  backgroundImage: string;
-  leftImage: string;
-  showButton?: boolean;
 }) {
   return (
     <div className="flex flex-col md:flex-row h-[calc(100vh-144px)] md:justify-between mt-24 md:mt-36 md:pb-20 bg-white relative overflow-hidden">

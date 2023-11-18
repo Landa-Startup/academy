@@ -3,7 +3,7 @@ import First from './First';
 import Second from './Second';
 import Third from './Third';
 import Fourth from './Fourth';
-import Mobile from './Mobile';
+// import Mobile from './Mobile';
 
 export default function RoadmapContainer() {
   return (

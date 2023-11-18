@@ -47,7 +47,7 @@ export default function ContactUsForm() {
     setIsSubmitting(true);
     setSend(true);
     try {
-      const response = await apiClient.post(
+      await apiClient.post(
         'common/reachUs-form',
         JSON.stringify(formData),
         {
@@ -60,7 +60,7 @@ export default function ContactUsForm() {
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
-      const timeout = setTimeout(() => {
+      setTimeout(() => {
         setShowNotification(false);
       }, 10000);
       reset(initialFormData); // Reset the form after successful submission
@@ -70,7 +70,7 @@ export default function ContactUsForm() {
       setSend(false);
       setIsSuccess(false);
       console.error('Error sending form data:', error);
-      const timeout = setTimeout(() => {
+      setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
     }

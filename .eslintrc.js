@@ -26,6 +26,9 @@ module.exports = {
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'tailwindcss/no-custom-classname': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+      "max-lines": ["error", { "max": 150, "skipComments": true, "skipBlankLines": true }],
+      "components/icons/*": ["off"],
     },
     settings: {
       'tailwindcss': {

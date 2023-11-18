@@ -6,7 +6,7 @@ import ContactUs from "@/components/academy/ContactUs";
 import ScrollMenu from "@/components/academy/ScrollMenu";
 import { Metadata } from "next";
 import Hero from "@/components/academy/Hero";
-import Video from "@/components/academy/Video";
+// import Video from "@/components/academy/Video";
 
 export const metadata: Metadata = {
   title: "Landa Academy",
@@ -18,12 +18,9 @@ export default function page() {
     <div className="bg-[#F1F8EC]">
       {/* Hero Section */}
       <Hero
-        showLanda={false}
         title="Landa Business Academy"
         subTitle="Landa Academy was founded with the mission of fostering the potential of individuals, especially young minds. We believe that investing in adolescents guarantees a bright future and a better tomorrow."
-        buttonBg="#FDD30A"
-        backgroundImage="586df33bf776763ec00a0ed6ea0528cb.jpg"
-        leftImage="academy.png"
+
       />
 
       {/* Roadmap Section */}
