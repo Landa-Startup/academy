@@ -1,6 +1,4 @@
 import React from "react";
-import CopyRight from "../common/CopyRight";
-import Image from "next/image";
 import Link from "next/link";
 import Instagram from "../icons/footer/Instagram";
 import Envelope from "../icons/footer/Envelope";
@@ -9,7 +7,7 @@ import LinkedIn from "../icons/footer/LinkedIn";
 
 export default function Footer() {
   function GetYear() {
-    var currentYear = new Date().getFullYear();
+    const currentYear = new Date().getFullYear();
     return currentYear;
   }
   return (

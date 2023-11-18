@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import IconLinkedin from '../icons/IconLinkedin';
+// import IconLinkedin from '../icons/IconLinkedin';
 import LinkedIn from '../icons/about/LinkedIn';
 
 export default function PersonalTab({

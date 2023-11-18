@@ -1,14 +1,13 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import PhoneInput from "./PhoneNumberInput";
 import ContactUsDropdown from "./ContactUsDropdown";
 import Input from "../common/form/Input";
-import { useForm } from "react-hook-form";
 import GetCsrfToken from "@/utils/get-csrf-token";
 import NotificationSendForm from "../common/form/NotificationSendForm";
 import apiClient from "@/utils/api";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
+import FormInit from "@/lib/FormInitHandler";
 import "react-phone-number-input/style.css";
 
 interface ContactUsType {
@@ -26,20 +25,12 @@ export default function ContactUs() {
     contactReason: "",
   };
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<ContactUsType>({
-    mode: "onBlur",
-    defaultValues: initialContactUsData,
-  });
-
+  const {register,handleSubmit,formState: { errors },reset,} = FormInit(initialContactUsData,typeof initialContactUsData)
   const [phone, setPhone] = useState<string | undefined>();
   const [selectedOption, setSelectedOption] = useState("");
 
   const [formData, setFormData] = useState<ContactUsType>(initialContactUsData);
+  console.log(formData)
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
@@ -53,9 +44,7 @@ export default function ContactUs() {
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken(
-        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}get-csrf-token`
-      );
+      const token = await GetCsrfToken(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}get-csrf-token`);
       setCsrfToken(token);
     }
     fetchCsrfToken();
@@ -71,32 +60,20 @@ export default function ContactUs() {
     sendFormData.append("last_name", formData.lastName);
     sendFormData.append("contact_reason", formData.contactReason);
     sendFormData.append("phone_number", formData.phoneNumber);
-    console.log(phone);
-    console.log(selectedOption);
-
     try {
-      console.log("new form data ", formData);
-
-      const response = await apiClient.post(
-        "common/contactUs-form",
-        sendFormData,
-        {
-          headers: {
-            "content-type": "application/json",
-            "X-CSRFToken": csrfToken,
-          },
-        }
-      );
-
-      console.log(phone);
+      await apiClient.post("common/contactUs-form", sendFormData, {
+        headers: {
+          "content-type": "multipart/form-data",
+          "X-CSRFToken": csrfToken,
+        },
+      });
 
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
       reset(initialContactUsData); // Reset the form after successful submission
       setFormData(initialContactUsData);
-      console.log("Form data sent successfully!");
-      const timeout = setTimeout(() => {
+      setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
     } catch (error) {
@@ -104,11 +81,9 @@ export default function ContactUs() {
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
-      //TODO: remove below code after testing
-      console.error("Error sending form data:", error);
-      reset(initialContactUsData); // Reset the form after successful submission
+      //TODO: remove below code after testing      reset(initialContactUsData); // Reset the form after successful submission
       setFormData(initialContactUsData); // reset states after successful submission
-      const timeout = setTimeout(() => {
+      setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
     }
@@ -120,10 +95,10 @@ export default function ContactUs() {
       className="relative md:w-[1440px] py-28 bg-[#F1F8EC] flex-col justify-start items-center gap-[37px] flex mx-auto h-screen snap-start"
     >
       <div className="self-center flex-col  items-center inline-flex">
-        <div className="font-gilda md:w-[413px] md:h-[58px] text-center text-lime-400 text-base md:text-2xl md:text-[32px] font-normal leading-[50px] tracking-[5.6px] md:tracking-[11.20px]">
+        <div className="font-gilda md:w-[413px] md:h-[58px] text-center text-lime-400 text-base md:text-[32px] font-normal leading-[50px] tracking-[5.6px] md:tracking-[11.20px]">
           LANDA ACADEMY
         </div>
-        <div className="md:w-[413px] md:h-[58px] text-center text-black text-3xl md:text-5xl md:text-[64px] font-normal leading-[50px] tracking-[1.6px] md:tracking-[3.20px] ">
+        <div className="md:w-[413px] md:h-[58px] text-center text-black text-3xl md:text-[64px] font-normal leading-[50px] tracking-[1.6px] md:tracking-[3.20px] ">
           Contact Us
         </div>
       </div>
@@ -141,7 +116,6 @@ export default function ContactUs() {
           className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
           labelClass="text-[#6b6b6b]"
         />
-
         <Input
           register={register}
           errors={errors}

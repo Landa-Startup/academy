@@ -19,12 +19,9 @@ export default function page() {
     <div className="bg-[#F1F8EC] scroll-smooth overflow-auto snap-y snap-mandatory h-screen">
       {/* Hero Section */}
       <Hero
-        showLanda={false}
         title="Landa Business Academy"
         subTitle="Landa Academy was founded with the mission of fostering the potential of individuals, especially young minds. We believe that investing in adolescents guarantees a bright future and a better tomorrow."
-        buttonBg="#FDD30A"
-        backgroundImage="586df33bf776763ec00a0ed6ea0528cb.jpg"
-        leftImage="academy.png"
+
       />
 
       {/* Roadmap Section */}

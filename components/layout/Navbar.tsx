@@ -1,9 +1,8 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import Logo from "../common/Logo";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import Instagram from "../icons/footer/Instagram";
 import Envelope from "../icons/footer/Envelope";
 import Whatsapp from "../icons/footer/Whatsapp";
@@ -11,9 +10,9 @@ import LinkedIn from "../icons/footer/LinkedIn";
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
-  const menuRef = useRef<HTMLDetailsElement>(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
-  const router = usePathname();
+  // const menuRef = useRef<HTMLDetailsElement>(null);
+  // const [isMenuOpen, setIsMenuOpen] = useState(true);
+  // const router = usePathname();
 
   const menuItems = [
     { label: "HOME", href: "/" },
@@ -130,6 +129,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           z-index: -1;
         }
       `}</style>
+
     </div>
   );
 }
