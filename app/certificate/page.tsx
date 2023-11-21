@@ -7,7 +7,7 @@ export default function Page() {
     <div>
       <Banner
         image="/static/images/Academy/seo-course.png"
-        title="Certificate"
+        title="SEO CERTIFICATE"
       />
       <CertificateAchivement />
       <Footer/>
