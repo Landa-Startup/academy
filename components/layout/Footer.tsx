@@ -13,7 +13,7 @@ export default function Footer() {
     return currentYear;
   }
   return (
-    <div className="flex h-screen snap-center flex-col bg-[#3D5656] p-8 py-32 font-barlow">
+    <div className="flex h-[680px] snap-center flex-col bg-[#3D5656] p-8 py-32 font-barlow">
       <div className="flex flex-col justify-between space-y-5 md:flex-row md:p-20">
         <div className="flex flex-col gap-4 md:w-[344px]">
           <div className="h-[25px] text-justify text-xl font-medium text-[#FEED9D]">
@@ -37,37 +37,37 @@ export default function Footer() {
           <div className="flex flex-col gap-1">
             <Link
               href={"/"}
-              className="max-w-fit text-base font-normal text-white hover:text-yellow-400"
+              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Home
             </Link>
             <Link
               href={"/"}
-              className="max-w-fit text-base font-normal text-white hover:text-yellow-400"
+              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Blog
             </Link>
             <Link
               href={"/about"}
-              className="max-w-fit text-base font-normal text-white hover:text-yellow-400"
+              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               About
             </Link>
             <Link
               href={"/contact"}
-              className="max-w-fit text-base font-normal text-white hover:text-yellow-400"
+              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Contact
             </Link>
             <Link
               href={"/"}
-              className="max-w-fit text-base font-normal text-white hover:text-yellow-400"
+              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Our Team
             </Link>
             <Link
               href={"/"}
-              className="max-w-fit text-base font-normal text-white hover:text-yellow-400"
+              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Verification
             </Link>
@@ -110,7 +110,7 @@ export default function Footer() {
                 href={
                   "https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=="
                 }
-                className="hover:text-yellow-400"
+                className="hover:text-[#CCE8BB]"
                 target="_blank"
               >
                 <Instagram />
@@ -118,14 +118,14 @@ export default function Footer() {
               <Link
                 aria-label="Email"
                 href={"mailto:info@landaholding.com"}
-                className="hover:text-yellow-400"
+                className="hover:text-[#CCE8BB]"
               >
                 <Envelope />
               </Link>
               <Link
                 aria-label="Whatsapp"
                 href={"https://wa.me/989120539563"}
-                className="hover:text-yellow-400"
+                className="hover:text-[#CCE8BB]"
                 target="_blank"
               >
                 <Whatsapp />
@@ -133,7 +133,7 @@ export default function Footer() {
               <Link
                 aria-label="Linkedin"
                 href={"https://www.linkedin.com/company/landa-startup-inc"}
-                className="hover:text-yellow-400"
+                className="hover:text-[#CCE8BB]"
                 target="_blank"
               >
                 <LinkedIn />
@@ -142,7 +142,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="self-stretch pt-4 text-center text-white border-green-300 text-[#CCE8BB]">
+      <div className="self-stretch pt-4 text-center text-white border-t border-[#CCE8BB] text-[#CCE8BB]">
         © Copyright {GetYear()} by{" "}
         <Link href={"/"} className="text-primary text-[#CCE8BB]">
           LandaHolding

@@ -20,11 +20,11 @@ export default function Banner({
 
       <div className="relative flex h-[250px] items-stretch justify-center lg:h-[512px] lg:justify-start ">
         <div className="z-10 flex flex-col items-center justify-center text-center md:m-auto lg:m-auto">
-          <p className="font-condensed text-base font-normal tracking-[5.60px] text-neutral-50 ">
-            LANDA HOLDING
+          <p className="font-condensed text-3xl font-normal tracking-[9.60px] text-neutral-50 w-[400px]">
+          LANDA ACADEMY
           </p>
           <p className="font-gilda text-[32px] font-normal text-neutral-50 md:text-[50px] lg:text-[74px] xl:text-[84px]">
-            {title}
+          SEO CERTIFICATE
           </p>
         </div>
         <div className="absolute h-full w-full bg-gradient-to-t from-[#3D5656D9] to-[#80C5554D] opacity-50"></div>
