@@ -1,19 +1,18 @@
-import React from "react";
-import RoadmapContainer from "@/components/academy/Roadmap/RoadmapContainer";
+import React from 'react';
+import RoadmapContainer from '@/components/academy/Roadmap/RoadmapContainer';
 // import PromoteCourse from '@/components/academy/PromoteCourse';
-import Gallery from "@/components/academy/Gallery";
-import ContactUs from "@/components/academy/ContactUs";
-import ScrollMenu from "@/components/academy/ScrollMenu";
-import { Metadata } from "next";
-import Hero from "@/components/academy/Hero";
-import Video from "@/components/academy/Video";
-import Footer from "@/components/layout/Footer";
+import Gallery from '@/components/academy/Gallery';
+import ContactUs from '@/components/academy/ContactUs';
+import ScrollMenu from '@/components/academy/ScrollMenu';
+import { Metadata } from 'next';
+import Hero from '@/components/academy/Hero';
+import Video from '@/components/academy/Video';
+import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: "Landa Academy",
-  description: "",
+  title: 'Landa Academy',
+  description: ''
 };
-
 
 export default function page() {
   return (
@@ -36,7 +35,7 @@ export default function page() {
       <Gallery />
 
       <ContactUs />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
