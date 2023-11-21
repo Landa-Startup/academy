@@ -4,10 +4,10 @@ import PlayButton from './PlayButton';
 
 export default function Video() {
   return (
-    <div className="flex justify-center items-start relative h-[475px]">
+    <div className="relative flex h-[475px] items-start justify-center">
       <Image
         loading="lazy"
-        className="blur-md object-cover"
+        className="object-cover blur-md"
         src={'/static/images/Academy/e8789aa2b833892200e6100e9998211b.jpg'}
         quality={100}
         alt="Landa Video"
@@ -27,11 +27,11 @@ export default function Video() {
         alt="Landa Video"
         layout="fill"
       /> */}
-      <div className="flex flex-col relative items-center my-auto">
-        <div className="font-condensed font-normal text-yellow-300 text-[32px] text-center tracking-[11.20px] leading-[50px] whitespace-nowrap">
+      <div className="relative my-auto flex flex-col items-center">
+        <div className="whitespace-nowrap text-center font-condensed text-[32px] font-normal leading-[50px] tracking-[11.20px] text-yellow-300">
           LANDA ACADEMY
         </div>
-        <div className="font-gilda font-normal text-white text-[48px] text-center tracking-[2.40px] leading-[normal] mb-14">
+        <div className="mb-14 text-center font-gilda text-[48px] font-normal leading-[normal] tracking-[2.40px] text-white">
           Promotional Video
         </div>
         <PlayButton />

@@ -17,10 +17,10 @@ export default function CertificateAchivement() {
         <p className="pt-12 ml-12 text-[#3D5656] font-barlow capitalize text-5xl">MOHAMAD AMIN ASGARIAN</p>
         <p className="text-[#6B6B6B] pt-12 text-xl ml-12">
         <p className="text-[#6B6B6B]"> For Participating in</p>
-        <p className="text-[#80C555] pt-12 text-5xl font-barlow capitalize">SEO Course</p>
-        <p className="pt-12 font-barlow text-[#6B6B6B] w-[642px]">The course was designed to provide participants with a comprehensive understanding of SEO strategies, techniques, and the best practices.</p>
+        <p className="pt-12 font-barlow text-5xl capitalize text-[#80C555]">SEO Course</p>
+        <p className="w-[642px] pt-12 font-barlow text-[#6B6B6B]">The course was designed to provide participants with a comprehensive understanding of SEO strategies, techniques, and the best practices.</p>
  </p>
-<div className="pt-12 pl-12">
+<div className="pl-12 pt-12">
 <Image
    src="/static/images/Academy/gallery/Certificate.png"
    alt="academy"

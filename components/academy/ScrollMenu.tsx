@@ -100,23 +100,23 @@ export default function ScrollMenu() {
   ];
 
   return (
-    <div className="bg-[#3D5656] py-10 h-screen snap-start" id="Courses">
+    <div className="h-screen snap-start bg-[#3D5656] py-10" id="Courses">
       <div className="container mx-auto">
-        <div className="font-condensed text-center text-white text-2xl md:text-3xl font-normal leading-[50px] tracking-[11.20px]">
+        <div className="text-center font-condensed text-2xl font-normal leading-[50px] tracking-[11.20px] text-white md:text-3xl">
           LANDA ACADEMY
         </div>
-        <div className="font-gilda text-center text-white text-4xl md:text-5xl font-normal leading-[50px] tracking-[3.20px] mb-12">
+        <div className="mb-12 text-center font-gilda text-4xl font-normal leading-[50px] tracking-[3.20px] text-white md:text-5xl">
           Our Courses
         </div>
-        <div className="flex items-center mx-5">
+        <div className="mx-5 flex items-center">
           <button
-            className="bg-gray-700 text-white md:px-4 md:py-2 p-2 md:rounded-r rounded-full"
+            className="rounded-full bg-gray-700 p-2 text-white md:rounded-r md:px-4 md:py-2"
             onClick={() => handleScroll("left")} // Adjust scroll offset as needed
           >
             <ArrowUp />
           </button>
           <div
-            className="flex overflow-x-hidden md:overflow-x-hidden whitespace-nowrap mx-2 gap-4 md:gap-12 md:h-[486px]"
+            className="mx-2 flex gap-4 overflow-x-hidden whitespace-nowrap md:h-[486px] md:gap-12 md:overflow-x-hidden"
             ref={scrollContainerRef}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -132,7 +132,7 @@ export default function ScrollMenu() {
             ))}
           </div>
           <button
-            className="bg-gray-700 text-white md:px-4 md:py-2 p-2 md:rounded-l rounded-full"
+            className="rounded-full bg-gray-700 p-2 text-white md:rounded-l md:px-4 md:py-2"
             onClick={() => handleScroll("right")} // Adjust scroll offset as needed
           >
             <svg
@@ -141,7 +141,7 @@ export default function ScrollMenu() {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-6 h-6"
+              className="h-6 w-6"
             >
               <path
                 strokeLinecap="round"
@@ -151,7 +151,7 @@ export default function ScrollMenu() {
             </svg>
           </button>
         </div>
-        <div className="flex justify-center mt-4"></div>
+        <div className="mt-4 flex justify-center"></div>
       </div>
     </div>
   );

@@ -78,11 +78,11 @@ export default function ContactUsForm() {
 
   return (
     <div>
-      <h2 className="text-5xl font-light text-center font-gilda">
+      <h2 className="text-center font-gilda text-5xl font-light">
         Reach us
       </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-1 my-6 gap-y-5 gap-x-6 md:grid-cols-2">
+        <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-5 md:grid-cols-2">
           <div className="flex flex-col">
             <input
               id="name"
@@ -95,7 +95,7 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Name*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.name ? 'border-red-500' : ''
+              className={`input input-bordered w-full bg-white drop-shadow-lg ${errors.name ? 'border-red-500' : ''
                 }`}
             />
             {errors.name && (
@@ -116,7 +116,7 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Email*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.email ? 'border-red-500' : ''
+              className={`input input-bordered w-full bg-white drop-shadow-lg ${errors.email ? 'border-red-500' : ''
                 }`}
             />
             {errors.email && (
@@ -137,7 +137,7 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Number*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.number ? 'border-red-500' : ''
+              className={`input input-bordered w-full bg-white drop-shadow-lg ${errors.number ? 'border-red-500' : ''
                 }`}
             />
             {errors.number && (
@@ -158,7 +158,7 @@ export default function ContactUsForm() {
                 },
               })}
               placeholder="Your Subject*"
-              className={`w-full input input-bordered drop-shadow-lg bg-white ${errors.subject ? 'border-red-500' : ''
+              className={`input input-bordered w-full bg-white drop-shadow-lg ${errors.subject ? 'border-red-500' : ''
                 }`}
             />
             {errors.subject && (
@@ -172,7 +172,7 @@ export default function ContactUsForm() {
             {...register('message', { required: 'Message is required.' })}
             rows={4}
             cols={20}
-            className={`w-full col-span-1 textarea textarea-bordered md:col-span-2 drop-shadow-lg bg-white ${errors.message ? 'border-red-500' : ''
+            className={`textarea textarea-bordered col-span-1 w-full bg-white drop-shadow-lg md:col-span-2 ${errors.message ? 'border-red-500' : ''
               }`}
             placeholder="Message*"
           ></textarea>
@@ -185,7 +185,7 @@ export default function ContactUsForm() {
         <div className="text-center">
           <button
             type="submit"
-            className="mt-3 btn btn-wide btn-neutral bg-yellow-400 border-none text-white"
+            className="btn btn-neutral btn-wide mt-3 border-none bg-yellow-400 text-white"
             disabled={send}
           >
             {send ? 'Submitting ....' : 'Submit'}

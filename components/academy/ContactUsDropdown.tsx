@@ -9,7 +9,7 @@ export default function ContactUsDropdown({selectedOption,handleOptionChange}:{s
   return (
     <div>
       <select
-        className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex capitalize"
+        className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 capitalize md:h-[50px] md:w-[389px]"
         value={selectedOption}
         onChange={handleOptionChange}
         name="contactReason"

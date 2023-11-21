@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <div className="bg-[#F1F8EC] scroll-smooth overflow-auto snap-y snap-mandatory h-screen">
+    <div className="h-screen snap-y snap-mandatory overflow-auto scroll-smooth bg-[#F1F8EC]">
       {/* Hero Section */}
       <Hero
         showLanda={false}

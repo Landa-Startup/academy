@@ -1,6 +1,5 @@
 import React from "react";
-import GalleryVideoCard from "./GalleryvideoCard";
-
+import GalleryVideoCard from "./GalleryVideoCard";
 export default function GalleryVideoCardContainer() {
   const videos = [
     {

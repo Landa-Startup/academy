@@ -15,19 +15,19 @@ export default function Banner({
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
-        className="h-[250px] lg:h-[512px] absolute inset-0"
+        className="absolute inset-0 h-[250px] lg:h-[512px]"
       ></div>
 
-      <div className="h-[250px] lg:h-[512px] justify-center lg:justify-start flex items-stretch relative ">
-        <div className="flex flex-col justify-center items-center text-center lg:m-auto md:m-auto z-10">
-          <p className="text-neutral-50 text-base font-normal tracking-[5.60px] font-condensed ">
+      <div className="relative flex h-[250px] items-stretch justify-center lg:h-[512px] lg:justify-start ">
+        <div className="z-10 flex flex-col items-center justify-center text-center md:m-auto lg:m-auto">
+          <p className="font-condensed text-base font-normal tracking-[5.60px] text-neutral-50 ">
             LANDA HOLDING
           </p>
-          <p className="text-neutral-50 text-[32px] font-normal font-gilda md:text-[50px] lg:text-[74px] xl:text-[84px]">
+          <p className="font-gilda text-[32px] font-normal text-neutral-50 md:text-[50px] lg:text-[74px] xl:text-[84px]">
             {title}
           </p>
         </div>
-        <div className="absolute w-full h-full bg-gradient-to-t from-[#3D5656D9] to-[#80C5554D] opacity-50"></div>
+        <div className="absolute h-full w-full bg-gradient-to-t from-[#3D5656D9] to-[#80C5554D] opacity-50"></div>
       </div>
     </div>
   );

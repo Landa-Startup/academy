@@ -25,7 +25,7 @@ export default function ImageModal({ src, alt, width, height }: ImageModalProps)
                     height={height}
                     quality={100}
                     alt={alt}
-                    className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
+                    className="h-[155px] w-[173px] object-cover md:h-[243px] md:w-[389px]"
                     src={src}
                 />
             </div>

@@ -9,18 +9,18 @@ import LinkedIn from "../icons/footer/LinkedIn";
 
 export default function Footer() {
   function GetYear() {
-    var currentYear = new Date().getFullYear();
+    const currentYear = new Date().getFullYear();
     return currentYear;
   }
   return (
-    <div className="flex flex-col p-8 bg-[#3D5656] font-barlow">
+    <div className="flex h-screen snap-center flex-col bg-[#3D5656] p-8 py-32 font-barlow">
       <div className="flex flex-col justify-between space-y-5 md:flex-row md:p-20">
-        <div className="flex flex-col md:w-[344px] gap-4">
-          <div className="h-[25px] text-justify text-[#FEED9D] text-xl font-medium">
+        <div className="flex flex-col gap-4 md:w-[344px]">
+          <div className="h-[25px] text-justify text-xl font-medium text-[#FEED9D]">
             About Landa
             <br />
           </div>
-          <div className="mt-1 text-base font-normal text-justify text-white">
+          <div className="mt-1 text-justify text-base font-normal text-white">
             In Landa Academy, individuals will be trained based on their
             interests and capabilities. Necessary actions are taken at the Landa
             Acceleration Center to accelerate their unique abilities. Then,
@@ -29,62 +29,62 @@ export default function Footer() {
             <br />
           </div>
         </div>
-        <div className="flex flex-col col-span-1 space-y-1">
-          <div className="text-xl font-medium text-justify text-[#FEED9D]">
+        <div className="col-span-1 flex flex-col space-y-1">
+          <div className="text-justify text-xl font-medium text-[#FEED9D]">
             Explore
             <br />
           </div>
           <div className="flex flex-col gap-1">
             <Link
               href={"/"}
-              className="text-base font-normal text-white hover:text-yellow-400 max-w-fit"
+              className="max-w-fit text-base font-normal text-white hover:text-yellow-400"
             >
               Home
             </Link>
             <Link
               href={"/"}
-              className="text-base font-normal text-white hover:text-yellow-400 max-w-fit"
+              className="max-w-fit text-base font-normal text-white hover:text-yellow-400"
             >
               Blog
             </Link>
             <Link
               href={"/about"}
-              className="text-base font-normal text-white hover:text-yellow-400 max-w-fit"
+              className="max-w-fit text-base font-normal text-white hover:text-yellow-400"
             >
               About
             </Link>
             <Link
               href={"/contact"}
-              className="text-base font-normal text-white hover:text-yellow-400 max-w-fit"
+              className="max-w-fit text-base font-normal text-white hover:text-yellow-400"
             >
               Contact
             </Link>
             <Link
               href={"/"}
-              className="text-base font-normal text-white hover:text-yellow-400 max-w-fit"
+              className="max-w-fit text-base font-normal text-white hover:text-yellow-400"
             >
               Our Team
             </Link>
             <Link
               href={"/"}
-              className="text-base font-normal text-white hover:text-yellow-400 max-w-fit"
+              className="max-w-fit text-base font-normal text-white hover:text-yellow-400"
             >
               Verification
             </Link>
           </div>
         </div>
 
-        <div className="flex flex-col col-span-1 space-y-1">
-          <div className="w-[93px] h-[30px] text-justify text-[#FEED9D] text-xl font-medium">
+        <div className="col-span-1 flex flex-col space-y-1">
+          <div className="h-[30px] w-[93px] text-justify text-xl font-medium text-[#FEED9D]">
             Contact
             <br />
           </div>
           <div className="flex flex-col divide-y-2 w-[330px] gap-2 divide-[#CCE8BB]">
             <div>
-              <div className="text-base font-normal text-justify text-white">
+              <div className="text-justify text-base font-normal text-white">
                 Young street, Toronto, Canada
               </div>
-              <div className="text-base font-normal text-justify text-white">
+              <div className="text-justify text-base font-normal text-white">
                 +1 (416) 557-7622
               </div>
             </div>
@@ -92,15 +92,15 @@ export default function Footer() {
               <div className="text-base font-normal text-white">
                 Gholam Jafari St, Tehran Province, Tajrish, Iran
               </div>
-              <div className="text-base font-normal text-justify text-white">
+              <div className="text-justify text-base font-normal text-white">
                 02188030167
               </div>
             </div>
             <div>
-              <div className="text-base font-normal text-justify text-white">
+              <div className="text-justify text-base font-normal text-white">
                 Saadat Abad Ave, Isfahan, Iran
               </div>
-              <div className="text-base font-normal text-justify text-white">
+              <div className="text-justify text-base font-normal text-white">
                 03131311914
               </div>
             </div>

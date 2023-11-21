@@ -20,16 +20,16 @@ export default function GalleryImageCard({ src }: { src: string }) {
   return (
     <>
       <div
-        className="relative w-[170px] md:w-[555px] h-[100px] md:h-[416px] group cursor-pointer"
+        className="group relative h-[100px] w-[170px] cursor-pointer md:h-[416px] md:w-[555px]"
         onClick={() => openModal(src)}
       >
         <Image
-          className="object-cover rounded-sm"
+          className="rounded-sm object-cover"
           src={src}
           alt="Landa Academy Image"
           layout="fill"
         />
-        <div className="flex-col text-white border-t-2 border-white absolute bottom-7 pl-24 pt-2 z-10 w-full hidden group-hover:flex fade-in">
+        <div className="fade-in absolute bottom-7 z-10 hidden w-full flex-col border-t-2 border-white pl-24 pt-2 text-white group-hover:flex">
           <span className="font-barlow text-xl font-medium">Desert Tour</span>
           <span className="font-barlow text-sm font-medium">20 Jan 2023</span>
         </div>

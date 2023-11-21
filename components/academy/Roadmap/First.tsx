@@ -5,10 +5,10 @@ import ScrollButton from './ScrollButton';
 export default function Second() {
   return (
     <div
-      className="flex flex-col bg-[#FFFBE6] relative h-screen snap-start"
+      className="relative flex h-screen snap-start flex-col bg-[#FFFBE6]"
       id="Roadmap-1"
     >
-      <div className="flex flex-col px-10 md:flex-row-reverse justify-evenly pt-16 pb-10 z-10">
+      <div className="z-10 flex flex-col justify-evenly px-10 pb-10 pt-16 md:flex-row-reverse">
         <Image
           loading="lazy"
           alt="Landa academy"
@@ -17,20 +17,20 @@ export default function Second() {
           height={500}
         />
         <div className="flex flex-col justify-evenly">
-          <div className="mt-8 md:w-[500px] text-gray-600 text-2xl md:text-4xl font-barlow  tracking-wider leading-snug">
+          <div className="mt-8 font-barlow text-2xl leading-snug tracking-wider text-gray-600  md:w-[500px] md:text-4xl">
             Registration and Participation in Optional Courses
           </div>
-          <div className="justify-start items-start gap-2 inline-flex">
-            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-5" />
-            <div className="mt-4 w-[280px] font-barlow text-gray-600 text-base md:text-2xl font-normal  md:w-[500px]">
+          <div className="inline-flex items-start justify-start gap-2">
+            <div className="mt-5 h-5 w-5 rounded-full bg-yellow-400" />
+            <div className="mt-4 w-[280px] font-barlow text-base font-normal text-gray-600 md:w-[500px]  md:text-2xl">
               Embark on your adventurous journey at Landa Academy by
               participating in our tailored crash courses designed by mentors
               from the Landa Holding.
             </div>
           </div>
-          <div className="justify-start items-start gap-2 inline-flex ">
-            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-2.5" />
-            <div className="md:w-[500px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify">
+          <div className="inline-flex items-start justify-start gap-2 ">
+            <div className="mt-2.5 h-5 w-5 rounded-full bg-yellow-400" />
+            <div className="text-justify font-barlow text-base font-normal leading-10 text-gray-600 md:w-[500px] md:text-2xl">
               Obtain a valid certificate of achievement
             </div>
           </div>
