@@ -13,7 +13,7 @@ export default function Footer() {
     return currentYear;
   }
   return (
-    <div className="flex flex-col p-8 bg-[#3D5656] font-barlow">
+    <div className="flex flex-col p-8 bg-[#3D5656] font-barlow snap-center h-screen py-32">
       <div className="flex flex-col justify-between space-y-5 md:flex-row md:p-20">
         <div className="flex flex-col md:w-[344px] gap-4">
           <div className="h-[25px] text-justify text-[#FEED9D] text-xl font-medium">
