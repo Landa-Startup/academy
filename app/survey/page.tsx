@@ -1,20 +1,35 @@
 import Banner from "@/components/common/Banner";
 import Button from "@/components/common/Button";
+import Hat from "@/components/icons/hat";
+import Footer from "@/components/layout/Footer";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Landa Academy | Survey",
+  description: "",
+};
 
 const SurveyPage = () => {
   return (
     <div>
       <Banner image="" title="Courses Survey" />
-      <div className="flex flex-col items-center w-[720px] py-14 px-11 mx-auto my-16 bg-[#F1F8EC]">
-        <p className="text-[#B2B2B2]">
-          At Landa Academy, various courses and skills are held, and after
-          completing the course, in addition to getting a valid certificate, the
-          best of the course enter the workplace and use the skills they learned
-          experimentally with the best mentors. The purpose of this form is to
-          find out your need and interest for the future courses that will be
-          held.
-        </p>
+      <div className="flex flex-col items-center w-[720px] py-14 px-11 mx-auto mt-16 mb-16 bg-[#F1F8EC] relative">
+        <div className="absolute -top-10 pt-3 px-3 bg-[#F1F8EC] rounded-full">
+          <Hat />
+        </div>
+        <div className="flex flex-col text-[#B2B2B2]">
+          <p>
+            At Landa Academy, various courses and skills are held, and after
+            completing the course, in addition to getting a valid certificate,
+            the best of the course enter the workplace and use the skills they
+            learned experimentally with the best mentors.
+          </p>
+          <p>
+            The purpose of this form is to find out your need and interest for
+            the future courses that will be held.
+          </p>
+        </div>
         <form className="mt-4 w-full space-y-8">
           <div>
             <input
@@ -44,7 +59,7 @@ const SurveyPage = () => {
             />
           </div>
           <div className="flex flex-col space-y-4">
-            <label htmlFor="skills">
+            <label htmlFor="skills" className="text-[#B2B2B2]">
               Which skills would you like to learn at Landa Academy?
             </label>
             <select
@@ -65,6 +80,7 @@ const SurveyPage = () => {
           </Button>
         </form>
       </div>
+      <Footer />
     </div>
   );
 };
