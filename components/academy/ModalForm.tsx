@@ -86,11 +86,10 @@ function ModalForm({ isOpen, onRequestClose, onSubmit, closeModal }: any) {
             <option value="interest1">Interest 1</option>
             <option value="interest2">Interest 2</option>
             <option value="interest3">Interest 3</option>
-            // Add more options as needed
-          </select>
+=          </select>
         </div>
       </form>
-      <Button text="Submit" size="not" type="submit" addedClass="mx-auto" />
+      <Button text="Submit" size="not" type="submit" addedClass="mx-auto" goto={""} />
     </Modal>
   );
 }

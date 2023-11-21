@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import GalleryImageCard from "./GalleryImageCard";
-import PhotoModal from "../PhotoModal";
+// import PhotoModal from "../PhotoModal";
 
 export default function GalleryImageCardContainer() {
   const images = [

@@ -1,6 +1,6 @@
 import Banner from "@/components/common/Banner";
 import Button from "@/components/common/Button";
-import Hat from "@/components/icons/hat";
+import Hat from "@/components/icons/Hat";
 import Footer from "@/components/layout/Footer";
 import { Metadata } from "next";
 import React from "react";
