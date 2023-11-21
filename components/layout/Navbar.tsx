@@ -41,7 +41,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
   //   document.addEventListener('click', handleClickOutside);
   // }, []);
   return (
-    <div className="top-0 drawer">
+    <div className="drawer top-0">
       <input
         id="my-drawer-3"
         type="checkbox"
@@ -49,18 +49,18 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         aria-label="Menu Toggle"
         ref={drawerRef}
       />
-      <div className="relative flex flex-col drawer-content md:px-32 md:pt-5">
-        <div className="flex items-center justify-between w-full text-black bg-transparent navbar">
+      <div className="drawer-content relative flex flex-col md:px-32 md:pt-5">
+        <div className="navbar flex w-full items-center justify-between bg-transparent text-black">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
-              className="-mt-5 btn btn-square btn-ghost"
+              className="btn btn-square btn-ghost -mt-5"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block w-8 h-8 stroke-current"
+                className="inline-block h-8 w-8 stroke-current"
               >
                 <path
                   strokeLinecap="round"
@@ -73,9 +73,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           </div>
           <Logo />
           <div className="hidden xl:flex">
-            <ul className="flex justify-center space-x-10 text-xl menu menu-horizontal font-condensed">
+            <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl">
               {menuItems.map((item) => (
-                <li className="text-2xl h-9" key={item.label}>
+                <li className="h-9 text-2xl" key={item.label}>
                   <Link
                     href={item.href}
                     className="hover:bg-black hover:text-white"
@@ -91,10 +91,10 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <div className="flex flex-col h-full text-xl menu w-80 bg-[#CFFDE1] justify-between">
+        <div className="menu flex h-full w-80 flex-col justify-between bg-[#CFFDE1] text-xl">
           <div className="p-4">
-            <div className="flex justify-center items-center pt-3 pb-7 border-b-2 border-[#3D5656] mb-4">
-              <span className="font-barlow font-bold text-xl tracking-[1px] text-[#3D5656]">
+            <div className="mb-4 flex items-center justify-center border-b-2 border-[#3D5656] pb-7 pt-3">
+              <span className="font-barlow text-xl font-bold tracking-[1px] text-[#3D5656]">
                 Landa Academy
               </span>
             </div>
@@ -112,7 +112,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               ))}
             </ul>
           </div>
-          <div className="flex justify-center text-white gap-5 p-4 bg-[#3D5656]">
+          <div className="flex justify-center gap-5 bg-[#3D5656] p-4 text-white">
             <Instagram />
             <Envelope />
             <Whatsapp />

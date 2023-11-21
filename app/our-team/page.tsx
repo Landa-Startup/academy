@@ -255,7 +255,7 @@ export default function TeamPage() {
         title="Our Team"
       />
       {/* <TeamRolesContainer /> */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center md:px-32 py-5 bg-[#FAFAFA] lg:grid-cols-3 xl:grid-cols-4 ">
+      <div className="grid grid-cols-1 justify-items-center gap-4 bg-[#FAFAFA] py-5 md:grid-cols-2 md:px-32 lg:grid-cols-3 xl:grid-cols-4 ">
         {/* map over personals. */}
         {persons.map((person, index) => (
           <PersonalTab

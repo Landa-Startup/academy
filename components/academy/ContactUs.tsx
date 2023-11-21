@@ -117,17 +117,17 @@ export default function ContactUs() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="relative md:w-[1440px] py-28 bg-[#F1F8EC] flex-col justify-start items-center gap-[37px] flex mx-auto h-screen snap-start"
+      className="relative mx-auto flex h-screen snap-start flex-col items-center justify-start gap-[37px] bg-[#F1F8EC] py-28 md:w-[1440px]"
     >
-      <div className="self-center flex-col  items-center inline-flex">
-        <div className="font-gilda md:w-[413px] md:h-[58px] text-center text-lime-400 text-base md:text-2xl md:text-[32px] font-normal leading-[50px] tracking-[5.6px] md:tracking-[11.20px]">
+      <div className="inline-flex flex-col  items-center self-center">
+        <div className="text-center font-gilda text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:h-[58px] md:w-[413px] md:text-2xl md:text-[32px] md:tracking-[11.20px]">
           LANDA ACADEMY
         </div>
-        <div className="md:w-[413px] md:h-[58px] text-center text-black text-3xl md:text-5xl md:text-[64px] font-normal leading-[50px] tracking-[1.6px] md:tracking-[3.20px] ">
+        <div className="text-center text-3xl font-normal leading-[50px] tracking-[1.6px] text-black md:h-[58px] md:w-[413px] md:text-5xl md:text-[64px] md:tracking-[3.20px] ">
           Contact Us
         </div>
       </div>
-      <div className="relative grid grid-cols-1 md:grid-cols-2 items-center gap-5 z-10">
+      <div className="relative z-10 grid grid-cols-1 items-center gap-5 md:grid-cols-2">
         <Input
           register={register}
           errors={errors}
@@ -138,7 +138,7 @@ export default function ContactUs() {
           patternValue=""
           patternMessage="Enter a Valid First Name"
           placeholder="Enter your First Name"
-          className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+          className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px]"
           labelClass="text-[#6b6b6b]"
         />
 
@@ -152,7 +152,7 @@ export default function ContactUs() {
           patternValue=""
           patternMessage="Enter a Valid Last Name"
           placeholder="Enter your Last Name"
-          className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+          className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px]"
           labelClass="text-[#6b6b6b] dark:text-current"
         />
 
@@ -167,19 +167,19 @@ export default function ContactUs() {
           defaultCountry="IR"
           international
           countryCallingCodeEditable={false}
-          className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex [&>*:nth-child(2)]:bg-yellow-50 !important] [&>*:nth-child(1)]:border-r-2 !important]"
+          className="!important] inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px] [&>*:nth-child(1)]:border-r-2 [&>*:nth-child(2)]:bg-yellow-50"
         />
       </div>
       <button
         type="submit"
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-yellow-400 h-[36px] md:h-14 w-[160px] md:w-60 mx-auto text-white"
+        className="mx-auto h-[36px] w-[160px] bg-yellow-400 text-white md:h-14 md:w-60"
       >
         {send ? "Submitting ...." : "Submit"}
       </button>
       <Image
         loading="lazy"
-        className="md:absolute md:-left-16 -bottom-5"
+        className="-bottom-5 md:absolute md:-left-16"
         src={"/static/images/Academy/Collab-pana 1.svg"}
         alt="Academy Contact Us"
         width={522}

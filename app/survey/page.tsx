@@ -14,8 +14,8 @@ const SurveyPage = () => {
   return (
     <div>
       <Banner image="" title="Courses Survey" />
-      <div className="flex flex-col items-center w-[720px] py-14 px-11 mx-auto mt-16 mb-16 bg-[#F1F8EC] relative">
-        <div className="absolute -top-10 pt-3 px-3 bg-[#F1F8EC] rounded-full">
+      <div className="relative mx-auto my-16 flex w-[720px] flex-col items-center bg-[#F1F8EC] px-11 py-14">
+        <div className="absolute -top-10 rounded-full bg-[#F1F8EC] px-3 pt-3">
           <Hat />
         </div>
         <div className="flex flex-col text-[#B2B2B2]">
@@ -33,7 +33,7 @@ const SurveyPage = () => {
         <form className="mt-4 w-full space-y-8">
           <div>
             <input
-              className="w-full h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+              className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
               type="text"
               id="fullName"
               name="fullName"
@@ -42,7 +42,7 @@ const SurveyPage = () => {
           </div>
           <div>
             <input
-              className="w-full h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+              className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
               type="email"
               id="email"
               name="email"
@@ -51,7 +51,7 @@ const SurveyPage = () => {
           </div>
           <div>
             <input
-              className="w-full h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+              className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
               type="tel"
               id="phoneNumber"
               name="phoneNumber"
@@ -63,7 +63,7 @@ const SurveyPage = () => {
               Which skills would you like to learn at Landa Academy?
             </label>
             <select
-              className="w-full h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+              className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
               id="skills"
               name="skills"
             >

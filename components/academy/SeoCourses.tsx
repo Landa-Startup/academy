@@ -37,9 +37,9 @@ export default function SeoCourses() {
   return (
     <>
       <Banner image="/static/images/Academy/Banner/seo.jpg" title="Course" />
-      <div className="container px-5 mx-auto my-10 font-normal text-black lg:p-10 font-barlow">
+      <div className="container mx-auto my-10 px-5 font-barlow font-normal text-black lg:p-10">
         <div className="text-center">
-          <p className="text-4xl text-[#FDD30A] tracking-widest	mb-10">
+          <p className="mb-10 text-4xl tracking-widest	text-[#FDD30A]">
             Landa Academy
           </p>
         </div>
@@ -52,28 +52,28 @@ export default function SeoCourses() {
                     {`A two-day ${course.title} course consisting of ${course.sessions} sessions, each lasting ${course.sessionDuration} ${course.sessionDurationType}, will be conducted.`}
                   </p>
                 </div>
-                <div className="bg-[#F1F8EC] my-5 mx-20 py-5">
+                <div className="mx-20 my-5 bg-[#F1F8EC] py-5">
                   <p className="my-1 text-2xl">Course Price</p>
-                  <p className="text-3xl my-1 line-through decoration-wavy decoration-[#FDD30A]">
+                  <p className="my-1 text-3xl line-through decoration-[#FDD30A] decoration-wavy">
                     {`${course.discount}T`}
                   </p>
                   <p className="my-1 text-3xl">{`${course.price}T`}</p>
                 </div>
-                <div className="bg-[#F1F8EC]  my-5 mx-20 py-5">
+                <div className="mx-20  my-5 bg-[#F1F8EC] py-5">
                   <p className="my-1 text-2xl">Contact Us</p>
-                  <div className="flex justify-center my-1 ">
+                  <div className="my-1 flex justify-center ">
                     <IconPhoneAcademy />
                     <a
-                      className="text-[#80C555] text-2xl ml-1  my-1"
+                      className="my-1 ml-1 text-2xl  text-[#80C555]"
                       href="tel:09120539563"
                     >
                       09120539563
                     </a>
                   </div>
-                  <div className="flex justify-center my-1 ">
+                  <div className="my-1 flex justify-center ">
                     <IconPhoneAcademy />
                     <a
-                      className="text-[#80C555] text-2xl ml-1 mr-5 my-1"
+                      className="my-1 ml-1 mr-5 text-2xl text-[#80C555]"
                       href="tel:03131311914"
                     >
                       03131311914
@@ -83,7 +83,7 @@ export default function SeoCourses() {
                 <div className="mt-10">
                   <a
                     role="button"
-                    className="btn border-0 text-xl text-white bg-[#FDD30A] hover-bg-[#fcda30] rounded-none	px-14  mb-10"
+                    className="hover-bg-[#fcda30] btn mb-10 rounded-none border-0 bg-[#FDD30A] px-14	text-xl  text-white"
                     href={course.payUrl}
                   >
                     Buy Now
@@ -94,13 +94,13 @@ export default function SeoCourses() {
                     Benefits of participating in the {course.title} course
                   </p>
                 </div>
-                <div className="flex bg-[#FFFBE6] px-3 py-5 mx-10 my-10">
+                <div className="m-10 flex bg-[#FFFBE6] px-3 py-5">
                   <IconStar />
                   <span className="ml-3 text-xl">
                     {`At the end of the ${course.title} course, a valid and questionable certificate will be awarded to you by Landa Academy.`}
                   </span>
                 </div>
-                <div className="flex bg-[#FFFBE6] px-3 py-5 mx-10 my-10">
+                <div className="m-10 flex bg-[#FFFBE6] px-3 py-5">
                   <IconStar />
                   <span className="ml-3 text-xl">
                     {`Also for the best of this course There is an employment condition.`}
@@ -108,7 +108,7 @@ export default function SeoCourses() {
                 </div>
               </div>
             </div>
-            <div className="col-span-3 px-5 py-5 lg:col-span-2 lg:px-20">
+            <div className="col-span-3 p-5 lg:col-span-2 lg:px-20">
               <div>
                 <div className="flex">
                   <IconYellow />
@@ -119,18 +119,18 @@ export default function SeoCourses() {
                 <div>
                   <p className="my-5 text-xl leading-8">{course.description}</p>
                 </div>
-                <div className="flex mt-16 mb-10">
+                <div className="mb-10 mt-16 flex">
                   <IconYellow />
                   <span className="ml-3 text-4xl font-medium">Headline</span>
                 </div>
                 <div>
-                  <div className="rounded-none collapse collapse-arrow">
+                  <div className="collapse collapse-arrow rounded-none">
                     <input type="checkbox" className="peer" />
-                    <div className="collapse-title text-2xl	font-medium bg-[#F1F8EC] text-[#3D5656]">
+                    <div className="collapse-title bg-[#F1F8EC]	text-2xl font-medium text-[#3D5656]">
                       First Day
                     </div>
                     <div className="collapse-content bg-white text-[#3D5656]">
-                      <ul className="list-image-[url(/static/images/Academy/green.png)] pl-5 text-xl	text-black	my-5 leading-9	 ">
+                      <ul className="my-5 list-image-[url(/static/images/Academy/green.png)] pl-5	text-xl	leading-9 text-black	 ">
                         <li>Basic concepts related to SEO</li>
                         <li>SEO tools</li>
                         <li>Keyword research</li>
@@ -150,13 +150,13 @@ export default function SeoCourses() {
                   </div>
                 </div>
                 <div>
-                  <div className="rounded-none collapse collapse-arrow">
+                  <div className="collapse collapse-arrow rounded-none">
                     <input type="checkbox" className="peer" />
-                    <div className="collapse-title text-2xl 	font-medium bg-[#F1F8EC] text-[#3D5656]">
+                    <div className="collapse-title bg-[#F1F8EC] 	text-2xl font-medium text-[#3D5656]">
                       Second Day
                     </div>
                     <div className="collapse-content bg-white text-[#3D5656]">
-                      <ul className="list-image-[url(/static/images/Academy/green.png)] pl-2  text-xl text-black 	my-5 leading-9">
+                      <ul className="my-5 list-image-[url(/static/images/Academy/green.png)]  pl-2 text-xl 	leading-9 text-black">
                         <li>Web Server</li>
                         <li>Hosting Server</li>
                         <li>Domain</li>

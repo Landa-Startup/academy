@@ -4,22 +4,22 @@ import Button from "../common/Button";
 
 export default function Gallery() {
   return (
-    <div className="py-5 relative bg-neutral-50 bg-opacity-95 h-screen snap-start">
+    <div className="relative h-screen snap-start bg-neutral-50 bg-opacity-95 py-5">
       <div className="flex flex-col">
-        <div className="text-center text-lime-400 text-base md:text-[32px] font-normal leading-[50px] tracking-[5.6px] md:tracking-[11.20px]">
+        <div className="text-center text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:text-[32px] md:tracking-[11.20px]">
           LANDA ACADEMY
         </div>
-        <div className="text-center text-black text-3xl md:text-[64px] font-normal leading-[50px] tracking-[1.6px] md:tracking-[3.20px]">
+        <div className="text-center text-3xl font-normal leading-[50px] tracking-[1.6px] text-black md:text-[64px] md:tracking-[3.20px]">
           Our Gallery
         </div>
-        <div className="grid grid-cols-2 mx-8 md:mx-32 md:grid-cols-3 justify-items-center gap-2 my-2">
+        <div className="mx-8 my-2 grid grid-cols-2 justify-items-center gap-2 md:mx-32 md:grid-cols-3">
           <Image
             loading="lazy"
             width={389}
             height={243}
             quality={100}
             alt="Gallery Photo"
-            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
+            className="h-[155px] w-[173px] object-cover md:h-[243px] md:w-[389px]"
             src="/static/images/Academy/gallery/1.png"
           />
           <Image
@@ -28,7 +28,7 @@ export default function Gallery() {
             height={243}
             quality={100}
             alt="Gallery Photo"
-            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
+            className="h-[155px] w-[173px] object-cover md:h-[243px] md:w-[389px]"
             src="/static/images/Academy/gallery/2.png"
           />
           <Image
@@ -37,7 +37,7 @@ export default function Gallery() {
             height={243}
             quality={100}
             alt="Gallery Photo"
-            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
+            className="h-[155px] w-[173px] object-cover md:h-[243px] md:w-[389px]"
             src="/static/images/Academy/gallery/3.png"
           />
           <Image
@@ -46,7 +46,7 @@ export default function Gallery() {
             height={243}
             quality={100}
             alt="Gallery Photo"
-            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
+            className="h-[155px] w-[173px] object-cover md:h-[243px] md:w-[389px]"
             src="/static/images/Academy/gallery/4.png"
           />
           <Image
@@ -55,7 +55,7 @@ export default function Gallery() {
             height={243}
             quality={100}
             alt="Gallery Photo"
-            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px]"
+            className="h-[155px] w-[173px] md:h-[243px] md:w-[389px]"
             src="/static/images/Academy/gallery/5.png"
           />
           <Image
@@ -64,7 +64,7 @@ export default function Gallery() {
             height={243}
             quality={100}
             alt="Gallery Photo"
-            className="w-[173px] md:w-[389px] h-[155px] md:h-[243px] object-cover"
+            className="h-[155px] w-[173px] object-cover md:h-[243px] md:w-[389px]"
             src="/static/images/Academy/gallery/6.png"
           />
         </div>

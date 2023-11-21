@@ -94,7 +94,7 @@ export default function GalleryImageCardContainer() {
   return (
     <div
       className="grid
-   grid-cols-2 gap-y-5 md:gap-24 md:mx-32 pb-7 justify-items-center"
+   grid-cols-2 justify-items-center gap-y-5 pb-7 md:mx-32 md:gap-24"
     >
       {images.map((image, index) => (
         <GalleryImageCard key={index} src={image.src} />

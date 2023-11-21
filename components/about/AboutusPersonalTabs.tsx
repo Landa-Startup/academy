@@ -24,41 +24,41 @@ export default function AboutusPersonalTabs({
 }) {
   return (
     <div
-      className="w-[300px] md:w-[270px] h-[300px] border border-primary rounded-sm flex flex-col  items-center md:ml-12 lg:mt-20"
+      className="flex h-[300px] w-[300px] flex-col items-center rounded-sm border border-primary  md:ml-12 md:w-[270px] lg:mt-20"
       style={{
         backgroundImage: `url(${image})`,
         backgroundPosition: 'center',
       }}
     >
-      <div className="flex flex-col p-2  self-start">
+      <div className="flex flex-col self-start  p-2">
         <Link
           href={linkedIn}
           target="_blank"
-          className="text-white rounded-full bg-[#222] p-2 opacity-75"
+          className="rounded-full bg-[#222] p-2 text-white opacity-75"
         >
           <IconLinkedin />
         </Link>
       </div>
 
-      <div className=" pl-2 pb-2 self-start">
+      <div className=" self-start pb-2 pl-2">
         <a href={email}>
           <IconRoundedEmail />
         </a>
       </div>
-      <div className=" pl-2 pb-2 self-start">
+      <div className=" self-start pb-2 pl-2">
         <Link href={website} target="_blank">
           <IconWeb />
         </Link>
       </div>
-      <div className=" pl-2 self-start opacity-75  ">
+      <div className=" self-start pl-2 opacity-75  ">
         <Link href={instagram} target="_blank">
           <IconRoundedInstagram />
         </Link>
       </div>
-      <div className="flex flex-col items-center px-4 pb-4 mt-40 lg:mt44  ">
-        <span className="font-normal text-lg text-black">{name}</span>
-        <div className="font-light w-full flex items-center justify-center  ">
-          <span className="font-light border-t-3 ">{position}</span>
+      <div className="lg:mt44 mt-40 flex flex-col items-center px-4 pb-4  ">
+        <span className="text-lg font-normal text-black">{name}</span>
+        <div className="flex w-full items-center justify-center font-light  ">
+          <span className="border-t-3 font-light ">{position}</span>
         </div>
       </div>
     </div>

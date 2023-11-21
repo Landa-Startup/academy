@@ -39,11 +39,11 @@ function PhotoModal({ isOpen, onRequestClose, imageUrl, closeModal }: any) {
       contentLabel="Photo Modal"
     >
       <XLg onClick={closeModal} />
-      <div className="flex gap-2 items-center">
+      <div className="flex items-center gap-2">
         {/* <div onClick={handlePrevClick}>
           <Chevron direction="left" />
         </div> */}
-        <div className="relative w-[350px] md:w-[700px] h-[240px] md:h-[480px]">
+        <div className="relative h-[240px] w-[350px] md:h-[480px] md:w-[700px]">
           <Image
             className="rounded-md"
             src={imageUrl}

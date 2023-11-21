@@ -44,16 +44,16 @@ export default function AboutUsProfile() {
 
   return (
     <div className="bg-[#FAFAFA]">
-      <div className="flex flex-col ml-8 lg:ml-64 mx-8 py-5 text-black justify-items-center">
-        <h2 className="text-xl font-normal leading-normal tracking-widest font-condensed md:text-2xl">
+      <div className="mx-8 flex flex-col justify-items-center py-5 text-black lg:ml-64">
+        <h2 className="font-condensed text-xl font-normal leading-normal tracking-widest md:text-2xl">
           PROFESSIONALS
         </h2>
-        <h1 className="text-3xl font-normal leading-normal font-gilda md:text-4xl">
+        <h1 className="font-gilda text-3xl font-normal leading-normal md:text-4xl">
           Board of Directors
         </h1>
       </div>
 
-      <div className="lg:flex lg:flex-row lg:justify-center  lg:pb-28 grid grid-cols-1  mx-auto pb-16 ml-8 md:space-x-12 space-y-20 mb-8 lg:ml-0">
+      <div className="mx-auto mb-8 ml-8  grid grid-cols-1 space-y-20  pb-16 md:space-x-12 lg:ml-0 lg:flex lg:flex-row lg:justify-center lg:pb-28">
         {cardsData.map((card, index) => (
           <AboutusPersonalTabs
             key={index}
