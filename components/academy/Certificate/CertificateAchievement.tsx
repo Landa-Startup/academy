@@ -1,3 +1,4 @@
+import Certificate from '@/components/Certificate';
 import CertificateCoursePromote from '@/components/CertificateCoursePromote';
 import Image from 'next/image';
 export default function CertificateAchievement() {
@@ -36,12 +37,13 @@ export default function CertificateAchievement() {
         </div>
         <div className="relative">
           <div className="flex flex-col gap-5">
-            <Image
+            {/* <Image
               src="/static/images/Academy/gallery/Certificate.png"
               alt="academy"
               width={700}
               height={400}
-            />
+            /> */}
+            <Certificate />
           </div>
           <div className="absolute -right-8 -bottom-24 -z-10">
             <Image
