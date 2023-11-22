@@ -142,9 +142,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="self-stretch pt-4 text-center text-white border-t border-[#CCE8BB] text-[#CCE8BB]">
+      <div className="self-stretch pt-4 text-center border-t border-[#CCE8BB] text-[#CCE8BB]">
         © Copyright {GetYear()} by{" "}
-        <Link href={"/"} className="text-primary text-[#CCE8BB]">
+        <Link href={"/"} className=" text-[#CCE8BB]">
           LandaHolding
         </Link>
       </div>
