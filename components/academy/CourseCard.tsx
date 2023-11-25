@@ -22,17 +22,17 @@ export default function CourseCard({
         active ? ' border-2 border-yellow-400' : ''
       }`}
     >
-      <div className="absolute left-[65px] top-[350px] hidden origin-top-left -rotate-90 text-4xl font-medium leading-[50px] tracking-widest text-white transition-colors duration-500 md:block md:w-[396px] md:group-hover:static md:group-hover:max-w-fit md:group-hover:rotate-0">
+      <div className="absolute left-[65px] top-[350px] hidden origin-top-left -rotate-90 text-4xl leading-[50px] tracking-widest text-white transition-colors duration-500 md:block md:w-[396px] md:group-hover:static md:group-hover:max-w-fit md:group-hover:rotate-0">
         {title}
       </div>
-      <div className="z-10 hidden text-xl font-medium leading-[50px] tracking-wide text-yellow-50 md:group-hover:block">
+      <div className="z-10 hidden text-xl leading-[50px] tracking-wide text-yellow-50 md:group-hover:block">
         {}
       </div>
-      <div className="left-[45px] top-[80px] z-10 origin-top-left text-xl font-medium leading-[50px] tracking-widest text-white md:hidden md:w-[396px] md:group-hover:animate-spin md:group-hover:transition-all md:group-hover:duration-500">
+      <div className="left-[45px] top-[80px] z-10 origin-top-left text-lg leading-[50px] tracking-widest text-white md:hidden md:w-[396px] md:group-hover:animate-spin md:group-hover:transition-all md:group-hover:duration-500">
         {title}
       </div>
       {active ? (
-        <div className="absolute bottom-0 left-0 flex h-[45px] w-full items-center justify-center bg-yellow-400 text-center font-medium text-emerald-800 md:group-hover:hidden">
+        <div className="absolute bottom-0 left-0 flex h-[45px] w-full items-center justify-center bg-yellow-400 text-center text-emerald-800 md:group-hover:hidden">
           <span className="text-xl tracking-[1px] md:text-xl md:tracking-wide">
             Register Now
           </span>
