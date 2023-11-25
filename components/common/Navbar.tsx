@@ -1,12 +1,12 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import IconDown from '../icons/IconDown';
+import '@/components/common/Navbar.css';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
-  const menuRef = useRef<HTMLDetailsElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(true);
 
   const menuItems = [
@@ -14,14 +14,14 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
     { label: 'ABOUT US', href: '/about' },
     // { label: 'ACCELERATION', href: '/acceleration' },
     { label: 'CONTACT US', href: '/contact' },
-    { label: 'OUR TEAM', href: '/our-team' },
+    { label: 'OUR TEAM', href: '/our-team' }
   ];
   const submenuItems = [
     { label: 'INVESTOR CENTER', href: '/investor-registration' },
     { label: 'ENTREPRENEUR CENTER', href: '/entrepreneurs' },
     { label: 'BUSINESS PARTNERS', href: '/partner-membership' },
     { label: 'STARTUPS VALIDATION', href: '/StartupsForm' },
-    { label: 'APPLY JOB', href: '/job-form' },
+    { label: 'APPLY JOB', href: '/job-form' }
   ];
   const handleLinkClick = () => {
     // setIsMenuOpen(false);
@@ -41,7 +41,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         ref={drawerRef}
       />
       <div className="drawer-content relative flex flex-col">
-        <div className="navbar fixed flex w-full items-center justify-between bg-neutral-800 bg-opacity-80 p-0 text-white md:px-12 ">
+        <div className="navbar fixed flex w-full items-center justify-between bg-neutral-800/80 p-0 text-white md:px-12 ">
           <div className="mt-3 flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -215,16 +215,6 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           </Link>
         </div>
       </div>
-      <style jsx>{`
-        .children {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-        }
-      `}</style>
     </div>
   );
 }
