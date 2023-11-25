@@ -6,9 +6,9 @@ import Envelope from '../icons/footer/Envelope';
 import Whatsapp from '../icons/footer/Whatsapp';
 import LinkedIn from '../icons/footer/LinkedIn';
 
-export default function Footer() {
+export default function FooterSecondary() {
   return (
-    <div className="flex h-screen snap-center flex-col bg-[#3D5656] p-8 py-32 font-barlow">
+    <div className="flex h-[680px] snap-center flex-col bg-[#3D5656] p-8 py-32 font-barlow">
       <div className="flex flex-col justify-between space-y-5 md:flex-row md:p-20">
         <div className="flex flex-col gap-4 md:w-[344px]">
           <div className="h-[25px] text-justify text-xl font-medium text-[#FEED9D]">
