@@ -1,6 +1,6 @@
-import Image from "next/image";
-import React from "react";
-import Button from "../common/Button";
+import Image from 'next/image';
+import React from 'react';
+import Button from '../common/Button';
 
 export default function Gallery() {
   return (
@@ -12,7 +12,7 @@ export default function Gallery() {
         <div className="text-center text-3xl font-normal leading-[50px] tracking-[1.6px] text-black md:text-[64px] md:tracking-[3.20px]">
           Our Gallery
         </div>
-        <div className="mx-8 my-2 grid grid-cols-2 justify-items-center gap-2 md:mx-32 md:grid-cols-3">
+        <div className="mx-8 mb-1 mt-6 grid grid-cols-2 justify-items-center gap-2 md:mx-32 md:grid-cols-3">
           <Image
             loading="lazy"
             width={389}
