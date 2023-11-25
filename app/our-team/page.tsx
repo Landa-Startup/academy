@@ -2,11 +2,12 @@ import React from 'react';
 import Banner from '@/components/common/Banner';
 import PersonalTab from '@/components/common/PersonalTab';
 import { Metadata } from 'next';
+import FooterSecondary from '@/components/layout/FooterSecondary';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Our Team',
   description:
-    'Meet the dedicated and talented individuals who make up the Landa Holding team. Learn about their expertise, passion, and commitment to excellence. Get to know the driving force behind our success.',
+    'Meet the dedicated and talented individuals who make up the Landa Holding team. Learn about their expertise, passion, and commitment to excellence. Get to know the driving force behind our success.'
 };
 
 export default function TeamPage() {
@@ -32,7 +33,7 @@ export default function TeamPage() {
     'Application Developer',
     'UI designer',
     'Front-end',
-    'Back-end',
+    'Back-end'
   ];
 
   const persons = [
@@ -40,212 +41,212 @@ export default function TeamPage() {
       image: '/static/images/Academy/our-team/Personals/a1.png',
       position: 'CEO',
       name: 'Dr.Rasoul Moradimehr',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a2.png',
       position: 'COTB',
       name: 'Dr.Hadi Hasanpour',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a10.png',
       position: 'Manager',
       name: 'Mehrnoosh Heibati',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a11.png',
       position: 'Case Manager',
       name: 'Mahsa Esmaili',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a3.png',
       position: 'Secretary',
       name: 'Lida Parvizi',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a4.png',
       position: 'Public Relations Officer',
       name: 'Kholod Hariri',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a5.png',
       position: 'Accountant',
       name: 'Ali Solaimani',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a6.png',
       position: 'CTO',
       name: 'Iman Nasr',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a7.png',
       position: 'Full stack',
       name: 'Sajad Momeni',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a8.png',
       position: 'Full Stack',
       name: 'Amin Asgarian',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a9.png',
       position: 'Digital Marketer',
       name: 'Ehsan Aliakbari',
-      linkedIn: '',
+      linkedIn: ''
     },
 
     {
       image: '/static/images/Academy/our-team/Personals/a12.png',
       position: 'Content Creator',
       name: 'Maryam Eskandari',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a13.png',
       position: 'UX/UI Designer',
       name: 'Ariana Shafie',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a14.png',
       position: 'UX/UI Designer',
       name: 'Arshia Nasiri',
-      linkedIn: '',
+      linkedIn: ''
     },
 
     {
       image: '/static/images/Academy/our-team/Personals/a15.png',
       position: 'Junior Back-end',
       name: 'Fateme Safi',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a16.png',
       position: 'Full Stack',
       name: 'Sobhan Emami',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a17.png',
       position: 'Front-end',
       name: 'Fahime Sajadie',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a18.png',
       position: 'Front-end',
       name: 'Saman Karchegani',
-      linkedIn: '',
+      linkedIn: ''
     },
 
     {
       image: '/static/images/Academy/our-team/Personals/a19.png',
       position: 'Front-end',
       name: 'Mohsen Kiani',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a20.png',
       position: 'Application Developer',
       name: 'Ali Khavari',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a21.png',
       position: 'Graphic Designer',
       name: 'Hoda Mehdi',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a22.png',
       position: 'Graphic Designer',
       name: 'Aynaz Reisi',
-      linkedIn: '',
+      linkedIn: ''
     },
 
     {
       image: '/static/images/Academy/our-team/Personals/a23.png',
       position: 'Content Creator',
       name: 'Mahtab Hafizi',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a24.png',
       position: 'UI designer',
       name: 'Saba Mokhtari',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a25.png',
       position: 'Content Creator',
       name: 'Tiam Safarian',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a26.png',
       position: 'Word Press Developer',
       name: 'Roham Arablo',
-      linkedIn: '',
+      linkedIn: ''
     },
 
     {
       image: '/static/images/Academy/our-team/Personals/a27.png',
       position: 'Full Stack',
       name: 'Meraj Bighamian',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a28.png',
       position: 'Front-end',
       name: 'Mahdi Salmanzade',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a29.png',
       position: 'Front-end',
       name: 'Mahrokh Lotfi',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a30.png',
       position: 'Front-end',
       name: 'Ramtin Foroozani',
-      linkedIn: '',
+      linkedIn: ''
     },
 
     {
       image: '/static/images/Academy/our-team/Personals/a31.png',
       position: 'Front-end',
       name: 'Barad Dehghani',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a32.png',
       position: 'Front-end',
       name: 'matin Janghorbani',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a33.png',
       position: 'Public Relations Officer',
       name: 'Gelareh Bahrami',
-      linkedIn: '',
+      linkedIn: ''
     },
     {
       image: '/static/images/Academy/our-team/Personals/a34.png',
       position: 'Graphic Designer',
       name: 'Faezeh Khani',
-      linkedIn: '',
-    },
+      linkedIn: ''
+    }
   ];
 
   return (
@@ -267,6 +268,7 @@ export default function TeamPage() {
           />
         ))}
       </div>
+      <FooterSecondary />
     </div>
   );
 }

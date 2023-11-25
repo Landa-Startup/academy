@@ -1,13 +1,14 @@
-import React from "react";
-import ContactUsForm from "@/components/common/form/ContactUsForm";
-import ContactUsDescription from "@/components/common/ContactUsDescription";
-import Banner from "@/components/common/Banner";
-import { Metadata } from "next";
+import React from 'react';
+import ContactUsForm from '@/components/common/form/ContactUsForm';
+import ContactUsDescription from '@/components/common/ContactUsDescription';
+import Banner from '@/components/common/Banner';
+import { Metadata } from 'next';
+import FooterSecondary from '@/components/layout/FooterSecondary';
 
 export const metadata: Metadata = {
-  title: "Landa Academy | Contact",
+  title: 'Landa Academy | Contact',
   description:
-    "Contact Landa Academy to get in touch with our dedicated team. Whether you have questions, inquiries, or partnership opportunities, we are here to assist you. Reach out to us today.",
+    'Contact Landa Academy to get in touch with our dedicated team. Whether you have questions, inquiries, or partnership opportunities, we are here to assist you. Reach out to us today.'
 };
 
 export default function ContactUsPage() {
@@ -28,6 +29,7 @@ export default function ContactUsPage() {
         {/* ContactUsForm Component */}
         <ContactUsForm />
       </div>
+      <FooterSecondary />
     </div>
   );
 }

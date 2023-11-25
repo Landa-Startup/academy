@@ -1,7 +1,7 @@
 import Banner from '@/components/common/Banner';
 import CertificateAchievement from '@/components/academy/Certificate/CertificateAchievement';
-import Footer from '@/components/layout/Footer';
 import { Metadata } from 'next';
+import FooterSecondary from '@/components/layout/FooterSecondary';
 
 export const metadata: Metadata = {
   title: 'Landa Academy | Certificate',
@@ -16,7 +16,7 @@ export default function Page() {
         title="SEO CERTIFICATE"
       />
       <CertificateAchievement />
-      <Footer />
+      <FooterSecondary />
     </div>
   );
 }
