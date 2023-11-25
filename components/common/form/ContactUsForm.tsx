@@ -187,7 +187,7 @@ export default function ContactUsForm() {
             size="visit"
             type="submit"
             disabled={send}
-            bgColor="Primary"
+            bgColor="Yellow"
             addedClass="mx-auto"
           />
         </div>
