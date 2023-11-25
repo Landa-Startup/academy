@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 
 export default function StoryOfLanda() {
@@ -24,7 +23,14 @@ export default function StoryOfLanda() {
               the name of FarshTech Investment Company and continued its
               operations as &quot;Tolo-e Roshan Pasargad&quot; with registration
               number 70300 in Iran and Canada. */}
-              Landa International Holding started its activity in Canada in 2017 as a company in the field of investment in startup planning, business planning, and collecting resources to develop pioneering startup businesses. After years of success and many successful projects, in 2021, Landa Holding was identified as a federal company, certified and verified in both Canada and Iran. This aim has been pursued since then even more thoroughly and passionately than ever.
+              Landa International Holding started its activity in Canada in 2017
+              as a company in the field of investment in startup planning,
+              business planning, and collecting resources to develop pioneering
+              startup businesses. After years of success and many successful
+              projects, in 2021, Landa Holding was identified as a federal
+              company, certified and verified in both Canada and Iran. This aim
+              has been pursued since then even more thoroughly and passionately
+              than ever.
             </p>
             <div className="flex flex-col">
               {/* <p>

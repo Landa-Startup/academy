@@ -1,10 +1,10 @@
-import Image from "next/image";
-import React from "react";
-import Button from "../common/Button";
+import Image from 'next/image';
+import React from 'react';
+import Button from '../common/Button';
 
 export default function Gallery() {
   return (
-    <div className="relative h-screen snap-start bg-neutral-50 bg-opacity-95 py-5">
+    <div className="relative h-screen snap-start bg-neutral-50/95 py-5">
       <div className="flex flex-col">
         <div className="text-center text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:text-[32px] md:tracking-[11.20px]">
           LANDA ACADEMY

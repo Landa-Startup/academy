@@ -6,7 +6,7 @@ import ContactUs from '@/components/academy/ContactUs';
 import ScrollMenu from '@/components/academy/ScrollMenu';
 import { Metadata } from 'next';
 import Hero from '@/components/academy/Hero';
-import Video from '@/components/academy/Video';
+// import Video from '@/components/academy/Video';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {

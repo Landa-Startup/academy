@@ -1,33 +1,20 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import Button from "../common/Button";
-import ArrowDown from "../icons/hero/ArrowDown";
+import Image from 'next/image';
+import Link from 'next/link';
+import ArrowDown from '../icons/hero/ArrowDown';
 
 export default function Hero({
-  showLanda,
   title,
-  subTitle,
-  buttonBg,
-  backgroundImage,
-  leftImage,
-  showButton,
+  subTitle
 }: {
-  showLanda: boolean;
   title: string;
   subTitle: string;
-  buttonBg?: string;
-  backgroundImage: string;
-  leftImage: string;
-  showButton?: boolean;
 }) {
   return (
     <div className="relative flex h-screen snap-start flex-col overflow-hidden bg-white pt-24 md:flex-row md:justify-between md:pt-36">
       <Image
         loading="lazy"
         className="absolute h-full w-full object-cover opacity-40 blur-sm md:static md:h-[600px] md:w-[461px] md:object-contain md:opacity-100 md:blur-none"
-        src={"/static/images/Academy/Hero/Hero.png"}
+        src={'/static/images/Academy/Hero/Hero.png'}
         width={481}
         height={501}
         alt="Hero Illustration"
@@ -52,7 +39,7 @@ export default function Hero({
         <Link
           aria-label="Scroll To Next Section"
           className="absolute bottom-4 left-7 flex h-10 w-10 animate-bounce items-center justify-center rounded-full border border-white md:left-10 md:h-12 md:w-12"
-          href={"#Roadmap-1"}
+          href={'#Roadmap-1'}
         >
           <ArrowDown />
         </Link>

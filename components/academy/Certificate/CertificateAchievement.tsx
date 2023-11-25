@@ -3,15 +3,15 @@ import CertificateCoursePromote from '@/components/CertificateCoursePromote';
 import Image from 'next/image';
 export default function CertificateAchievement() {
   return (
-    <div className="flex flex-col justify-around text-white h-screen relative">
+    <div className="relative flex h-screen flex-col justify-around text-white">
       <div className="grid grid-cols-2 justify-items-center">
         <div className="flex flex-col gap-11">
-          <div className="flex flex-col gap-5 justify-start p-10 rounded-sm bg-[#fdd40a1a]">
-            <h2 className="font-gilda text-[#FDD30A] text-4xl">
+          <div className="flex flex-col justify-start gap-5 rounded-sm bg-[#fdd40a1a] p-10">
+            <h2 className="font-gilda text-4xl text-[#FDD30A]">
               CERTIFICATE OF ACHIEVEMNENT
             </h2>
-            <p className="text-lg text-[#6B6B6B] font-barlow">AWARDED TO</p>
-            <p className="text-[#3D5656] font-barlow capitalize text-4xl">
+            <p className="font-barlow text-lg text-[#6B6B6B]">AWARDED TO</p>
+            <p className="font-barlow text-4xl capitalize text-[#3D5656]">
               MOHAMAD AMIN ASGARIAN
             </p>
 
@@ -25,7 +25,7 @@ export default function CertificateAchievement() {
               best practices.
             </p>
             <div>
-              <p className="text-[#6B6B6B] font-barlow text-sm capitalize">
+              <p className="font-barlow text-sm capitalize text-[#6B6B6B]">
                 issued on Jul/02/2022
               </p>
             </div>
@@ -45,7 +45,7 @@ export default function CertificateAchievement() {
             /> */}
             <Certificate />
           </div>
-          <div className="absolute -right-8 -bottom-24 -z-10">
+          <div className="absolute -bottom-24 -right-8 -z-10">
             <Image
               src="/static/images/Academy/gallery/academy.stroke.png"
               alt="academy"
