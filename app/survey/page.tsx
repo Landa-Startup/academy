@@ -100,7 +100,7 @@ const SurveyPage = () => {
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="mt-4 w-full space-y-8"
+          className="mt-4 flex flex-col items-center space-y-8"
         >
           <div>
             <input
@@ -114,7 +114,7 @@ const SurveyPage = () => {
                 }
               })}
               placeholder="Your Name*"
-              className={`inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
+              className={`inline-flex h-[40px] w-[630px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
                 errors.full_name ? 'border-red-500' : ''
               }`}
             />
@@ -136,7 +136,7 @@ const SurveyPage = () => {
                 }
               })}
               placeholder="Your Email*"
-              className={`inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
+              className={`inline-flex h-[40px] w-[630px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
                 errors.email ? 'border-red-500' : ''
               }`}
             />
@@ -158,7 +158,7 @@ const SurveyPage = () => {
                 }
               })}
               placeholder="Your Number*"
-              className={`inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
+              className={`inline-flex h-[40px] w-[630px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
                 errors.phone_number ? 'border-red-500' : ''
               }`}
             />
@@ -173,9 +173,16 @@ const SurveyPage = () => {
               Which skills would you like to learn at Landa Academy?
             </label>
             <select
-              className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
+              className={`inline-flex h-[40px] w-[630px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
+                errors.phone_number ? 'border-red-500' : ''
+              }`}
               id="skills"
               {...register('favorite_skill', {
+                pattern: {
+                  value:
+                    /^(webDevelopment|dataScience|mobileAppDevelopment|uiUxDesign)$/,
+                  message: 'Enter a valid skill.'
+                },
                 required: 'Your skill is required.'
               })}
             >
@@ -188,8 +195,12 @@ const SurveyPage = () => {
               <option value="uiUxDesign">UI/UX Design</option>
             </select>
           </div>
-          <button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? 'Submitting ....' : 'Submit'}
+          <button
+            type="submit"
+            disabled={send}
+            className="h-[40px] w-[180px] bg-[#FDD30A] font-barlow text-black md:h-[50px]"
+          >
+            {send ? 'Submitting ....' : 'Submit'}
           </button>
         </form>
         <NotificationSendForm
