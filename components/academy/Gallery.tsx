@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Button from '../common/Button';
+// import Loading from './../../app/loading';
 
 export default function Gallery() {
   const imagesGallery = [
