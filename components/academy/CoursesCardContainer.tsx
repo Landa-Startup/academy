@@ -28,7 +28,6 @@ export default function CoursesCardContainer() {
           id={index}
           key={index}
           title={course.title}
-          isActive={course.active}
           backgroundImage={course.thumbnail}
           price={formatPrice(course.price)}
         />

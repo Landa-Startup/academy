@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
 // Define the ButtonProps type
@@ -13,7 +12,7 @@ type ButtonProps = DetailedHTMLProps<
   type?: 'button' | 'reset' | 'submit';
   addedClass?: string;
   bgColor?: 'Primary' | 'Yellow';
-  goto: string;
+  goto?: string;
 };
 
 export default function Button({
@@ -22,21 +21,21 @@ export default function Button({
   type = 'button',
   addedClass,
   bgColor,
-  goto = '/',
+  goto = '/'
 }: ButtonProps) {
   // Determine the button size and apply appropriate styles
   const isVisitSize = size === 'visit';
 
-  const router = useRouter();
-
   return (
-    <Link href={goto}>
+    <Link href={goto || '/'}>
       <button
-        className={`btn2 ${isVisitSize
-          ? 'mt-[19px] h-[32px] w-[135px] pb-4 pl-[72px] pr-[71px] pt-[15px] md:h-[60px] md:w-[219px]'
-          : 'mt-[19px] hidden h-11 pb-4 pl-[72px] pr-[71px] pt-[15px] md:flex'
-          } ${bgColor === 'Primary' ? 'bg-primary' : 'bg-[#FDD30A]'
-          } relative inset-0 flex items-center justify-center overflow-hidden border border-white px-10 py-5 text-center font-condensed text-base font-normal uppercase leading-none tracking-wider text-white hover:text-white ${addedClass}`}
+        className={`btn2 ${
+          isVisitSize
+            ? 'mt-[19px] h-[32px] w-[135px] pb-4 pl-[72px] pr-[71px] pt-[15px] md:h-[60px] md:w-[219px]'
+            : 'mt-[19px] hidden h-11 pb-4 pl-[72px] pr-[71px] pt-[15px] md:flex'
+        } ${
+          bgColor === 'Primary' ? 'bg-primary' : 'bg-[#FDD30A]'
+        } relative inset-0 flex items-center justify-center overflow-hidden border border-white px-10 py-5 text-center font-condensed text-base font-normal uppercase leading-none tracking-wider text-white hover:text-white ${addedClass}`}
         type={type}
       >
         <span className="absolute inset-0 bg-black"></span>

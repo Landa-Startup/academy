@@ -1,31 +1,29 @@
-import Link from "next/link";
-import React from "react";
-import Button from "../common/Button";
+import Link from 'next/link';
+import React from 'react';
+import Button from '../common/Button';
 
 export default function CoursesCard({
   id,
   title,
-  isActive,
   backgroundImage,
-  price,
+  price
 }: {
   id: number;
   title: string;
-  isActive?: boolean;
   backgroundImage: string;
   price: string;
 }) {
   return (
     <Link
-      href={"/courses/" + (id + 1)}
+      href={'/courses/' + (id + 1)}
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
       }}
       className="group relative flex h-[170px] w-[170px] flex-col items-center justify-center rounded-sm md:h-[486px] md:w-[556px]"
     >
-      <span className="z-10 font-barlow font-medium tracking-[2.4px] text-white transition-all duration-500 group-hover:absolute group-hover:-ml-[480px] group-hover:-rotate-90 md:text-5xl">
+      <span className="z-10 font-barlow font-medium tracking-[2.4px] text-white transition-all duration-500 group-hover:absolute group-hover:ml-[-480px] group-hover:-rotate-90 md:text-5xl">
         {title}
       </span>
       <div className="absolute h-full w-full bg-gradient-to-t from-[#FDD30A57] to-[#80C555B2]"></div>

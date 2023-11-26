@@ -1,13 +1,13 @@
-import Banner from "@/components/common/Banner";
-import Button from "@/components/common/Button";
-import Hat from "@/components/icons/Hat";
-import Footer from "@/components/layout/Footer";
-import { Metadata } from "next";
-import React from "react";
+import Banner from '@/components/common/Banner';
+import Button from '@/components/common/Button';
+import Hat from '@/components/icons/Hat';
+import FooterSecondary from '@/components/layout/FooterSecondary';
+import { Metadata } from 'next';
+import React from 'react';
 
 export const metadata: Metadata = {
-  title: "Landa Academy | Survey",
-  description: "",
+  title: 'Landa Academy | Survey',
+  description: ''
 };
 
 const SurveyPage = () => {
@@ -80,7 +80,7 @@ const SurveyPage = () => {
           </Button>
         </form>
       </div>
-      <Footer />
+      <FooterSecondary />
     </div>
   );
 };

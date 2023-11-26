@@ -1,16 +1,22 @@
-import Banner from "@/components/common/Banner";
-import CertificateAchivement from "@/components/academy/Certificate/CertificateAchievement";
-import Footer from "@/components/layout/Footer";
+import Banner from '@/components/common/Banner';
+import CertificateAchievement from '@/components/academy/Certificate/CertificateAchievement';
+import { Metadata } from 'next';
+import FooterSecondary from '@/components/layout/FooterSecondary';
+
+export const metadata: Metadata = {
+  title: 'Landa Academy | Certificate',
+  description: ''
+};
 
 export default function Page() {
   return (
     <div>
       <Banner
-        image="/static/images/Academy/certificate/lakdshfkj.jpg"
-        title="Certificate"
+        image="/static/images/Academy/seo-course.png"
+        title="SEO CERTIFICATE"
       />
-      <CertificateAchivement />
-      <Footer/>
+      <CertificateAchievement />
+      <FooterSecondary />
     </div>
   );
 }

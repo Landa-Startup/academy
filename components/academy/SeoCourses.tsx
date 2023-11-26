@@ -150,7 +150,7 @@ export default function SeoCourses() {
                   </div>
                 </div>
                 <div>
-                  <div className="collapse collapse-arrow rounded-none">
+                  <div className="collapse-arrow collapse rounded-none">
                     <input type="checkbox" className="peer" />
                     <div className="collapse-title bg-[#F1F8EC] 	text-2xl font-medium text-[#3D5656]">
                       Second Day

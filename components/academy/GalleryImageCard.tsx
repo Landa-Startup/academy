@@ -1,12 +1,17 @@
-"use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import PhotoModal from "../PhotoModal";
+'use client';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import PhotoModal from '../PhotoModal';
 
-export default function GalleryImageCard({ src }: { src: string }) {
+export default function GalleryImageCard({
+  src,
+  title
+}: {
+  src: string;
+  title: string;
+}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   const openModal = (imageUrl: any) => {
     setSelectedImage(imageUrl);
@@ -30,8 +35,8 @@ export default function GalleryImageCard({ src }: { src: string }) {
           layout="fill"
         />
         <div className="fade-in absolute bottom-7 z-10 hidden w-full flex-col border-t-2 border-white pl-24 pt-2 text-white group-hover:flex">
-          <span className="font-barlow text-xl font-medium">Desert Tour</span>
-          <span className="font-barlow text-sm font-medium">20 Jan 2023</span>
+          <span className="font-barlow text-xl font-medium">{title}</span>
+          <span className="font-barlow text-sm font-medium"></span>
         </div>
       </div>
 

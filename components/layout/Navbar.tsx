@@ -1,26 +1,22 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useState, useRef, useEffect } from "react";
-import Logo from "../common/Logo";
-import { usePathname } from "next/navigation";
-import Instagram from "../icons/footer/Instagram";
-import Envelope from "../icons/footer/Envelope";
-import Whatsapp from "../icons/footer/Whatsapp";
-import LinkedIn from "../icons/footer/LinkedIn";
+'use client';
+import Link from 'next/link';
+import React, { useRef } from 'react';
+import Logo from '../common/Logo';
+import Instagram from '../icons/footer/Instagram';
+import Envelope from '../icons/footer/Envelope';
+import Whatsapp from '../icons/footer/Whatsapp';
+import LinkedIn from '../icons/footer/LinkedIn';
+import './Navbar.css';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
-  const menuRef = useRef<HTMLDetailsElement>(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
-  const router = usePathname();
 
   const menuItems = [
-    { label: "HOME", href: "/" },
+    { label: 'HOME', href: '/' },
     // { label: "COURSES", href: "/courses" },
-    { label: "CONTACT", href: "/contact" },
+    { label: 'CONTACT', href: '/contact' },
     // { label: "ABOUT", href: "/about" },
-    { label: "OUR TEAM", href: "/our-team" },
+    { label: 'OUR TEAM', href: '/our-team' }
     // { label: "VERIFICATION", href: "/verification" },
   ];
 
@@ -120,16 +116,6 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </div>
-      <style jsx>{`
-        .children {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-        }
-      `}</style>
     </div>
   );
 }
