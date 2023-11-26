@@ -55,7 +55,7 @@ export default function Footer() {
               Contact
             </Link>
             <Link
-              href={'/'}
+              href={'/our-team'}
               className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Our Team
