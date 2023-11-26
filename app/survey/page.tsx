@@ -1,6 +1,5 @@
 'use client';
 import Banner from '@/components/common/Banner';
-import Button from '@/components/common/Button';
 import NotificationSendForm from '@/components/common/form/NotificationSendForm';
 import Hat from '@/components/icons/Hat';
 import FooterSecondary from '@/components/layout/FooterSecondary';
