@@ -1,16 +1,85 @@
+'use client';
 import Banner from '@/components/common/Banner';
 import Button from '@/components/common/Button';
+import NotificationSendForm from '@/components/common/form/NotificationSendForm';
 import Hat from '@/components/icons/Hat';
 import FooterSecondary from '@/components/layout/FooterSecondary';
-import { Metadata } from 'next';
-import React from 'react';
+import apiClient from '@/utils/api';
+import GetCsrfToken from '@/utils/get-csrf-token';
+// import { Metadata } from 'next';
+import React, { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
 
-export const metadata: Metadata = {
-  title: 'Landa Academy | Survey',
-  description: ''
-};
-
+// export const metadata: Metadata = {
+//   title: 'Landa Academy | Survey',
+//   description: ''
+// };
+interface SurveyForm {
+  full_name: string;
+  email: string;
+  phone_number: string;
+  favorite_skill: string;
+}
 const SurveyPage = () => {
+  const initialFormData: SurveyForm = {
+    full_name: '',
+    email: '',
+    phone_number: '',
+    favorite_skill: ''
+  };
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm<SurveyForm>({
+    mode: 'onBlur',
+    defaultValues: initialFormData
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(true);
+  const [send, setSend] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
+  const [csrfToken, setCsrfToken] = useState('');
+  useEffect(() => {
+    async function fetchCsrfToken() {
+      const token = await GetCsrfToken(
+        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}/get-csrf-token`
+      );
+      setCsrfToken(token);
+    }
+    fetchCsrfToken();
+  }, []);
+  const onSubmit = async (formData: SurveyForm) => {
+    setIsSubmitting(true);
+    setSend(true);
+    try {
+      await apiClient.post('common/survey-form', JSON.stringify(formData), {
+        headers: {
+          'X-CSRFToken': csrfToken,
+          'Content-Type': 'application/json'
+        }
+      });
+      setIsSuccess(true);
+      setShowNotification(true);
+      setSend(false);
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 10000);
+      reset(initialFormData); // Reset the form after successful submission
+      console.log('Form data sent successfully!');
+    } catch (error) {
+      setShowNotification(true);
+      setSend(false);
+      setIsSuccess(false);
+      console.error('Error sending form data:', error);
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 10000); // 10 seconds in milliseconds
+    }
+  };
   return (
     <div>
       <Banner image="" title="Courses Survey" />
@@ -30,33 +99,75 @@ const SurveyPage = () => {
             the future courses that will be held.
           </p>
         </div>
-        <form className="mt-4 w-full space-y-8">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="mt-4 w-full space-y-8"
+        >
           <div>
             <input
-              className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
+              id="name"
               type="text"
-              id="fullName"
-              name="fullName"
-              placeholder="Full Name"
+              {...register('full_name', {
+                required: 'Your Name is required.',
+                pattern: {
+                  value: /^[a-z ,.'-]+$/i,
+                  message: 'Enter a valid Name.'
+                }
+              })}
+              placeholder="Your Name*"
+              className={`inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
+                errors.full_name ? 'border-red-500' : ''
+              }`}
             />
+            {errors.full_name && (
+              <span className="mt-2 text-sm text-yellow-500">
+                {errors.full_name.message}
+              </span>
+            )}
           </div>
           <div>
             <input
-              className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
-              type="email"
               id="email"
-              name="email"
-              placeholder="Email address"
+              type="email"
+              {...register('email', {
+                required: 'Your Email is required.',
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: 'Enter a valid email address.'
+                }
+              })}
+              placeholder="Your Email*"
+              className={`inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
+                errors.email ? 'border-red-500' : ''
+              }`}
             />
+            {errors.email && (
+              <span className="mt-2 text-sm text-yellow-500">
+                {errors.email.message}
+              </span>
+            )}
           </div>
           <div>
             <input
-              className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              placeholder="Phone Number"
+              id="number"
+              type="text"
+              {...register('phone_number', {
+                required: 'Your Number is required.',
+                pattern: {
+                  value: /^\d{11}$/,
+                  message: 'Enter a valid number.'
+                }
+              })}
+              placeholder="Your Number*"
+              className={`inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
+                errors.phone_number ? 'border-red-500' : ''
+              }`}
             />
+            {errors.phone_number && (
+              <span className="mt-2 text-sm text-yellow-500">
+                {errors.phone_number.message}
+              </span>
+            )}
           </div>
           <div className="flex flex-col space-y-4">
             <label htmlFor="skills" className="text-[#B2B2B2]">
@@ -65,8 +176,11 @@ const SurveyPage = () => {
             <select
               className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
               id="skills"
-              name="skills"
+              {...register('favorite_skill', {
+                required: 'Your skill is required.'
+              })}
             >
+              <option value="">Select a skill</option>
               <option value="webDevelopment">Web Development</option>
               <option value="dataScience">Data Science</option>
               <option value="mobileAppDevelopment">
@@ -75,10 +189,16 @@ const SurveyPage = () => {
               <option value="uiUxDesign">UI/UX Design</option>
             </select>
           </div>
-          <Button addedClass="mx-auto" text="submit" size="not" goto="submit">
-            Submit
-          </Button>
+          <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? 'Submitting ....' : 'Submit'}
+          </button>
         </form>
+        <NotificationSendForm
+          submitting={isSubmitting}
+          success={isSuccess}
+          sendStatus={send}
+          show={showNotification}
+        />
       </div>
       <FooterSecondary />
     </div>
