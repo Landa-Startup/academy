@@ -1,11 +1,12 @@
-"use client";
-import React, { useState } from "react";
+const options = ['join us', 'courses', 'faqs', 'Counseling'];
 
-const options = ["join us", "courses", "faqs", "Counseling"];
-
-export default function ContactUsDropdown({selectedOption,handleOptionChange}:{selectedOption:any;handleOptionChange:any;}) {
-
-
+export default function ContactUsDropdown({
+  selectedOption,
+  handleOptionChange
+}: {
+  selectedOption: any;
+  handleOptionChange: any;
+}) {
   return (
     <div>
       <select

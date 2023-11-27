@@ -126,7 +126,6 @@ export default function ScrollMenu() {
                 key={index}
                 title={card.title}
                 image={card.image}
-                date={card.date}
                 active={card.active}
               />
             ))}

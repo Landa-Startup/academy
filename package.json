@@ -41,6 +41,7 @@
     "react-modal": "^3.16.1",
     "react-phone-number-input": "^3.3.7",
     "react-player": "^2.13.0",
+    "short-uuid": "^4.2.2",
     "stream": "^0.0.2"
   },
   "devDependencies": {
@@ -48,6 +49,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/formidable": "^3.4.0",
+    "@types/md5": "^2.3.5",
     "@types/node": "^20.8.3",
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",

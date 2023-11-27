@@ -1,13 +1,17 @@
-"use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import PhotoModal from "../PhotoModal";
-import { title } from "process";
+'use client';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import PhotoModal from '../PhotoModal';
 
-export default function GalleryImageCard({ src , title}: { src: string , title:string }) {
+export default function GalleryImageCard({
+  src,
+  title
+}: {
+  src: string;
+  title: string;
+}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   const openModal = (imageUrl: any) => {
     setSelectedImage(imageUrl);

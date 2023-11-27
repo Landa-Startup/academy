@@ -1,7 +1,6 @@
 import Banner from '@/components/common/Banner';
 import Button from '@/components/common/Button';
 import Hat from '@/components/icons/Hat';
-import Footer from '@/components/layout/Footer';
 import FooterSecondary from '@/components/layout/FooterSecondary';
 import { Metadata } from 'next';
 import React from 'react';

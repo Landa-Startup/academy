@@ -4,26 +4,30 @@ import Button from './common/Button';
 
 export default function CertificateCoursePromote({
   course,
-  image
+  image,
+  description,
+  slug
 }: {
   course: string;
   image: string;
+  description: string;
+  slug: string;
 }) {
   return (
     <div className="flex justify-between gap-3">
       <div className="flex gap-3">
-        <div className="text-black w-28 h-28 relative">
+        <div className="relative h-28 w-28 text-black">
           <Image
-            className="object-cover rounded-full"
+            className="rounded-full object-cover"
             alt={course}
-            src={`/static/images/Academy/${image}`}
+            src={image}
             layout="fill"
           />
         </div>
-        <div className="flex flex-col text-black font-barlow">
+        <div className="flex flex-col font-barlow text-black">
           <span className="text-xl">{course}</span>
           <div className="flex gap-1">
-            <div className="w-5 h-5 relative">
+            <div className="relative h-5 w-5">
               <Image
                 alt="Logo"
                 src={'/static/images/Academy/Logo.svg'}
@@ -32,12 +36,10 @@ export default function CertificateCoursePromote({
             </div>
             <span>Landa Academy</span>
           </div>
-          <p className="2/4">
-            The course was designed to provide participants with a ...
-          </p>
+          <p className="2/4">{description}</p>
         </div>
       </div>
-      <Button goto="/" size="not" text="Enroll" />
+      <Button goto={'/courses/' + slug} size="not" text="Enroll" />
     </div>
   );
 }
