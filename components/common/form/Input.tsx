@@ -28,7 +28,7 @@ export default function Input({
   
   let value = new RegExp(patternValue); // **don`t use slash (/) before and after regex pattern for this component and don`t use i end of regex pattern in this component
   return (
-    <div>
+    <div className='flex flex-col'>
       <label htmlFor={nameInput} className={labelClass }>
         {label}
       </label>
@@ -47,8 +47,8 @@ export default function Input({
         className={className + (errors[nameInput] ? ' border-red-500' : '')}
         />
       {errors[nameInput] && (
-        <span className="mt-4 text-sm text-yellow-500">
-          {errors[nameInput].message}
+        <span className="mt-4  text-sm text-yellow-500 ">
+         {errors[nameInput].message}
         </span>
       )}
 

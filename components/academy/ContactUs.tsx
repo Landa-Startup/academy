@@ -9,6 +9,7 @@ import GetCsrfToken from "@/utils/get-csrf-token";
 import NotificationSendForm from "../common/form/NotificationSendForm";
 import apiClient from "@/utils/api";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
+import "./ContactUs.css"
 import "react-phone-number-input/style.css";
 
 interface ContactUsType {
@@ -127,7 +128,7 @@ export default function ContactUs() {
           Contact Us
         </div>
       </div>
-      <div className="relative grid grid-cols-1 md:grid-cols-2 items-center gap-5 z-10">
+      <div className="relative grid grid-cols-1 md:grid-cols-2  gap-5 z-10">
         <Input
           register={register}
           errors={errors}
@@ -167,16 +168,19 @@ export default function ContactUs() {
           defaultCountry="IR"
           international
           countryCallingCodeEditable={false}
-          className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex [&>*:nth-child(2)]:bg-yellow-50 !important] [&>*:nth-child(1)]:border-r-2 !important]"
+          className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] bg-yellow-50 border border-yellow-400 justify-center items-center inline-flex [&>*:nth-child(2)]:bg-yellow-50 !important] [&>*:nth-child(1)]:border-r-2 !important]"
         />
       </div>
+      <div>
       <button
         type="submit"
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-yellow-400 h-[36px] md:h-14 w-[160px] md:w-60 mx-auto text-white"
+        className="bg-yellow-400 h-12 md:h-14 w-[160px] md:w-60 mx-auto text-white"
       >
         {send ? "Submitting ...." : "Submit"}
       </button>
+      </div>
+     
       <Image
         loading="lazy"
         className="md:absolute md:-left-16 -bottom-5"
