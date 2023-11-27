@@ -35,4 +35,13 @@ yarn-error.log*
 .vercel
 
 # Husky
-/.husky/
+.husky/
+
+# package-lock.json
+package-lock.json
+
+# yarn.lock
+yarn.lock
+
+# pnpm 
+pnpm-lock.yaml
