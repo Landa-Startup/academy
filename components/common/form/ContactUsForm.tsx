@@ -31,7 +31,6 @@ export default function ContactUsForm() {
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
   const [csrfToken, setCsrfToken] = useState('');
-
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken(
@@ -39,10 +38,8 @@ export default function ContactUsForm() {
       );
       setCsrfToken(token);
     }
-
     fetchCsrfToken();
   }, []);
-
   const onSubmit = async (formData: ContactUSFormData) => {
     setIsSubmitting(true);
     setSend(true);
@@ -71,7 +68,6 @@ export default function ContactUsForm() {
       }, 10000); // 10 seconds in milliseconds
     }
   };
-
   return (
     <div>
       <h2 className="text-center font-gilda text-5xl font-light">Reach us</h2>

@@ -1,28 +1,10 @@
-"use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import ScrollButton from "./ScrollButton";
-import Button from "@/components/common/Button";
-import ModalForm from "../ModalForm";
+'use client';
+import Image from 'next/image';
+import React from 'react';
+import ScrollButton from './ScrollButton';
+import Button from '@/components/common/Button';
 
 export default function Fifth() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleFormSubmit = (formData: any) => {
-    // Handle the form data, for example, you can log it to the console
-    console.log("Form Data:", formData);
-
-    // Close the modal
-    closeModal();
-  };
   return (
     <div
       className="relative flex h-screen snap-start flex-col items-center bg-[#FFFBE6] p-10"
@@ -35,7 +17,7 @@ export default function Fifth() {
         loading="lazy"
         className="z-10 order-1"
         alt="Landa academy"
-        src={"static/images/Academy/Roadmap/Selecting team-cuate (1) 1.svg"}
+        src={'static/images/Academy/Roadmap/Selecting team-cuate (1) 1.svg'}
         width={645}
         height={430}
       />
@@ -49,15 +31,7 @@ export default function Fifth() {
         </div>
       </div>
       <div className="order-4">
-        <Button goto="/" onClick={openModal} size="not" text="Register" />
-        <div>
-          <ModalForm
-            isOpen={isModalOpen}
-            onRequestClose={closeModal}
-            onSubmit={handleFormSubmit}
-            closeModal={closeModal}
-          />
-        </div>
+        <Button goto="/survey" size="not" text="Register" />
       </div>
       <ScrollButton scrollTo="Courses" addedClass="absolute bottom-3" />
       <svg
