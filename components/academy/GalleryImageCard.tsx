@@ -38,6 +38,7 @@ export default function GalleryImageCard({
           <span className="font-barlow text-xl font-medium">{title}</span>
           <span className="font-barlow text-sm font-medium"></span>
         </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] via-[rgba(0,0,0,0.2)] to-transparent opacity-0 transition-all duration-500 hover:opacity-100"></div>
       </div>
 
       <PhotoModal
