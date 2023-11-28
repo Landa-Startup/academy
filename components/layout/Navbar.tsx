@@ -46,7 +46,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         ref={drawerRef}
       />
       <div className="drawer-content relative flex flex-col md:px-32 md:pt-5">
-        <div className="navbar flex w-full items-center justify-between bg-transparent text-black">
+        <div className="navbar flex w-full items-center bg-transparent text-black">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"

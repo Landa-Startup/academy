@@ -267,7 +267,7 @@ export default function TeamPersons() {
     'Accountant',
     'Public Relations',
     'Digital Marketer',
-    'Secretary'
+    'Secretary',
   ];
 
   const [selectedRole, setSelectedRole] = useState<string>('All');
@@ -285,6 +285,7 @@ export default function TeamPersons() {
         (person) =>
           person.category?.toLowerCase().includes(selectedRole.toLowerCase())
       );
+      console.log(filteredPersons)
       setFilteredPersons(filteredPersons);
     }
   }, [selectedRole]);

@@ -3,11 +3,11 @@ import RoadmapContainer from '@/components/academy/Roadmap/RoadmapContainer';
 // import PromoteCourse from '@/components/academy/PromoteCourse';
 import Gallery from '@/components/academy/Gallery';
 import ContactUs from '@/components/academy/ContactUs';
-import ScrollMenu from '@/components/academy/ScrollMenu';
 import { Metadata } from 'next';
 import Hero from '@/components/academy/Hero';
 // import Video from '@/components/academy/Video';
 import Footer from '@/components/layout/Footer';
+import SliderMenu from '@/components/academy/SliderMenu';
 
 export const metadata: Metadata = {
   title: 'Landa Academy',
@@ -26,7 +26,8 @@ export default function page() {
       {/* Roadmap Section */}
       <RoadmapContainer />
 
-      <ScrollMenu />
+      {/* <ScrollMenu /> */}
+      <SliderMenu />
 
       <Gallery />
 
