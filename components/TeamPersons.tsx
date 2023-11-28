@@ -267,14 +267,17 @@ export default function TeamPersons() {
     'Accountant',
     'Public Relations',
     'Digital Marketer',
-    'Secretary'
+    'Secretary',
   ];
 
   const [selectedRole, setSelectedRole] = useState<string>('All');
   const [filteredPersons, setFilteredPersons] = useState(persons);
 
-  function handleRoleSelect(role: string) {
-    setSelectedRole(role);
+  async function handleRoleSelect(role: string) {
+    await setSelectedRole(role);
+    console.log("selectedRole:", selectedRole)
+    console.log("clicked role:", role)
+
     if (selectedRole === 'All') {
       setFilteredPersons(persons);
     } else {
@@ -282,6 +285,7 @@ export default function TeamPersons() {
         (person) =>
           person.category?.toLowerCase().includes(selectedRole.toLowerCase())
       );
+      console.log(filteredPersons)
       setFilteredPersons(filteredPersons);
     }
   }

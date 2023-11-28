@@ -82,7 +82,7 @@ const SurveyPage = () => {
   return (
     <div>
       <Banner image="" title="Courses Survey" />
-      <div className="relative mx-auto my-16 flex w-[720px] flex-col items-center bg-[#F1F8EC] px-11 py-14">
+      <div className="relative mx-5 my-16 flex flex-col items-center bg-[#F1F8EC] px-8 py-14 md:mx-auto md:w-[720px] md:px-11">
         <div className="absolute -top-10 rounded-full bg-[#F1F8EC] px-3 pt-3">
           <Hat />
         </div>
@@ -114,7 +114,7 @@ const SurveyPage = () => {
                 }
               })}
               placeholder="Your Name*"
-              className={`inline-flex h-[40px] w-[630px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
+              className={`inline-flex h-[40px] w-[300px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[630px] ${
                 errors.full_name ? 'border-red-500' : ''
               }`}
             />
@@ -136,7 +136,7 @@ const SurveyPage = () => {
                 }
               })}
               placeholder="Your Email*"
-              className={`inline-flex h-[40px] w-[630px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
+              className={`inline-flex h-[40px] w-[300px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[630px] ${
                 errors.email ? 'border-red-500' : ''
               }`}
             />
@@ -158,7 +158,7 @@ const SurveyPage = () => {
                 }
               })}
               placeholder="Your Number*"
-              className={`inline-flex h-[40px] w-[630px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
+              className={`inline-flex h-[40px] w-[300px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[630px] ${
                 errors.phone_number ? 'border-red-500' : ''
               }`}
             />
@@ -173,7 +173,7 @@ const SurveyPage = () => {
               Which skills would you like to learn at Landa Academy?
             </label>
             <select
-              className={`inline-flex h-[40px] w-[630px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] ${
+              className={`inline-flex h-[40px] w-[300px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[630px] ${
                 errors.phone_number ? 'border-red-500' : ''
               }`}
               id="skills"
@@ -186,7 +186,9 @@ const SurveyPage = () => {
                 required: 'Your skill is required.'
               })}
             >
-              <option value="">Select a skill</option>
+              <option disabled value="">
+                Select a skill
+              </option>
               <option value="webDevelopment">Web Development</option>
               <option value="dataScience">Data Science</option>
               <option value="mobileAppDevelopment">

@@ -10,6 +10,7 @@ export default function TeamRolesContainer({
 }) {
   const [selectedRole, setSelectedRole] = useState<string | null>('All');
   function handleRoleClick(role: string) {
+    console.log("role:", role)
     onRoleSelect(role);
     setSelectedRole(role);
   }

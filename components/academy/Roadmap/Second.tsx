@@ -1,6 +1,6 @@
-import Image from "next/image";
-import React from "react";
-import ScrollButton from "./ScrollButton";
+import Image from 'next/image';
+import React from 'react';
+import ScrollButton from './ScrollButton';
 
 export default function Third() {
   return (
@@ -12,12 +12,12 @@ export default function Third() {
         <Image
           loading="lazy"
           alt="Landa academy"
-          src={"static/images/Academy/Roadmap/At the office-amico 2.svg"}
+          src={'static/images/Academy/Roadmap/At the office-amico 2.svg'}
           width={500}
           height={500}
         />
         <div className="flex flex-col justify-evenly">
-          <div className="mb-10 text-2xl font-normal leading-snug tracking-wider text-[#3D5656] md:mt-28 md:w-[592px] md:text-5xl">
+          <div className="text-2xl font-normal leading-snug tracking-wider text-[#3D5656] md:mt-32 md:w-[592px] md:text-5xl">
             Joining Landa Academy and benefiting from its facilities.
           </div>
           <ul className="font-barlow font-medium leading-[25px] tracking-[1px] text-[#FFFBE6] md:text-2xl md:leading-[50px]">
