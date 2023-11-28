@@ -1,9 +1,9 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import IconPhoneAcademy from "../icons/IconPhoneAcademy";
-import IconYellow from "../icons/IconYellow";
-import IconStar from "../icons/IconStar";
-import Banner from "../common/Banner";
+'use client';
+import React, { useEffect, useState } from 'react';
+import IconPhoneAcademy from '../icons/IconPhoneAcademy';
+import IconYellow from '../icons/IconYellow';
+import IconStar from '../icons/IconStar';
+import Banner from '../common/Banner';
 
 interface Course {
   title: string;
@@ -18,15 +18,17 @@ interface Course {
   payUrl: string;
 }
 
-export default function SeoCourses() {
+export default function SeoCourses({ params }: { params: { slug: string } }) {
   const [course, setCourse] = useState<Course | null>(null);
 
   useEffect(() => {
     // Fetch data from the API when the component mounts
-    fetch("https://apigenerator.dronahq.com/api/NkgQThFP/course")
+    fetch(
+      `https://academy-back.landaholding.com/course/details/${params.slug}/?format=json`
+    )
       .then((response) => response.json())
       .then((data) => setCourse(data[0]))
-      .catch((error) => console.error("Error fetching data:", error));
+      .catch((error) => console.error('Error fetching data:', error));
   }, []); // The empty dependency array ensures this effect runs once when the component mounts
 
   if (!course) {
