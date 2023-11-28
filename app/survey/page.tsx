@@ -109,7 +109,7 @@ const SurveyPage = () => {
               {...register('full_name', {
                 required: 'Your Name is required.',
                 pattern: {
-                  value: /^[a-z ,.'-]+$/i,
+                  value: /^[\u0600-\u06FF ,.'-]+$/i,
                   message: 'Enter a valid Name.'
                 }
               })}
