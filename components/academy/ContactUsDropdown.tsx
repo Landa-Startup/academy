@@ -15,7 +15,9 @@ export default function ContactUsDropdown({
         onChange={handleOptionChange}
         name="contactReason"
       >
-        <option value="">select contact reason...</option>
+        <option disabled value="">
+          select contact reason...
+        </option>
         {options.map((option) => (
           <option key={option} value={option}>
             {option}
