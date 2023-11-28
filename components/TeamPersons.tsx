@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TeamRolesContainer from './academy/TeamRolesContainer';
 import PersonalTab from './PersonalTab';
 
@@ -275,6 +275,9 @@ export default function TeamPersons() {
 
   function handleRoleSelect(role: string) {
     setSelectedRole(role);
+  }
+  useEffect(() => {
+    console.log("Selected Role:", selectedRole);
     if (selectedRole === 'All') {
       setFilteredPersons(persons);
     } else {
@@ -284,7 +287,7 @@ export default function TeamPersons() {
       );
       setFilteredPersons(filteredPersons);
     }
-  }
+  }, [selectedRole]);
   return (
     <div>
       <TeamRolesContainer onRoleSelect={handleRoleSelect} roles={roles} />
