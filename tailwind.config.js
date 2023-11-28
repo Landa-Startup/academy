@@ -11,7 +11,7 @@ module.exports = {
         sacramento: ['Sacramento', 'serif']
       },
       colors: {
-        primary: '#AA8453',
+        primary: '#80C555',
         whiteGold: '#F8F5F0',
         tableHeader: '#DDCEBA'
       }
