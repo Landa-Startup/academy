@@ -15,7 +15,7 @@ const CourseItem = ({
         backgroundPosition: 'center',
         backgroundSize: 'cover'
       }}
-      className="courses-overlay group relative flex h-[350px] w-[175px] shrink-0 flex-col items-center justify-center bg-gray-300 p-4 m-8 duration-500 md:h-[486px] md:hover:h-[486px] md:hover:w-[384px]"
+      className="courses-overlay group relative m-8 flex h-[350px] w-[175px] shrink-0 flex-col items-center justify-center bg-gray-300 p-4 duration-500 md:h-[486px] md:hover:h-[486px] md:hover:w-[384px]"
     >
       <div className="absolute left-[65px] top-[350px] hidden origin-top-left -rotate-90 text-4xl leading-[50px] tracking-widest text-white transition-colors duration-500 md:block md:w-[396px] md:group-hover:static md:group-hover:max-w-fit md:group-hover:rotate-0">
         {title}
