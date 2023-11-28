@@ -43,8 +43,8 @@ export default function ContactUsDescription() {
         </Link>
       </div>
       <div className="mt-10 flex flex-col gap-4">
-        <div className="flex  gap-2">
-          <Phone />
+        <div className="flex gap-2">
+          <Phone addedClass='-mt-5'/>
           <div className="flex flex-col">
             <span className="font-semibold">Phone Call</span>
             <ul className="gap-1">
