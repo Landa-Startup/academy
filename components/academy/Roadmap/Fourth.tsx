@@ -35,7 +35,7 @@ export default function Fifth() {
       </div>
       <ScrollButton scrollTo="Courses" addedClass="absolute bottom-3" />
       <svg
-        className="absolute -top-7 left-[683px] hidden md:block"
+        className="absolute -top-7 left-[670px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="47"
         height="178"
