@@ -3,11 +3,9 @@ import Link from 'next/link';
 const CourseItem = ({
   title,
   image,
-  date
 }: {
   title: string;
   image: string;
-  date: string;
 }) => {
   return (
     <Link

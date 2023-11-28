@@ -107,12 +107,7 @@ const SliderMenu = () => {
         <div className="mx-2 grid m-auto relative overflow-hidden whitespace-nowrap md:h-[486px]">
           <div className="flex w-[calc(250px * 16)] scroll hover:pause w-4/5">
             {cardData.map((card, index) => (
-              <CourseItem
-                key={index}
-                title={card.title}
-                image={card.image}
-                date={card.date}
-              />
+              <CourseItem key={index} title={card.title} image={card.image} />
             ))}
           </div>
         </div>
