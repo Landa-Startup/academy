@@ -9,7 +9,7 @@ export default function Third() {
       id="Roadmap-2"
 
     >
-      <div className="z-10 flex flex-col justify-evenly space-y-4 px-10 pb-8 pt-2 md:flex-row">
+      <div className="z-10 flex flex-col justify-evenly  px-10 pt-2 md:flex-row">
         <Image
           loading="lazy"
           alt="Landa academy"
@@ -39,7 +39,7 @@ export default function Third() {
       <ScrollButton
         scrollTo="Roadmap-3"
         color="white"
-        addedClass="absolute bottom-[20px] right-[160px]"
+        addedClass="absolute bottom-[0px] right-[160px]"
       />
       <svg
         className="absolute left-[620px] top-0 hidden md:block"
