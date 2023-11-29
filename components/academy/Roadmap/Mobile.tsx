@@ -5,10 +5,10 @@ import Image from 'next/image';
 export default function Mobile() {
   return (
     <div
-      className="md:hidden flex flex-col h-screen bg-[#F1F8EC] relative mb-10"
+      className="relative mb-10 flex h-screen flex-col bg-[#F1F8EC] md:hidden"
       id="Roadmap-3M"
     >
-      <div className="flex flex-col px-10 md:flex-row-reverse justify-evenly pt-16 pb-10 z-10">
+      <div className="z-10 flex flex-col justify-evenly px-10 pb-10 pt-16 md:flex-row-reverse">
         <Image
           loading="lazy"
           alt="Landa academy"
@@ -17,7 +17,7 @@ export default function Mobile() {
           height={500}
         />
         <div className="flex flex-col justify-evenly font-barlow">
-          <ul className="text-[#3D5656] font-barlow text-xl font-medium leading-[25px] md:leading-[50px] tracking-[1px] space-y-2">
+          <ul className="space-y-2 font-barlow text-xl font-medium leading-[25px] tracking-[1px] text-[#3D5656] md:leading-[50px]">
             <li>1.Personalized mentoring by industry professionals</li>
             <li>2.Co-working spaces</li>
             <li>3.Free participation at the next courses</li>

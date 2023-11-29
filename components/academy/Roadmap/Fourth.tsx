@@ -1,67 +1,42 @@
-"use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import ScrollButton from "./ScrollButton";
-import Button from "@/components/common/Button";
-import ModalForm from "../ModalForm";
+'use client';
+import Image from 'next/image';
+import React from 'react';
+import ScrollButton from './ScrollButton';
+import Button from '@/components/common/Button';
 
 export default function Fifth() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleFormSubmit = (formData: any) => {
-    // Handle the form data, for example, you can log it to the console
-    console.log("Form Data:", formData);
-
-    // Close the modal
-    closeModal();
-  };
   return (
     <div
-      className="flex flex-col items-center relative px-10 py-10 bg-[#FFFBE6] h-screen snap-start"
+      className="relative flex h-screen snap-start flex-col items-center bg-[#FFFBE6] p-10"
       id="Roadmap-4"
+      
     >
-      <div className="mt-4 order-2 md:w-[420px] text-black font-barlow text-2xl md:text-4xl font-normal leading-snug static md:absolute left-40 top-28">
+      <div className="static left-40 top-28 order-2 mt-4 font-barlow text-2xl font-normal leading-snug text-black md:absolute md:w-[420px] md:text-4xl">
         Work experience at the Canadian company
       </div>
       <Image
         loading="lazy"
         className="z-10 order-1"
         alt="Landa academy"
-        src={"static/images/Academy/Roadmap/Selecting team-cuate (1) 1.svg"}
+        src={'static/images/Academy/Roadmap/Selecting team-cuate (1) 1.svg'}
         width={645}
         height={430}
       />
       <div className="justify-start items-start inline-flex order-3">
-        <div className="w-5 h-5 bg-yellow-400 rounded-full mt-3 flex-shrink-0" />
-        <div className="md:w-[500px] text-black font-barlow md:text-2xl font-medium leading-7">
+        <div className="w-5 h-5 bg-yellow-400 rounded-full ml-[-1.5rem] mt-[2.5rem] mb-4 mr-2 flex-shrink-0" />
+        <div className="md:w-[500px] text-black font-barlow md:text-2xl font-medium  leading-7 ml-[5.5px] m-[35px] mr-[0] letter-spacing: 0.8px; ">
           Following a year of active participation within Landa, you will
           receive a credible and verifiable
-          <span className="font-semibold mx-1">Canadian work experience</span>
-          certificate from us.
+          <span className="font-semibold mx-1 ">Canadian work experience
+          certificate from us.</span>
         </div>
       </div>
       <div className="order-4">
-        <Button goto="/" onClick={openModal} size="not" text="Register" />
-        <div>
-          <ModalForm
-            isOpen={isModalOpen}
-            onRequestClose={closeModal}
-            onSubmit={handleFormSubmit}
-            closeModal={closeModal}
-          />
-        </div>
+        <Button goto="/survey" size="not" text="Register" />
       </div>
-      <ScrollButton scrollTo="Courses" addedClass="absolute bottom-3" />
+      <ScrollButton scrollTo="Courses" addedClass="absolute bottom-3   " />
       <svg
-        className="absolute -top-7 left-[683px] hidden md:block"
+        className="absolute -top-7 left-[670px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="47"
         height="178"

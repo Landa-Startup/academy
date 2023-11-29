@@ -1,5 +1,3 @@
-// import { useForm, UseFormRegister, FieldValues } from 'react-hook-form';
-
 export default function Select({
   register,
   errors,
@@ -9,7 +7,7 @@ export default function Select({
   options,
   className,
   labelClass,
-  placeholder,
+  placeholder
 }: {
   register: any;
   errors: any;
@@ -23,37 +21,36 @@ export default function Select({
 }) {
   return (
     <>
-    <div>
+      <div>
+        <label htmlFor={nameInput} className={labelClass}>
+          {label}
+        </label>
 
-      <label htmlFor={nameInput} className={labelClass}>
-        {label}
-      </label>
-
-      <select
-        id={nameInput}
-        {...register(nameInput, {
-          required: required,
-        })}
-        className={className + (errors[nameInput] ? ' border-red-500' : '')}
-      >
-        <option disabled selected value={""}>
-          {placeholder}
-        </option>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
+        <select
+          id={nameInput}
+          {...register(nameInput, {
+            required: required
+          })}
+          className={className + (errors[nameInput] ? ' border-red-500' : '')}
+        >
+          <option disabled selected value={''}>
+            {placeholder}
           </option>
-        ))}
-      </select>
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
 
-      {errors[nameInput] && (
-        <span className="mt-2 text-sm text-yellow-500">
-          {errors[nameInput].message}
-        </span>
-      )}
+        {errors[nameInput] && (
+          <span className="mt-2 text-sm text-yellow-500">
+            {errors[nameInput].message}
+          </span>
+        )}
 
-      <br />
-    </div>
+        <br />
+      </div>
     </>
   );
 }

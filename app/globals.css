@@ -3,29 +3,60 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* paused scroll animation on hover */
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
+
 /* Define custom fonts with @font-face */
 @font-face {
-  font-family: "Gilda Display";
-  src: url("../public/static/fonts/GildaDisplay-Regular.ttf"),
-    local("Serif") format("truetype");
+  font-family: 'Gilda Display';
+  src:
+    url('../public/static/fonts/GildaDisplay-Regular.ttf'),
+    local('Serif') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Barlow";
-  src: url("../public/static/fonts/Barlow-Regular.ttf"),
-    local("Serif") format("truetype");
+  font-family: 'Barlow';
+  src:
+    url('../public/static/fonts/Barlow-Regular.ttf'),
+    local('Serif') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Condensed";
-  src: url("../public/static/fonts/BarlowCondensed-Regular.ttf"),
-    local("Serif") format("truetype");
+  font-family: 'Condensed';
+  src:
+    url('../public/static/fonts/BarlowCondensed-Regular.ttf'),
+    local('Serif') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pinyon';
+  src:
+    url('../public/static/fonts/PinyonScript-Regular.ttf'),
+    local('Serif') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sacramento';
+  src:
+    url('../public/static/fonts/Sacramento-Regular.ttf'),
+    local('Serif') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -86,7 +117,7 @@ img {
 
 /* Create a gradient overlay for elements with class "courses-overlay" */
 .courses-overlay::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -109,6 +140,21 @@ img {
   }
 }
 
+/* scroll slider animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 8));
+  }
+}
+
 .fade-in {
   animation: fadeIn 0.3s ease-in-out;
+}
+
+/* infinite scroll slider animation */
+.scroll {
+  animation: scroll 40s linear infinite;
 }

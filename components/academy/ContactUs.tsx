@@ -1,14 +1,15 @@
-"use client";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import ContactUsDropdown from "./ContactUsDropdown";
-import Input from "../common/form/Input";
-import GetCsrfToken from "@/utils/get-csrf-token";
-import NotificationSendForm from "../common/form/NotificationSendForm";
-import apiClient from "@/utils/api";
-import PhoneInputWithCountrySelect from "react-phone-number-input";
-import FormInit from "@/lib/FormInitHandler";
-import "react-phone-number-input/style.css";
+'use client';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import ContactUsDropdown from './ContactUsDropdown';
+import Input from '../common/form/Input';
+import { useForm } from 'react-hook-form';
+import GetCsrfToken from '@/utils/get-csrf-token';
+import NotificationSendForm from '../common/form/NotificationSendForm';
+import apiClient from '@/utils/api';
+import PhoneInputWithCountrySelect from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
+import Button from '../common/Button';
 
 interface ContactUsType {
   firstName: string;
@@ -19,24 +20,34 @@ interface ContactUsType {
 
 export default function ContactUs() {
   const initialContactUsData: ContactUsType = {
-    firstName: "",
-    lastName: "",
-    phoneNumber: "",
-    contactReason: "",
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    contactReason: ''
   };
 
-  const {register,handleSubmit,formState: { errors },reset,} = FormInit(initialContactUsData,typeof initialContactUsData)
-  const [phone, setPhone] = useState<string | undefined>();
-  const [selectedOption, setSelectedOption] = useState("");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm<ContactUsType>({
+    mode: 'onBlur',
+    defaultValues: initialContactUsData
+  });
 
+  const [phone, setPhone] = useState<string | undefined>();
+  const [selectedOption, setSelectedOption] = useState('');
+
+  // TODO: remove below code after testing
   const [formData, setFormData] = useState<ContactUsType>(initialContactUsData);
-  console.log(formData)
+  console.log(formData);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
-  const [csrfToken, setCsrfToken] = useState("");
+  const [csrfToken, setCsrfToken] = useState('');
 
   function handleOptionChange(event: React.ChangeEvent<HTMLSelectElement>) {
     setSelectedOption(event.target.value);
@@ -56,23 +67,31 @@ export default function ContactUs() {
     const sendFormData = new FormData();
     formData.phoneNumber = String(phone);
     formData.contactReason = String(selectedOption);
-    sendFormData.append("first_name", formData.firstName);
-    sendFormData.append("last_name", formData.lastName);
-    sendFormData.append("contact_reason", formData.contactReason);
-    sendFormData.append("phone_number", formData.phoneNumber);
+    sendFormData.append('first_name', formData.firstName);
+    sendFormData.append('last_name', formData.lastName);
+    sendFormData.append('contact_reason', formData.contactReason);
+    sendFormData.append('phone_number', formData.phoneNumber);
+    console.log(phone);
+    console.log(selectedOption);
+
     try {
-      await apiClient.post("common/contactUs-form", sendFormData, {
+      console.log('new form data ', formData);
+
+      await apiClient.post('common/contactUs-form', sendFormData, {
         headers: {
-          "content-type": "multipart/form-data",
-          "X-CSRFToken": csrfToken,
-        },
+          'content-type': 'application/json',
+          'X-CSRFToken': csrfToken
+        }
       });
+
+      console.log(phone);
 
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
       reset(initialContactUsData); // Reset the form after successful submission
       setFormData(initialContactUsData);
+      console.log('Form data sent successfully!');
       setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
@@ -81,7 +100,9 @@ export default function ContactUs() {
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
-      //TODO: remove below code after testing      reset(initialContactUsData); // Reset the form after successful submission
+      //TODO: remove below code after testing
+      console.error('Error sending form data:', error);
+      reset(initialContactUsData); // Reset the form after successful submission
       setFormData(initialContactUsData); // reset states after successful submission
       setTimeout(() => {
         setShowNotification(false);
@@ -92,17 +113,17 @@ export default function ContactUs() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="relative md:w-[1440px] py-28 bg-[#F1F8EC] flex-col justify-start items-center gap-[37px] flex mx-auto h-screen snap-start"
+      className="relative mx-auto flex h-screen snap-start flex-col items-center justify-start gap-[37px] bg-[#F1F8EC] py-28 md:w-[1440px]"
     >
-      <div className="self-center flex-col  items-center inline-flex">
-        <div className="font-gilda md:w-[413px] md:h-[58px] text-center text-lime-400 text-base md:text-[32px] font-normal leading-[50px] tracking-[5.6px] md:tracking-[11.20px]">
+      <div className="inline-flex flex-col  items-center self-center">
+        <div className="text-center font-gilda text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:h-[58px] md:w-[413px] md:text-3xl md:tracking-[11.20px]">
           LANDA ACADEMY
         </div>
-        <div className="md:w-[413px] md:h-[58px] text-center text-black text-3xl md:text-[64px] font-normal leading-[50px] tracking-[1.6px] md:tracking-[3.20px] ">
+        <div className="text-center font-gilda text-3xl font-normal leading-[50px] tracking-[1.6px] text-black md:h-[58px] md:w-[413px] md:text-5xl md:tracking-[3.20px] ">
           Contact Us
         </div>
       </div>
-      <div className="relative grid grid-cols-1 md:grid-cols-2 items-center gap-5 z-10">
+      <div className="relative z-10 grid grid-cols-1 items-center gap-5 md:grid-cols-2">
         <Input
           register={register}
           errors={errors}
@@ -113,7 +134,7 @@ export default function ContactUs() {
           patternValue=""
           patternMessage="Enter a Valid First Name"
           placeholder="Enter your First Name"
-          className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+          className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px]"
           labelClass="text-[#6b6b6b]"
         />
         <Input
@@ -126,7 +147,7 @@ export default function ContactUs() {
           patternValue=""
           patternMessage="Enter a Valid Last Name"
           placeholder="Enter your Last Name"
-          className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+          className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px]"
           labelClass="text-[#6b6b6b] dark:text-current"
         />
 
@@ -141,20 +162,19 @@ export default function ContactUs() {
           defaultCountry="IR"
           international
           countryCallingCodeEditable={false}
-          className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex [&>*:nth-child(2)]:bg-yellow-50 !important] [&>*:nth-child(1)]:border-r-2 !important]"
+          className="!important] inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px] [&>*:nth-child(1)]:border-r-2 [&>*:nth-child(2)]:bg-yellow-50"
         />
       </div>
-      <button
-        type="submit"
+      <Button
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-yellow-400 h-[36px] md:h-14 w-[160px] md:w-60 mx-auto text-white"
-      >
-        {send ? "Submitting ...." : "Submit"}
-      </button>
+        type="submit"
+        size="visit"
+        text={send ? 'Submitting ....' : 'Submit'}
+      />
       <Image
         loading="lazy"
-        className="md:absolute md:-left-16 -bottom-5"
-        src={"/static/images/Academy/Collab-pana 1.svg"}
+        className="-bottom-5 md:absolute md:-left-16"
+        src={'/static/images/Academy/Collab-pana 1.svg'}
         alt="Academy Contact Us"
         width={522}
         height={348}

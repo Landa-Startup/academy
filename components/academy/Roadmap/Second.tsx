@@ -1,26 +1,27 @@
-import Image from "next/image";
-import React from "react";
-import ScrollButton from "./ScrollButton";
+import Image from 'next/image';
+import React from 'react';
+import ScrollButton from './ScrollButton';
 
 export default function Third() {
   return (
     <div
-      className="flex flex-col md:h-screen bg-[#80C555] text-white relative h-screen snap-start"
+      className="relative flex h-screen snap-start flex-col bg-[#80C555] text-white md:h-screen"
       id="Roadmap-2"
+
     >
-      <div className="flex flex-col md:flex-row justify-evenly pt-2 pb-8 z-10 px-10 space-y-4">
+      <div className="z-10 flex flex-col justify-evenly  px-10 pt-2 md:flex-row">
         <Image
           loading="lazy"
           alt="Landa academy"
-          src={"static/images/Academy/Roadmap/At the office-amico 2.svg"}
+          src={'static/images/Academy/Roadmap/At the office-amico 2.svg'}
           width={500}
           height={500}
         />
         <div className="flex flex-col justify-evenly">
-          <div className="md:w-[592px] text-2xl md:mt-28 mb-10 md:text-5xl font-normal tracking-wider leading-snug text-[#3D5656]">
+          <div className="text-2xl font-normal leading-snug tracking-wider text-[#3D5656] md:mt-32 md:w-[592px] md:text-5xl">
             Joining Landa Academy and benefiting from its facilities.
           </div>
-          <ul className="text-[#FFFBE6] font-barlow md:text-2xl font-medium leading-[25px] md:leading-[50px] tracking-[1px]">
+          <ul className="font-barlow font-medium leading-[25px] tracking-[1px] text-[#FFFBE6] md:text-2xl md:leading-[50px]">
             <li>1.Personalized mentoring by industry professionals</li>
             <li>2.Co-working spaces</li>
             <li>3.Free participation at the next courses</li>
@@ -38,10 +39,10 @@ export default function Third() {
       <ScrollButton
         scrollTo="Roadmap-3"
         color="white"
-        addedClass="absolute bottom-[20px] right-[160px]"
+        addedClass="absolute bottom-[0px] right-[160px]"
       />
       <svg
-        className="absolute top-0 left-[620px] hidden md:block"
+        className="absolute left-[620px] top-0 hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         width="367"
         height="364"

@@ -1,24 +1,21 @@
-import React from "react";
-import Link from "next/link";
-import Instagram from "../icons/footer/Instagram";
-import Envelope from "../icons/footer/Envelope";
-import Whatsapp from "../icons/footer/Whatsapp";
-import LinkedIn from "../icons/footer/LinkedIn";
+import React from 'react';
+import CopyRight from '../common/CopyRight';
+import Link from 'next/link';
+import Instagram from '../icons/footer/Instagram';
+import Envelope from '../icons/footer/Envelope';
+import Whatsapp from '../icons/footer/Whatsapp';
+import LinkedIn from '../icons/footer/LinkedIn';
 
 export default function Footer() {
-  function GetYear() {
-    const currentYear = new Date().getFullYear();
-    return currentYear;
-  }
   return (
-    <div className="flex flex-col p-8 bg-[#3D5656] font-barlow py-36 h-screen snap-start">
+    <div className="flex h-screen snap-center flex-col bg-[#3D5656] p-8 py-32 font-barlow">
       <div className="flex flex-col justify-between space-y-5 md:flex-row md:p-20">
-        <div className="flex flex-col md:w-[344px] gap-4">
-          <div className="h-[25px] text-justify text-[#FEED9D] text-xl font-medium">
+        <div className="flex flex-col gap-4 md:w-[344px]">
+          <div className="h-[25px] text-justify text-xl font-medium text-[#FEED9D]">
             About Landa
             <br />
           </div>
-          <div className="mt-1 text-base font-normal text-justify text-white">
+          <div className="mt-1 text-justify text-base font-normal text-white">
             In Landa Academy, individuals will be trained based on their
             interests and capabilities. Necessary actions are taken at the Landa
             Acceleration Center to accelerate their unique abilities. Then,
@@ -27,62 +24,62 @@ export default function Footer() {
             <br />
           </div>
         </div>
-        <div className="flex flex-col col-span-1 space-y-1">
-          <div className="text-xl font-medium text-justify text-[#FEED9D]">
+        <div className="col-span-1 flex flex-col space-y-1">
+          <div className="text-justify text-xl font-medium text-[#FEED9D]">
             Explore
             <br />
           </div>
           <div className="flex flex-col gap-1">
             <Link
-              href={"/"}
-              className="text-base font-normal text-white hover:text-yellow-400 max-w-fit"
+              href={'/'}
+              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Home
             </Link>
             <Link
-              href={"/"}
-              className="text-base font-normal text-white hover:text-yellow-400 max-w-fit"
+              href={'/'}
+              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Blog
             </Link>
             <Link
-              href={"/about"}
-              className="text-base font-normal text-white hover:text-yellow-400 max-w-fit"
+              href={'/about'}
+              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               About
             </Link>
             <Link
-              href={"/contact"}
-              className="text-base font-normal text-white hover:text-yellow-400 max-w-fit"
+              href={'/contact'}
+              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Contact
             </Link>
             <Link
-              href={"/"}
-              className="text-base font-normal text-white hover:text-yellow-400 max-w-fit"
+              href={'/'}
+              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Our Team
             </Link>
             <Link
-              href={"/"}
-              className="text-base font-normal text-white hover:text-yellow-400 max-w-fit"
+              href={'/'}
+              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Verification
             </Link>
           </div>
         </div>
 
-        <div className="flex flex-col col-span-1 space-y-1">
-          <div className="w-[93px] h-[30px] text-justify text-[#FEED9D] text-xl font-medium">
+        <div className="col-span-1 flex flex-col space-y-1">
+          <div className="h-[30px] w-[93px] text-justify text-xl font-medium text-[#FEED9D]">
             Contact
             <br />
           </div>
-          <div className="flex flex-col divide-y-2 w-[225px] divide-green-200 gap-2">
+          <div className="flex w-[330px] flex-col gap-2 divide-y-2 divide-[#CCE8BB]">
             <div>
-              <div className="text-base font-normal text-justify text-white">
+              <div className="text-justify text-base font-normal text-white">
                 Young street, Toronto, Canada
               </div>
-              <div className="text-base font-normal text-justify text-white">
+              <div className="text-justify text-base font-normal text-white">
                 +1 (416) 557-7622
               </div>
             </div>
@@ -91,47 +88,47 @@ export default function Footer() {
                 Gholam Jafari St, Tehran Province, Tajrish, Iran
               </div>
               <div className="text-base font-normal text-justify text-white">
-                02188030167
+                021-880-301-67
               </div>
             </div>
             <div>
-              <div className="text-base font-normal text-justify text-white">
+              <div className="text-justify text-base font-normal text-white">
                 Saadat Abad Ave, Isfahan, Iran
               </div>
               <div className="text-base font-normal text-justify text-white">
-                03131311914
+                031-313-119-14
               </div>
             </div>
-            <div className="w-[226px] h-[22px] flex flex-row justify-between items-center pt-4 text-white">
+            <div className="flex h-[22px] w-[330px] flex-row items-center gap-6 pt-4 text-white">
               <Link
                 aria-label="Instagram"
                 href={
-                  "https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=="
+                  'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='
                 }
-                className="hover:text-yellow-400"
+                className="hover:text-[#CCE8BB]"
                 target="_blank"
               >
                 <Instagram />
               </Link>
               <Link
                 aria-label="Email"
-                href={"mailto:info@landaholding.com"}
-                className="hover:text-yellow-400"
+                href={'mailto:info@landaholding.com'}
+                className="hover:text-[#CCE8BB]"
               >
                 <Envelope />
               </Link>
               <Link
                 aria-label="Whatsapp"
-                href={"https://wa.me/989120539563"}
-                className="hover:text-yellow-400"
+                href={'https://wa.me/989120539563'}
+                className="hover:text-[#CCE8BB]"
                 target="_blank"
               >
                 <Whatsapp />
               </Link>
               <Link
                 aria-label="Linkedin"
-                href={"https://www.linkedin.com/company/landa-startup-inc"}
-                className="hover:text-yellow-400"
+                href={'https://www.linkedin.com/company/landa-startup-inc'}
+                className="hover:text-[#CCE8BB]"
                 target="_blank"
               >
                 <LinkedIn />
@@ -140,12 +137,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="self-stretch pt-4 text-center text-green-200 border-t border-green-200">
-        © Copyright {GetYear()} by{" "}
-        <Link href={"/"} className=" text-green-200">
-          LandaHolding
-        </Link>
-      </div>
+      <CopyRight />
     </div>
   );
 }

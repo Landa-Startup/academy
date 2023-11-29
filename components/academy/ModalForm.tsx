@@ -49,11 +49,11 @@ function ModalForm({ isOpen, onRequestClose, onSubmit, closeModal }: any) {
       contentLabel="Register Modal"
     >
       <XLg onClick={closeModal} />
-      <h2 className="text-center mb-5 text-xl font-semibold">Register</h2>
+      <h2 className="mb-5 text-center text-xl font-semibold">Register</h2>
       <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-5">
         <div>
           <input
-            className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+            className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px]"
             type="text"
             name="firstName"
             value={formData.firstName}
@@ -63,7 +63,7 @@ function ModalForm({ isOpen, onRequestClose, onSubmit, closeModal }: any) {
         </div>
         <div>
           <input
-            className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+            className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px]"
             type="text"
             name="lastName"
             value={formData.lastName}
@@ -77,7 +77,7 @@ function ModalForm({ isOpen, onRequestClose, onSubmit, closeModal }: any) {
         </div>
         <div>
           <select
-            className="w-[360px] md:w-[389px] h-[40px] md:h-[50px] pl-5 bg-yellow-50 border border-yellow-400 justify-start items-center inline-flex"
+            className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px]"
             name="interests"
             value={formData.interests}
             onChange={handleChange}
@@ -86,8 +86,7 @@ function ModalForm({ isOpen, onRequestClose, onSubmit, closeModal }: any) {
             <option value="interest1">Interest 1</option>
             <option value="interest2">Interest 2</option>
             <option value="interest3">Interest 3</option>
-            // Add more options as needed
-          </select>
+=          </select>
         </div>
       </form>
       <Button text="Submit" size="not" type="submit" addedClass="mx-auto" goto={""} />

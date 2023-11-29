@@ -1,7 +1,5 @@
-"use client";
-import React, { useState } from "react";
-import GalleryImageCard from "./GalleryImageCard";
-import PhotoModal from "../PhotoModal";
+'use client';
+import GalleryImageCard from './GalleryImageCard';
 
 export default function GalleryImageCardContainer() {
   const images = [
@@ -116,13 +114,11 @@ export default function GalleryImageCardContainer() {
     {
       src: '/static/images/Academy/gallery/all/28.jpg',
       title: 'Dr.MoradiMehr Birthday'
-    },
+    }
   ];
 
   return (
-    <div
-      className="grid grid-cols-2 gap-y-5 md:gap-24 md:mx-32 pb-7 justify-items-center"
-    >
+    <div className="grid grid-cols-2 justify-items-center gap-y-5 pb-7 md:mx-32 md:gap-24">
       {images.map((image, index) => (
         <GalleryImageCard key={index} src={image.src} title={image.title} />
       ))}
