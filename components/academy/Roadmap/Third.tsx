@@ -21,7 +21,7 @@ export default function Fourth() {
             Employment opportunities
           </div>
           <div className="justify-start items-start gap-2 inline-flex">
-            <div className="w-5 h-5 bg-[#80C555] rounded-full mt-6" />
+            <div className="w-6 h-4 bg-[#80C555]  rounded-full mt-7 md:w-5 md:h-5 " />
             <div className="mt-5 w-[454px] md:text-2xl font-normal font-barlow leading-7">
               After completing the intensive 6-month academy program, you will
               have the opportunity to officially work alongside experienced

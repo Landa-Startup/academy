@@ -30,7 +30,7 @@ export default function Second() {
           </div>
           <div className="justify-start items-start gap-2 inline-flex ">
             <div className="w-5 h-5 bg-yellow-400 rounded-full mt-2.5" />
-            <div className="md:w-[500px] font-barlow text-gray-600 text-base md:text-2xl font-normal leading-10 text-justify">
+            <div className="md:w-[500px] font-barlow text-gray-600 text-base md:text-2xl font-normal  ">
               Obtain a valid certificate of achievement
             </div>
           </div>
