@@ -28,9 +28,9 @@ export default function Second() {
               from the Landa Holding.
             </div>
           </div>
-          <div className="inline-flex items-start justify-start gap-2 ">
-            <div className="mt-2.5 h-5 w-5 rounded-full bg-yellow-400" />
-            <div className="text-justify font-barlow text-base font-normal leading-10 text-gray-600 md:w-[500px] md:text-2xl">
+          <div className="justify-start items-start gap-2 inline-flex ">
+            <div className="w-5 h-5 bg-yellow-400 rounded-full mt-2.5" />
+            <div className="md:w-[500px] font-barlow text-gray-600 text-base md:text-2xl font-normal  ">
               Obtain a valid certificate of achievement
             </div>
           </div>

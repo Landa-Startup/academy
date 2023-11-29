@@ -7,6 +7,7 @@ export default function Third() {
     <div
       className="relative flex h-screen snap-start flex-col bg-[#80C555] text-white md:h-screen"
       id="Roadmap-2"
+
     >
       <div className="z-10 flex flex-col justify-evenly space-y-4 px-10 pb-8 pt-2 md:flex-row">
         <Image

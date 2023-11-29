@@ -9,6 +9,7 @@ export default function Fifth() {
     <div
       className="relative flex h-screen snap-start flex-col items-center bg-[#FFFBE6] p-10"
       id="Roadmap-4"
+      
     >
       <div className="static left-40 top-28 order-2 mt-4 font-barlow text-2xl font-normal leading-snug text-black md:absolute md:w-[420px] md:text-4xl">
         Work experience at the Canadian company
@@ -21,19 +22,19 @@ export default function Fifth() {
         width={645}
         height={430}
       />
-      <div className="order-3 inline-flex items-start justify-start">
-        <div className="mt-3 h-5 w-5 shrink-0 rounded-full bg-yellow-400" />
-        <div className="font-barlow font-medium leading-7 text-black md:w-[500px] md:text-2xl">
+      <div className="justify-start items-start inline-flex order-3">
+        <div className="w-5 h-5 bg-yellow-400 rounded-full ml-[-1.5rem] mt-[2.5rem] mb-4 mr-2 flex-shrink-0" />
+        <div className="md:w-[500px] text-black font-barlow md:text-2xl font-medium  leading-7 ml-[5.5px] m-[35px] mr-[0] letter-spacing: 0.8px; ">
           Following a year of active participation within Landa, you will
           receive a credible and verifiable
-          <span className="mx-1 font-semibold">Canadian work experience</span>
-          certificate from us.
+          <span className="font-semibold mx-1 ">Canadian work experience
+          certificate from us.</span>
         </div>
       </div>
       <div className="order-4">
         <Button goto="/survey" size="not" text="Register" />
       </div>
-      <ScrollButton scrollTo="Courses" addedClass="absolute bottom-3" />
+      <ScrollButton scrollTo="Courses" addedClass="absolute bottom-3   " />
       <svg
         className="absolute -top-7 left-[670px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"

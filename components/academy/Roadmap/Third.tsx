@@ -20,9 +20,9 @@ export default function Fourth() {
           <div className="text-2xl font-normal leading-snug tracking-wider md:w-[480px] md:text-4xl">
             Employment opportunities
           </div>
-          <div className="inline-flex items-start justify-start gap-2">
-            <div className="mt-6 h-5 w-5 rounded-full bg-[#80C555]" />
-            <div className="mt-5 w-[454px] font-barlow font-normal leading-7 md:text-2xl">
+          <div className="justify-start items-start gap-2 inline-flex">
+            <div className="w-6 h-4 bg-[#80C555]  rounded-full mt-7 md:w-5 md:h-5 " />
+            <div className="mt-5 w-[454px] md:text-2xl font-normal font-barlow leading-7">
               After completing the intensive 6-month academy program, you will
               have the opportunity to officially work alongside experienced
               mentors on startups and international projects to gain valuable
