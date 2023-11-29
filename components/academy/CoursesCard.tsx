@@ -1,36 +1,34 @@
-import Link from "next/link";
-import React from "react";
-import Button from "../common/Button";
+import Link from 'next/link';
+import React from 'react';
+import Button from '../common/Button';
 
 export default function CoursesCard({
-  id,
   title,
-  isActive,
   backgroundImage,
   price,
+  slug
 }: {
-  id: number;
   title: string;
-  isActive?: boolean;
   backgroundImage: string;
   price: string;
+  slug: string;
 }) {
   return (
     <Link
-      href={"/courses/" + (id + 1)}
+      href={'/courses/' + slug}
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
       }}
-      className="relative flex flex-col justify-center items-center w-[170px] md:w-[556px] h-[170px] md:h-[486px] rounded-sm group"
+      className="group relative flex h-[170px] w-[170px] flex-col items-center justify-center rounded-sm md:h-[486px] md:w-[556px]"
     >
-      <span className="font-barlow md:text-5xl font-medium tracking-[2.4px] text-white z-10 group-hover:-rotate-90 group-hover:absolute group-hover:-ml-[480px] transition-all duration-500">
+      <span className="z-10 font-barlow font-medium tracking-[2.4px] text-white transition-all duration-500 group-hover:absolute group-hover:ml-[-480px] group-hover:-rotate-90 md:text-5xl">
         {title}
       </span>
-      <div className="absolute w-full h-full bg-gradient-to-t from-[#FDD30A57] to-[#80C555B2]"></div>
-      <div className="w-[400px] h-[430px] bg-black opacity-50 z-auto text-white hidden group-hover:md:block transition-all duration-500">
-        <ul className="flex flex-col p-5 gap-6">
+      <div className="absolute h-full w-full bg-gradient-to-t from-[#FDD30A57] to-[#80C555B2]"></div>
+      <div className="z-auto hidden h-[430px] w-[400px] bg-black text-white opacity-50 transition-all duration-500 group-hover:md:block">
+        <ul className="flex flex-col gap-6 p-5">
           <li>
             Elevate your online impact with our SEO course at Landa Academy!
             Master search engine optimization, from keywords to cutting-edge

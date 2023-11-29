@@ -1,11 +1,10 @@
-"use client";
-import { useState } from "react";
-import PhoneInputWithCountrySelect from "react-phone-number-input";
-import "react-phone-number-input/style.css";
+'use client';
+import PhoneInputWithCountrySelect from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
 
 export default function PhoneInput({
   phone,
-  setPhone,
+  setPhone
 }: {
   phone: any;
   setPhone: any;

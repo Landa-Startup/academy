@@ -5,12 +5,12 @@ import React from "react";
 
 export default function Logo() {
   return (
-    <div className="px-2 m-2 text-left h-full flex justify-start items-center">
+    <div className="m-2 flex h-full items-center justify-start px-2 text-left">
       <Link href={"/"}>
-        <div className="flex flex-col md:flex-row items-end">
+        <div className="flex flex-col items-end md:flex-row">
           <Image
             loading="lazy"
-            className="w-10 h-10 md:w-12 md:h-14"
+            className="h-10 w-10 md:h-14 md:w-12"
             src={"/static/images/Academy/Logo.svg"}
             alt="Logo"
             width={125}
@@ -18,7 +18,7 @@ export default function Logo() {
           />
           <span
             className={
-              "text-lime-400 text-[12px] md:text-xl tracking-[0.375px] font-bold"
+              "text-[12px] font-bold tracking-[0.375px] text-lime-400 md:text-xl"
             }
           ></span>
         </div>

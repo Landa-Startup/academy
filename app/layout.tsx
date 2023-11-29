@@ -1,11 +1,10 @@
-import React from "react";
-import Footer from "@/components/layout/Footer";
-import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import ScrollUpButton from "@/components/common/ScrollUpButton";
+import React from 'react';
+import './globals.css';
+import Navbar from '@/components/layout/Navbar';
+import ScrollUpButton from '@/components/common/ScrollUpButton';
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {

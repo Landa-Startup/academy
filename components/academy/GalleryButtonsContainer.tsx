@@ -12,7 +12,7 @@ export default function GalleryButtonsContainer() {
 
   return (
     <div>
-      <div className="flex gap-9 justify-center my-11">
+      <div className="my-11 flex justify-center gap-9">
         <button
           className={`btn w-[160px] md:w-[220px] ${
             currentMode === "photos" ? "bg-[#B3DC99]" : "bg-[#ECEFEF]"
