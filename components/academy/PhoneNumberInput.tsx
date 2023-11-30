@@ -1,14 +1,17 @@
 'use client';
-import PhoneInputWithCountrySelect from 'react-phone-number-input';
+// import PhoneInputWithCountrySelect from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 
-export default function PhoneInput({
-  phone,
-  setPhone
-}: {
-  phone: any;
-  setPhone: any;
-}) {
+// props PhoneInput
+// {
+//   phone,
+//   setPhone
+// }: {
+//   phone: any;
+//   setPhone: any;
+// }
+
+export default function PhoneInput() {
   return (
     <div>
       {/* <PhoneInputWithCountrySelect
