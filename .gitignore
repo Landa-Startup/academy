@@ -45,3 +45,6 @@ yarn.lock
 
 # pnpm 
 pnpm-lock.yaml
+
+# IDE
+.vscode/

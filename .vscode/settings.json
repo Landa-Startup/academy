@@ -2,20 +2,20 @@
     "i18n-ally.localesPaths": [
         "locales"
     ],
-    "workbench.colorCustomizations": {
-        "titleBar.activeBackground": "#019db2",
-        "titleBar.activeForeground": "#FFFFFF",
-        "titleBar.inactiveBackground": "#019db2",
-        "titleBar.inactiveForeground": "#FFFFFF",
-        "titleBar.border": "#019db2",
-        "activityBar.background": "#019db2",
-        "activityBar.foreground": "#FFFFFF",
-        "statusBar.background": "#019db2",
-        "statusBar.foreground": "#FFFFFF",
-        "statusBar.debuggingBackground": "#019db2",
-        "statusBar.debuggingForeground": "#FFFFFF",
-        "tab.activeBorder": "#019db2",
-        "iLoveWorkSpaceColors": true,
-        "iLoveWorkSpaceRandom": false
-    }
+    // "workbench.colorCustomizations": {
+    //     "titleBar.activeBackground": "#019db2",
+    //     "titleBar.activeForeground": "#FFFFFF",
+    //     "titleBar.inactiveBackground": "#019db2",
+    //     "titleBar.inactiveForeground": "#FFFFFF",
+    //     "titleBar.border": "#019db2",
+    //     "activityBar.background": "#019db2",
+    //     "activityBar.foreground": "#FFFFFF",
+    //     "statusBar.background": "#019db2",
+    //     "statusBar.foreground": "#FFFFFF",
+    //     "statusBar.debuggingBackground": "#019db2",
+    //     "statusBar.debuggingForeground": "#FFFFFF",
+    //     "tab.activeBorder": "#019db2",
+    //     "iLoveWorkSpaceColors": true,
+    //     "iLoveWorkSpaceRandom": false
+    // }
 }
