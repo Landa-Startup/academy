@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import TeamRolesContainer from './academy/TeamRolesContainer';
+import TeamRolesContainer from './TeamRolesContainer';
 import PersonalTab from './PersonalTab';
 
 export default function TeamPersons() {
@@ -267,7 +267,7 @@ export default function TeamPersons() {
     'Accountant',
     'Public Relations',
     'Digital Marketer',
-    'Secretary',
+    'Secretary'
   ];
 
   const [selectedRole, setSelectedRole] = useState<string>('All');
@@ -277,7 +277,7 @@ export default function TeamPersons() {
     setSelectedRole(role);
   }
   useEffect(() => {
-    console.log("Selected Role:", selectedRole);
+    console.log('Selected Role:', selectedRole);
     if (selectedRole === 'All') {
       setFilteredPersons(persons);
     } else {
@@ -285,7 +285,7 @@ export default function TeamPersons() {
         (person) =>
           person.category?.toLowerCase().includes(selectedRole.toLowerCase())
       );
-      console.log(filteredPersons)
+      console.log(filteredPersons);
       setFilteredPersons(filteredPersons);
     }
   }, [selectedRole]);

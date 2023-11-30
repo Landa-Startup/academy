@@ -1,5 +1,5 @@
-import CoursesCardContainer from '@/components/academy/CoursesCardContainer';
-import SearchInput from '@/components/academy/SearchInput';
+import CoursesCardContainer from '@/components/Courses/CoursesCardContainer';
+import SearchInput from '@/components/Courses/CoursesSearchInput';
 import Banner from '@/components/common/Banner';
 import Pagination from '@/components/common/Pagination';
 import FooterSecondary from '@/components/layout/FooterSecondary';
