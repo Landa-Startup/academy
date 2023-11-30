@@ -36,17 +36,12 @@ export default function Footer() {
             >
               Home
             </Link>
+
             <Link
-              href={'/'}
+              href={'/gallery'}
               className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
-              Blog
-            </Link>
-            <Link
-              href={'/about'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              About
+              Gallery
             </Link>
             <Link
               href={'/contact'}
@@ -60,12 +55,7 @@ export default function Footer() {
             >
               Our Team
             </Link>
-            <Link
-              href={'/'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              Verification
-            </Link>
+
           </div>
         </div>
 
