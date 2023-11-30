@@ -25,7 +25,7 @@ function ModalForm({ isOpen, onRequestClose, onSubmit, closeModal }: any) {
     phoneNumber: '',
     interests: ''
   });
-  const [phone, setPhone] = useState('');
+  // const [phone, setPhone] = useState('');
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -77,7 +77,9 @@ function ModalForm({ isOpen, onRequestClose, onSubmit, closeModal }: any) {
         remove phone from <PhoneInput/>
         Property 'phone' does not exist on type 'IntrinsicAttributes'.
         */}
-          <PhoneInput phone={phone} setPhone={setPhone} />
+          <PhoneInput
+          // phone={phone} setPhone={setPhone}
+          />
         </div>
         <div>
           <select
