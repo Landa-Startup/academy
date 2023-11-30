@@ -9,6 +9,7 @@ interface Course {
   date: string;
   active?: boolean;
   price: number;
+  slug: string
 }
 
 export default function CoursesCardContainer() {
@@ -25,7 +26,7 @@ export default function CoursesCardContainer() {
     <div className="mx-2 grid grid-cols-2 justify-items-center gap-y-5 md:gap-16 md:px-32">
       {courses.map((course, index) => (
         <CoursesCard
-          id={index}
+        slug={course.slug}
           key={index}
           title={course.title}
           backgroundImage={course.thumbnail}

@@ -3,19 +3,19 @@ import React from 'react';
 import Button from '../common/Button';
 
 export default function CoursesCard({
-  id,
   title,
   backgroundImage,
-  price
+  price,
+  slug
 }: {
-  id: number;
   title: string;
   backgroundImage: string;
   price: string;
+  slug: string;
 }) {
   return (
     <Link
-      href={'/courses/' + (id + 1)}
+      href={'/courses/' + slug}
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundPosition: 'center',

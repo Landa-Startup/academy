@@ -9,6 +9,7 @@ import NotificationSendForm from '../common/form/NotificationSendForm';
 import apiClient from '@/utils/api';
 import PhoneInputWithCountrySelect from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
+import Button from '../common/Button';
 
 interface ContactUsType {
   firstName: string;
@@ -120,7 +121,7 @@ export default function ContactUs() {
         <div className="text-center font-gilda text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:h-[58px] md:w-[413px] md:text-3xl md:tracking-[11.20px]">
           LANDA ACADEMY
         </div>
-        <div className="text-center text-3xl font-normal leading-[50px] tracking-[1.6px] text-black md:h-[58px] md:w-[413px] md:text-5xl md:tracking-[3.20px] ">
+        <div className="text-center font-gilda text-3xl font-normal leading-[50px] tracking-[1.6px] text-black md:h-[58px] md:w-[413px] md:text-5xl md:tracking-[3.20px] ">
           Contact Us
         </div>
       </div>
@@ -167,13 +168,12 @@ export default function ContactUs() {
           className="!important] inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px] [&>*:nth-child(1)]:border-r-2 [&>*:nth-child(2)]:bg-yellow-50"
         />
       </div>
-      <button
-        type="submit"
+      <Button
         onSubmit={handleSubmit(onSubmit)}
-        className="mx-auto h-[36px] w-[160px] bg-yellow-400 text-white md:h-14 md:w-60"
-      >
-        {send ? 'Submitting ....' : 'Submit'}
-      </button>
+        type="submit"
+        size="visit"
+        text={send ? 'Submitting ....' : 'Submit'}
+      />
       <Image
         loading="lazy"
         className="-bottom-5 md:absolute md:-left-16"

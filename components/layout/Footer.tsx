@@ -87,16 +87,16 @@ export default function Footer() {
               <div className="text-base font-normal text-white">
                 Gholam Jafari St, Tehran Province, Tajrish, Iran
               </div>
-              <div className="text-justify text-base font-normal text-white">
-                02188030167
+              <div className="text-base font-normal text-justify text-white">
+                021-880-301-67
               </div>
             </div>
             <div>
               <div className="text-justify text-base font-normal text-white">
                 Saadat Abad Ave, Isfahan, Iran
               </div>
-              <div className="text-justify text-base font-normal text-white">
-                03131311914
+              <div className="text-base font-normal text-justify text-white">
+                031-313-119-14
               </div>
             </div>
             <div className="flex h-[22px] w-[330px] flex-row items-center gap-6 pt-4 text-white">
