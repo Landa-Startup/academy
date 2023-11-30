@@ -250,3 +250,214 @@ export const persons = [
     category: 'designers'
   }
 ];
+
+// cardsData
+
+export const cardsData = [
+  {
+    image: '/static/images/our-team/Personals/a1.png',
+    name: 'Rasoul Moradimehr',
+    position: ' CEO',
+    links: {
+      linkedin: 'https://www.linkedin.com/in/rasoul-moradi-mehr/',
+      whatsapp: 'wa.me/+989134233863',
+      email: 'mailto:rasoulmoradimehr@gmail.com',
+      website: 'https://moradimehr.com/',
+      instagram: 'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA==',
+    },
+  },
+  {
+    image: '/static/images/4-1.png',
+    name: 'MORTEZA JAFARI',
+    position: 'International Relations',
+    links: {
+      linkedin: 'https://www.linkedin.com/in/morteza-jafari-5b40b63a',
+      whatsapp: 'https://api.whatsapp.com/send?phone=+14705199691',
+      email: 'mailto:morteza_jafari49@yahoo.com',
+      website: 'https://mortezajafari.ca/',
+      instagram: 'https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA==',
+    },
+  },
+  {
+    image: '/static/images/our-team/Personals/a2.png',
+    name: 'Hadi Hasanpour',
+    position: 'COTB',
+    links: {
+      linkedin: 'https://www.linkedin.com/in/hadi-hasanpour',
+      whatsapp: 'https://wa.me/+12892693933',
+      email: 'mailto:hadihasanpor@gmail.com',
+      website: 'https://www.hadihasanpour.ca/',
+      instagram: 'https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA==',
+    },
+  },
+];
+
+// galleryImages
+
+export const galleryImages = [
+  {
+    src: '/static/images/Academy/gallery/all/1.jpg',
+    title: 'Kashan Tour'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/2.jpg',
+    title: 'Yalda 1401'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/3.jpg',
+    title: 'Kashan Tour'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/4.jpg',
+    title: 'Noroz 1401'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/5.jpg',
+    title: 'Desert Tour'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/6.jpg',
+    title: 'Seo Course'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/7.jpg',
+    title: 'Start up School'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/8.jpg',
+    title: 'Landa Academy'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/9.jpg',
+    title: 'Kashan Tour'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/10.jpg',
+    title: 'Landa Academy'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/11.jpg',
+    title: 'Landa Academy'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/12.jpg',
+    title: 'Start up School'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/13.png',
+    title: 'Landa Academy'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/14.jpg',
+    title: 'Landa Academy'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/15.jpg',
+    title: 'Noroz 1401'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/16.jpg',
+    title: 'Noroz 1401'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/17.jpg',
+    title: 'Landa Academy'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/18.jpg',
+    title: 'Kashan Tour'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/19.jpg',
+    title: 'Team Working'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/20.jpg',
+    title: 'Kashan Tour'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/21.jpg',
+    title: 'Seo Course'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/22.jpg',
+    title: 'Kashan Tour'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/23.jpg',
+    title: 'Kashan Tour'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/24.jpg',
+    title: 'Start up School'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/25.jpg',
+    title: 'Noroz 1401'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/26.png',
+    title: 'Start up School'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/27.jpg',
+    title: 'Developers'
+  },
+  {
+    src: '/static/images/Academy/gallery/all/28.jpg',
+    title: 'Dr.MoradiMehr Birthday'
+  }
+];
+
+// HomeGalleryImage
+
+export const homeGalleryImage = [
+  {
+    src: '/static/images/Academy/gallery/1.png',
+    width: 389
+  },
+  {
+    src: '/static/images/Academy/gallery/2.png',
+    width: 291
+  },
+  {
+    src: '/static/images/Academy/gallery/3.png',
+    width: 493
+  },
+  {
+    src: '/static/images/Academy/gallery/4.png',
+    width: 489
+  },
+  {
+    src: '/static/images/Academy/gallery/5.png',
+    width: 389
+  },
+  {
+    src: '/static/images/Academy/gallery/6.png',
+    width: 287
+  }
+];
+
+
+// galleryVideos
+
+export const galleryVideos = [
+  {
+    url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U'
+  },
+  {
+    url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U'
+  },
+  {
+    url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U'
+  },
+  {
+    url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U'
+  },
+  {
+    url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U'
+  },
+  {
+    url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U'
+  }
+];
