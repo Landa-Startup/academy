@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export const persons = [
   {
     image: '/static/images/Academy/our-team/Personals/a1.png',
@@ -263,8 +265,9 @@ export const cardsData = [
       whatsapp: 'wa.me/+989134233863',
       email: 'mailto:rasoulmoradimehr@gmail.com',
       website: 'https://moradimehr.com/',
-      instagram: 'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA==',
-    },
+      instagram:
+        'https://instagram.com/dr.moradimehr.rasoul?igshid=MzRlODBiNWFlZA=='
+    }
   },
   {
     image: '/static/images/4-1.png',
@@ -275,8 +278,9 @@ export const cardsData = [
       whatsapp: 'https://api.whatsapp.com/send?phone=+14705199691',
       email: 'mailto:morteza_jafari49@yahoo.com',
       website: 'https://mortezajafari.ca/',
-      instagram: 'https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA==',
-    },
+      instagram:
+        'https://instagram.com/jafari.irimmigration.ca?igshid=MzRlODBiNWFlZA=='
+    }
   },
   {
     image: '/static/images/our-team/Personals/a2.png',
@@ -287,9 +291,10 @@ export const cardsData = [
       whatsapp: 'https://wa.me/+12892693933',
       email: 'mailto:hadihasanpor@gmail.com',
       website: 'https://www.hadihasanpour.ca/',
-      instagram: 'https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA==',
-    },
-  },
+      instagram:
+        'https://instagram.com/dr.hadihasanpour?igshid=MzRlODBiNWFlZA=='
+    }
+  }
 ];
 
 // galleryImages
@@ -437,7 +442,6 @@ export const homeGalleryImage = [
     width: 287
   }
 ];
-
 
 // galleryVideos
 
