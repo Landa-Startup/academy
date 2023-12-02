@@ -22,12 +22,12 @@ export default function Fifth() {
         width={645}
         height={430}
       />
-      <div className="justify-start items-start inline-flex order-3">
-        <div className="w-5 h-5 bg-yellow-400 rounded-full ml-[-1.5rem] mt-[2.5rem] mb-4 mr-2 flex-shrink-0" />
-        <div className="md:w-[500px] text-black font-barlow md:text-2xl font-medium  leading-7 ml-[5.5px] m-[35px] mr-[0] letter-spacing: 0.8px; ">
+      <div className="order-3 inline-flex items-start justify-start">
+        <div className="mb-4 ml-[-1.5rem] mr-2 mt-[2.5rem] h-5 w-5 shrink-0 rounded-full bg-yellow-400" />
+        <div className="letter-spacing: 0.8px; m-[35px] ml-[5.5px] mr-[0]  font-barlow font-medium leading-7 text-black md:w-[500px] md:text-2xl ">
           Following a year of active participation within Landa, you will
           receive a credible and verifiable
-          <span className="font-semibold mx-1 ">Canadian work experience
+          <span className="mx-1 font-semibold ">Canadian work experience
           certificate from us.</span>
         </div>
       </div>

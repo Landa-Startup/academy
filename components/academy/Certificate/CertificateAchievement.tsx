@@ -1,7 +1,4 @@
 import Certificate from '@/components/Certificate';
-import IconInstagram from '@/components/icons/IconInstagram';
-import IconLinkedin from '@/components/icons/IconLinkedin';
-import IconWhatApp from '@/components/icons/IconWhatsApp';
 // import CertificateCoursePromote from '@/components/CertificateCoursePromote';
 import Image from 'next/image';
 export default function CertificateAchievement({
@@ -54,7 +51,7 @@ export default function CertificateAchievement({
             description={description}
             slug={slug}
           /> */}
-          <div className="rounded-sm bg-[#fdd40a1a] p-6 font-gilda text-black">
+          {/* <div className="rounded-sm bg-[#fdd40a1a] p-6 font-gilda text-black">
             <span className="text-xl">Event sharing</span>
             <div className="my-6 flex gap-5">
               <IconInstagram />
@@ -74,7 +71,7 @@ export default function CertificateAchievement({
             <p className='ml-2 mt-2'>
               Send this link to someone to share your Certificate with them.
             </p>
-          </div>
+          </div> */}
         </div>
         <div className="relative">
           <div className="flex flex-col gap-5">

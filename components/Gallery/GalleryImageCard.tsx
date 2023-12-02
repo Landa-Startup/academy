@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import PhotoModal from '../PhotoModal';
+import PhotoModal from './PhotoModal';
 
 export default function GalleryImageCard({
   src,
@@ -47,7 +47,7 @@ export default function GalleryImageCard({
         imageUrl={selectedImage}
         closeModal={closeModal}
       />
-      <div className="flex-col text-white border-t-2 border-white absolute bottom-7 pl-24 pt-2 z-10 w-full hidden group-hover:flex fade-in">
+      <div className="fade-in absolute bottom-7 z-10 hidden w-full flex-col border-t-2 border-white pl-24 pt-2 text-white group-hover:flex">
         <span className="font-barlow text-xl font-medium">{title}</span>
         <span className="font-barlow text-sm font-medium"></span>
       </div>

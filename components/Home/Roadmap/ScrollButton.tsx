@@ -13,7 +13,7 @@ export default function ScrollButton({
   return (
     <Link
       href={'#' + scrollTo}
-      className={ `btn btn-circle btn-outline   lg:ml-[1150px]    lg:mb-0 mb-48    ${
+      className={ `btn btn-circle btn-outline   mb-48    lg:mb-0 lg:ml-[1150px]    ${
         color === 'white'
           ? 'border-white text-white'
           : 'border-black text-black'

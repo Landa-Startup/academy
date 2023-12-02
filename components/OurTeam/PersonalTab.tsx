@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import LinkedIn from './icons/about/LinkedIn';
+import LinkedIn from '../icons/about/LinkedIn';
 
 export default function PersonalTab({
   image,

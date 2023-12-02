@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import PlayButton from './PlayButton';
+import PlayButton from '../common/PlayButton';
 
 export default function Video() {
   return (

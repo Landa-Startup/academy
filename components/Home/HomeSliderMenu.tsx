@@ -104,8 +104,8 @@ const SliderMenu = () => {
           Our Courses
         </div>
         {/* mx-2 flex gap-4 relative overflow-hidden whitespace-nowrap md:h-[486px] md:gap-12 */}
-        <div className="relative m-auto mx-2 grid overflow-hidden whitespace-nowrap md:h-[486px]">
-          <div className="w-[calc(250px * 16)] scroll hover:pause flex w-4/5">
+        <div className="slider relative m-auto grid w-11/12 overflow-hidden whitespace-nowrap md:h-[486px]">
+          <div className="w-[calc(250px * 16)] scroll hover:pause flex">
             {cardData.map((card, index) => (
               <CourseItem key={index} title={card.title} image={card.image} />
             ))}

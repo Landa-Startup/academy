@@ -2,7 +2,7 @@
 import Image from 'next/image';
 // import React, { useState } from 'react';
 import Modal from 'react-modal';
-import XLg from './icons/common/XLg';
+import XLg from '../icons/common/XLg';
 
 const customStyles = {
   content: {

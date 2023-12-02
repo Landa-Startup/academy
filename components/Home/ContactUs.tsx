@@ -173,7 +173,7 @@ export default function ContactUs() {
       />
       <Image
         loading="lazy"
-        className="-bottom-5 md:absolute md:-left-16"
+        className="bottom-0 md:absolute md:-left-16"
         src={'/static/images/Academy/Collab-pana 1.svg'}
         alt="Academy Contact Us"
         width={522}
