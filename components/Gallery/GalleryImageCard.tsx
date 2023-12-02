@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import PhotoModal from '../PhotoModal';
+import PhotoModal from './PhotoModal';
 
 export default function GalleryImageCard({
   src,
