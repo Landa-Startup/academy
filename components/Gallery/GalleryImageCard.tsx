@@ -47,6 +47,10 @@ export default function GalleryImageCard({
         imageUrl={selectedImage}
         closeModal={closeModal}
       />
+      <div className="fade-in absolute bottom-7 z-10 hidden w-full flex-col border-t-2 border-white pl-24 pt-2 text-white group-hover:flex">
+        <span className="font-barlow text-xl font-medium">{title}</span>
+        <span className="font-barlow text-sm font-medium"></span>
+      </div>
     </>
   );
 }

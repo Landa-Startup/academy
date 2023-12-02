@@ -55,9 +55,7 @@ export default function ContactUs() {
 
   useEffect(() => {
     async function fetchCsrfToken() {
-      const token = await GetCsrfToken(
-        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}get-csrf-token`
-      );
+      const token = await GetCsrfToken(`${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}get-csrf-token`);
       setCsrfToken(token);
     }
     fetchCsrfToken();
@@ -139,7 +137,6 @@ export default function ContactUs() {
           className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px]"
           labelClass="text-[#6b6b6b]"
         />
-
         <Input
           register={register}
           errors={errors}

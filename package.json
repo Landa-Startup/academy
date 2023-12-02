@@ -5,21 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p ${PORT:-8080}",
+    "start": "next start -p 8080",
     "lint": "next lint",
     "test": "jest --watch",
     "test:ci": "jest --ci",
-    "migrate:dev": "npx dotenv -e .env.local -- prisma migrate dev",
-    "db:push": "npx dotenv -e .env.local -- prisma db push",
-    "migrate:reset": "npx dotenv -e .env.local -- prisma migrate reset",
-    "db:seed": "npx dotenv -e .env.local -- prisma db seed",
-    "prisma:generate": "npx dotenv -e .env.local -- prisma generate",
-    "prisma:studio": "npx dotenv -e .env.local -- prisma studio",
     "production:build": "npx prisma generate && npx prisma migrate deploy && next build",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "prepare": "husky install"
   },
   "dependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@prisma/client": "^5.0.0",
     "axios": "^1.4.0",
     "cloudinary": "^1.40.0",
@@ -34,6 +30,7 @@
     "next": "^13.5.4",
     "nookies": "^2.5.2",
     "path": "^0.12.7",
+    "prettier": "^3.1.0",
     "prisma": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -70,5 +67,16 @@
     "postcss": "^8.4.22",
     "tailwindcss": "^3.3.1",
     "typescript": "^5.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && pnpm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }

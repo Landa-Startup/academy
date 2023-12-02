@@ -102,7 +102,7 @@ const SurveyPage = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="mt-4 flex flex-col items-center space-y-8"
         >
-          <div>
+          {/* <div>
             <input
               id="name"
               type="text"
@@ -123,8 +123,8 @@ const SurveyPage = () => {
                 {errors.full_name.message}
               </span>
             )}
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <input
               id="email"
               type="email"
@@ -145,8 +145,8 @@ const SurveyPage = () => {
                 {errors.email.message}
               </span>
             )}
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <input
               id="number"
               type="text"
@@ -167,7 +167,7 @@ const SurveyPage = () => {
                 {errors.phone_number.message}
               </span>
             )}
-          </div>
+          </div> */}
           <div className="flex flex-col space-y-4">
             <label htmlFor="skills" className="text-[#B2B2B2]">
               Which skills would you like to learn at Landa Academy?

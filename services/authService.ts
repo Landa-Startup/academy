@@ -1,5 +1,5 @@
 import jwtDecode from 'jwt-decode';
-import { setCookie, destroyCookie, parseCookies } from 'nookies';
+import { setCookie } from 'nookies';
 import { DecodedToken } from 'app/types/global';
 
 // import { refreshToken } from './authService';
@@ -7,16 +7,13 @@ import { DecodedToken } from 'app/types/global';
 const TOKEN_EXPIRATION_TIME = 30 * 60 * 1000; // 30 minutes
 
 export async function login(email: string, password: string) {
-  const response = await fetch(
-    'http://127.0.0.1:8000/accounts/api/token/',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    }
-  );
+  const response = await fetch('http://127.0.0.1:8000/accounts/api/token/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ email, password })
+  });
 
   if (response.ok) {
     const { access } = await response.json();
@@ -26,7 +23,7 @@ export async function login(email: string, password: string) {
     if (decodedToken) {
       setCookie(null, 'currentUser', JSON.stringify(decodedToken), {
         maxAge: TOKEN_EXPIRATION_TIME,
-        path: '/',
+        path: '/'
       });
       // console.log("cookies:", parseCookies());
       // setCookie(null, 'refreshToken', refreshToken, {
