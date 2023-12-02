@@ -22,7 +22,7 @@
 // }
 
 export default {
-    'hello': 'سلام',
-    'hello.world': 'سلام جهان!',
-    'welcome': 'سلام {name}!'
-  } as const
+  hello: 'سلام',
+  'hello.world': 'سلام جهان!',
+  welcome: 'سلام {name}!'
+} as const;

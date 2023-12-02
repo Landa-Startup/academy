@@ -7,8 +7,27 @@ import Whatsapp from '../icons/footer/Whatsapp';
 import LinkedIn from '../icons/footer/LinkedIn';
 
 export default function Footer() {
+  const footerLinks = [
+    {
+      href: '/',
+      title: 'Home'
+    },
+    {
+      href: '/gallery',
+      title: 'Gallery'
+    },
+    {
+      href: '/contact',
+      title: 'contact'
+    },
+    {
+      href: '/our-team',
+      title: 'Our Team'
+    }
+  ];
+
   return (
-    <div className="flex h-screen snap-center flex-col bg-[#3D5656] p-8 py-32 font-barlow">
+    <div className="flex h-screen snap-center flex-col bg-[#3D5656] p-8 py-12 font-barlow md:py-32">
       <div className="flex flex-col justify-between space-y-5 md:flex-row md:p-20">
         <div className="flex flex-col gap-4 md:w-[344px]">
           <div className="h-[25px] text-justify text-xl font-medium text-[#FEED9D]">
@@ -30,42 +49,15 @@ export default function Footer() {
             <br />
           </div>
           <div className="flex flex-col gap-1">
-            <Link
-              href={'/'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              Home
-            </Link>
-            <Link
-              href={'/'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              Blog
-            </Link>
-            <Link
-              href={'/about'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              About
-            </Link>
-            <Link
-              href={'/contact'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              Contact
-            </Link>
-            <Link
-              href={'/'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              Our Team
-            </Link>
-            <Link
-              href={'/'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              Verification
-            </Link>
+            {footerLinks.map((link, index) => (
+              <Link
+                key={index}
+                href={link.href}
+                className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
+              >
+                {link.title}
+              </Link>
+            ))}
           </div>
         </div>
 
@@ -87,7 +79,7 @@ export default function Footer() {
               <div className="text-base font-normal text-white">
                 Gholam Jafari St, Tehran Province, Tajrish, Iran
               </div>
-              <div className="text-base font-normal text-justify text-white">
+              <div className="text-justify text-base font-normal text-white">
                 021-880-301-67
               </div>
             </div>
@@ -95,7 +87,7 @@ export default function Footer() {
               <div className="text-justify text-base font-normal text-white">
                 Saadat Abad Ave, Isfahan, Iran
               </div>
-              <div className="text-base font-normal text-justify text-white">
+              <div className="text-justify text-base font-normal text-white">
                 031-313-119-14
               </div>
             </div>

@@ -35,7 +35,11 @@ yarn-error.log*
 .vercel
 
 # Husky
-.husky/
+<<<<<<< HEAD
+/.husky/
+=======
+# .husky/
+>>>>>>> 038ac0bf348aa752fb32aad2ee5f38e743ada349
 
 # package-lock.json
 package-lock.json
@@ -45,3 +49,6 @@ yarn.lock
 
 # pnpm 
 pnpm-lock.yaml
+
+# IDE
+.vscode/

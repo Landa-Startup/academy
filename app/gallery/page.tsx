@@ -1,4 +1,4 @@
-import GalleryButtonsContainer from '@/components/academy/GalleryButtonsContainer';
+import GalleryButtonsContainer from '@/components/Gallery/GalleryButtonsContainer';
 import Banner from '@/components/common/Banner';
 import FooterSecondary from '@/components/layout/FooterSecondary';
 import { Metadata } from 'next';
