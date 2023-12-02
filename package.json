@@ -19,6 +19,7 @@
     "@prisma/client": "^5.0.0",
     "axios": "^1.4.0",
     "cloudinary": "^1.40.0",
+    "commitlint": "^18.4.3",
     "dotenv-cli": "^7.2.1",
     "eslint-config-prettier": "^9.0.0",
     "formidable": "^3.5.0",
