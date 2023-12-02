@@ -97,11 +97,13 @@ const SliderMenu = () => {
   return (
     <div className="h-screen snap-start bg-[#3D5656] py-10" id="Courses">
       <div className="container mx-auto">
-        <div className="text-center font-condensed text-2xl font-normal leading-[50px] tracking-[11.20px] text-white md:text-3xl">
-          LANDA ACADEMY
-        </div>
-        <div className="mb-12 text-center font-gilda text-4xl font-normal leading-[50px] tracking-[3.20px] text-white md:text-5xl">
-          Our Courses
+        <div className="mt-12">
+          <div className="text-center font-condensed text-2xl font-normal leading-[50px]  tracking-[11.20px] text-white md:text-3xl">
+            LANDA ACADEMY
+          </div>
+          <div className="text-center font-gilda text-4xl font-normal leading-[50px] tracking-[3.20px] text-white md:text-5xl">
+            Our Courses
+          </div>
         </div>
         {/* mx-2 flex gap-4 relative overflow-hidden whitespace-nowrap md:h-[486px] md:gap-12 */}
         <div className="slider relative m-auto grid w-11/12 overflow-hidden whitespace-nowrap md:h-[486px]">
