@@ -2,20 +2,19 @@ import Image from 'next/image';
 import React from 'react';
 import Button from '../common/Button';
 // import Loading from './../../app/loading';
-import {homeGalleryImage} from '../Constant/constant'
+import { homeGalleryImage } from '../Constant/constant';
 
 export default function Gallery() {
-
   return (
     <div className="relative h-screen snap-start bg-neutral-50/95 py-5">
       <div className="flex flex-col">
         <div className="text-center text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:text-[32px] md:tracking-[11.20px]">
           LANDA ACADEMY
         </div>
-        <div className="text-center font-gilda text-3xl font-normal leading-[50px] tracking-[1.6px] text-black md:text-[64px] md:tracking-[3.20px]">
+        <div className="-mt-3 text-center font-gilda text-3xl font-normal tracking-[1.6px] text-black md:text-[64px] md:leading-[50px] md:tracking-[3.20px]">
           Our Gallery
         </div>
-        <div className="mx-8 mb-1 mt-6 grid grid-cols-2 justify-items-center gap-2 md:mx-32 md:grid-cols-3">
+        <div className="mx-8 grid grid-cols-2 justify-items-center gap-2 md:mx-32 md:mt-6 md:grid-cols-3">
           {homeGalleryImage.map((image, index) => (
             <Image
               key={index}
