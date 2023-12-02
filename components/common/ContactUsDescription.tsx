@@ -43,8 +43,8 @@ export default function ContactUsDescription() {
         </Link>
       </div>
       <div className="mt-10 flex flex-col gap-4">
-        <div className="flex  gap-2">
-          <Phone />
+        <div className="flex gap-2">
+          <Phone addedClass='-mt-5'/>
           <div className="flex flex-col">
             <span className="font-semibold">Phone Call</span>
             <ul className="gap-1">
@@ -57,13 +57,13 @@ export default function ContactUsDescription() {
               <li>
                 <Link href="tel:+14165577622">
                   <span>Tehran:</span>
-                  <span className="text-yellow-400">02188030167</span>
+                  <span className="text-yellow-400">021-880-301-67</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
                   <span>Isfahan:</span>
-                  <span className="text-yellow-400">03131311914</span>
+                  <span className="text-yellow-400">031-313-119-14</span>
                 </Link>
               </li>
             </ul>

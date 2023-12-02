@@ -1,7 +1,7 @@
 import Banner from '@/components/common/Banner';
 import { Metadata } from 'next';
 import FooterSecondary from '@/components/layout/FooterSecondary';
-import TeamPersons from '@/components/TeamPersons';
+import TeamPersons from '@/components/OurTeam/TeamPersons';
 
 export const metadata: Metadata = {
   title: 'Landa Holding | Our Team',

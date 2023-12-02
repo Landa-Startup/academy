@@ -1,53 +1,39 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
     'next/core-web-vitals',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
+    "plugin:@typescript-eslint/eslint-recommended",
     'plugin:tailwindcss/recommended',
     'eslint-config-prettier'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'tailwindcss',
-    'no-loops',
-    'prettier'
-  ],
+  plugins: ['react', '@typescript-eslint', 'tailwindcss', 'no-loops', 'prettier'],
   rules: {
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-unused-vars': 'error',
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'tailwindcss/no-custom-classname': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    'max-lines': [
-      'error',
-      { max: 350, skipComments: true, skipBlankLines: true }
-    ],
-    'components/icons/*': ['off']
+    "max-lines": ["error", { "max": 200, "skipComments": true, "skipBlankLines": true }],
+    "components/icons/*": ["off"],
   },
   settings: {
-    tailwindcss: {
+    'tailwindcss': {
       groupByResponsive: true,
-      whitelist: []
-    }
-  }
+      whitelist: [],
+    },
+  },
 };

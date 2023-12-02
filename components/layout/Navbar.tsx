@@ -13,7 +13,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
 
   const menuItems = [
     { label: 'HOME', href: '/' },
-    // { label: "COURSES", href: "/courses" },
+    { label: "GALLERY", href: "/gallery" },
     { label: 'CONTACT', href: '/contact' },
     // { label: "ABOUT", href: "/about" },
     { label: 'OUR TEAM', href: '/our-team' }
