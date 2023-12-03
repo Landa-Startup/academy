@@ -44,26 +44,26 @@ export default function ContactUsDescription() {
       </div>
       <div className="mt-10 flex flex-col gap-4">
         <div className="flex gap-2">
-          <Phone addedClass='-mt-5'/>
+          <Phone addedClass="-mt-5" />
           <div className="flex flex-col">
             <span className="font-semibold">Phone Call</span>
             <ul className="gap-1">
               <li>
                 <Link href="tel:+14165577622">
                   <span>Toronto:</span>
-                  <span className="text-yellow-400">+1 (416) 557-7622</span>
+                  <span className="text-yellow-400">+1 (289) 269-3933</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
                   <span>Tehran:</span>
-                  <span className="text-yellow-400">021-880-301-67</span>
+                  <span className="text-yellow-400">+98 (912) 0539563</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
                   <span>Isfahan:</span>
-                  <span className="text-yellow-400">031-313-119-14</span>
+                  <span className="text-yellow-400">+98 (313) 1311914</span>
                 </Link>
               </li>
             </ul>
@@ -89,9 +89,18 @@ export default function ContactUsDescription() {
           <div className="ml-2 flex flex-col">
             <span className="font-semibold">Address</span>
             <ul className="mx-4 list-disc space-y-3">
-              <li>No. 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
-              <li>No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran</li>
-              <li>Tala Complex, Saadat Abad St, Isfahan, Iran</li>
+              <li>
+                No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9,
+                Canada
+              </li>
+              <li>
+                Office 41, No. 27, Gholam Jafari Street, Tajrish Square, Tehran,
+                Iran
+              </li>
+              <li>
+                Office C, 5th Floor, Tala Complex, Sa&apos;adat Abad Street,
+                Isfahan, Iran
+              </li>
             </ul>
           </div>
         </div>

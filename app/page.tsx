@@ -16,22 +16,27 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
+    // Main page container with full height, smooth scrolling and specific background color
     <div className="h-screen snap-y snap-mandatory overflow-auto scroll-smooth bg-[#F1F8EC]">
-      {/* Hero Section */}
+      {/* Hero Section - Displays the main title and subtitle of the page */}
       <Hero
         title="Landa Business Academy"
         subTitle="Landa Academy was founded with the mission of fostering the potential of individuals, especially young minds. We believe that investing in adolescents guarantees a bright future and a better tomorrow."
       />
 
-      {/* Roadmap Section */}
+      {/* Roadmap Section - Displays the roadmap or timeline */}
       <RoadmapContainer />
 
-      {/* <ScrollMenu /> */}
+      {/* Slider Menu - Displays a horizontal scrolling menu */}
       <SliderMenu />
 
+      {/* Gallery - Displays a collection of images or items */}
       <Gallery />
 
+      {/* Contact Us - Section for users to contact or reach out */}
       <ContactUs />
+
+      {/* Footer - Displays the footer of the page */}
       <Footer />
     </div>
   );
