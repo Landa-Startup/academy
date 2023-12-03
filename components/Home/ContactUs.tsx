@@ -10,6 +10,8 @@ import apiClient from '@/utils/api';
 import PhoneInputWithCountrySelect from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import Button from '../common/Button';
+import "./ContactUs.css"
+
 
 interface ContactUsType {
   firstName: string;
@@ -123,7 +125,7 @@ export default function ContactUs() {
           Contact Us
         </div>
       </div>
-      <div className="relative z-10 grid grid-cols-1 items-center gap-5 md:grid-cols-2">
+      <div className="relative z-10 grid grid-cols-1  gap-5 md:grid-cols-2">
         <Input
           register={register}
           errors={errors}
@@ -162,7 +164,7 @@ export default function ContactUs() {
           defaultCountry="IR"
           international
           countryCallingCodeEditable={false}
-          className="!important] inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px] [&>*:nth-child(1)]:border-r-2 [&>*:nth-child(2)]:bg-yellow-50"
+          className="!important] inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px] [&>*:nth-child(1)]:border-r-2 [&>*:nth-child(2)]:bg-yellow-50 "
         />
       </div>
       <Button
