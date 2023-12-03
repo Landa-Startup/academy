@@ -22,12 +22,7 @@ export default function Footer() {
             >
               Home
             </Link>
-            <Link
-              href={'/'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              Blog
-            </Link>
+
             <Link
               href={'/about'}
               className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
@@ -41,16 +36,10 @@ export default function Footer() {
               Contact
             </Link>
             <Link
-              href={'/'}
+              href={'/our-team'}
               className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Our Team
-            </Link>
-            <Link
-              href={'/'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              Verification
             </Link>
           </div>
         </div>
