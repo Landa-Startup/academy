@@ -135,7 +135,7 @@ export default function ContactUs() {
           required="First Name is Required."
           patternValue=""
           patternMessage="Enter a Valid First Name"
-          placeholder="Enter your First Name"
+          placeholder="First Name"
           className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px]"
           labelClass="text-[#6b6b6b]"
         />
@@ -148,7 +148,7 @@ export default function ContactUs() {
           required="Last Name is Required."
           patternValue=""
           patternMessage="Enter a Valid Last Name"
-          placeholder="Enter your Last Name"
+          placeholder="Last Name"
           className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px]"
           labelClass="text-[#6b6b6b] dark:text-current"
         />
