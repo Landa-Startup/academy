@@ -5,6 +5,7 @@ import CertificateAchievement from '@/components/academy/Certificate/Certificate
 import FooterSecondary from '@/components/layout/FooterSecondary';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import CertificateAchievementNew from '@/components/CertificateAchievementNew';
 
 interface Certificate {
   user: { first_name: string; last_name: string };
@@ -53,7 +54,7 @@ export default function Page() {
         image="/static/images/Academy/seo-course.png"
         title="Certificate"
       />
-      <CertificateAchievement
+      {/* <CertificateAchievement
         name={certificate.user.first_name + ' ' + certificate.user.last_name}
         courseTitle={certificate.course.title}
         issuedDate={certificate.issue_date.replace(/-/g, '/')}
@@ -61,7 +62,8 @@ export default function Page() {
         description={certificate.course.description}
         qrcode_image={certificate.qrcode_image}
         slug={certificate.course.slug}
-      />
+      /> */}
+      <CertificateAchievementNew />
       <FooterSecondary />
     </div>
   );

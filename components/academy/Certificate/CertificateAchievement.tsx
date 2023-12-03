@@ -1,4 +1,4 @@
-import Certificate from '@/components/Certificate';
+import Certificate from '@/components/academy/Certificate/Certificate';
 // import CertificateCoursePromote from '@/components/CertificateCoursePromote';
 import Image from 'next/image';
 export default function CertificateAchievement({
@@ -19,8 +19,9 @@ export default function CertificateAchievement({
 }) {
   return (
     <div className="relative flex h-screen flex-col justify-around text-white">
-      <div className="grid grid-cols-2 justify-items-center">
+      <div className="flex flex-col-reverse justify-between px-6">
         <div className="flex flex-col gap-5">
+          {/* CERTIFICATE INFO */}
           <div className="flex flex-col justify-start gap-5 rounded-sm bg-[#fdd40a1a] p-10">
             <h2 className="font-gilda text-4xl text-[#FDD30A]">
               CERTIFICATE OF ACHIEVEMENT
@@ -45,6 +46,7 @@ export default function CertificateAchievement({
               </p>
             </div>
           </div>
+          {/* CERTIFICATE INFO */}
           {/* <CertificateCoursePromote
             course={courseTitle}
             image={courseImage}
