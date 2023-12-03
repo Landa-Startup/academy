@@ -7,17 +7,20 @@ import Envelope from '../icons/footer/Envelope';
 import Whatsapp from '../icons/footer/Whatsapp';
 import LinkedIn from '../icons/footer/LinkedIn';
 import './Navbar.css';
+import Image from 'next/image';
+import CaretDown from '../icons/CaretDown';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
 
   const menuItems = [
     { label: 'HOME', href: '/' },
+    // { label: 'Blog', href: '/blog' },
+    { label: 'COURSES', href: '/courses' },
     { label: 'GALLERY', href: '/gallery' },
     { label: 'CONTACT', href: '/contact' },
-    // { label: "ABOUT", href: "/about" },
+    { label: 'ABOUT', href: '/about' },
     { label: 'OUR TEAM', href: '/our-team' }
-    // { label: "VERIFICATION", href: "/verification" },
   ];
 
   const handleLinkClick = () => {
@@ -46,7 +49,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         ref={drawerRef}
       />
       <div className="drawer-content relative flex flex-col">
-        <div className="navbar flex w-full items-center justify-between bg-[#26323880] text-black backdrop-blur-sm">
+        <div className="navbar flex w-full items-center justify-between bg-[#26323880] px-12 text-black backdrop-blur-sm">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -69,18 +72,27 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           </div>
           <Logo />
           <div className="hidden xl:flex xl:justify-center">
-            <ul className="menu menu-horizontal flex justify-center font-condensed text-xl">
+            <ul className="menu menu-horizontal flex justify-center font-condensed text-xl text-white">
               {menuItems.map((item) => (
                 <li className="mx-2 text-2xl" key={item.label}>
                   <Link
                     href={item.href}
-                    className="hover:bg-black hover:text-white"
+                    className="hover:bg-white hover:text-black"
                   >
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
+          </div>
+          <div className="flex gap-2">
+            <Image
+              alt="us"
+              src={'/static/images/Academy/usFlag.png'}
+              width={45}
+              height={34}
+            />
+            <CaretDown />
           </div>
         </div>
         <div className="children">{children}</div>
