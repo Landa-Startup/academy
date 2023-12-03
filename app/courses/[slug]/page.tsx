@@ -30,7 +30,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       .then((response) => response.json())
       .then((data) => setCourse(data))
       .catch((error) => console.error('Error fetching data:', error));
-  }, []); // The empty dependency array ensures this effect runs once when the component mounts
+  }); // The empty dependency array ensures this effect runs once when the component mounts
 
   if (!course) {
     // You can add a loading state here
