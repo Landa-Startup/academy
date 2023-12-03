@@ -69,26 +69,29 @@ export default function Footer() {
           <div className="flex w-[330px] flex-col gap-2 divide-y-2 divide-[#CCE8BB]">
             <div>
               <div className="text-justify text-base font-normal text-white">
-                Young street, Toronto, Canada
+                No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9,
+                Canada
               </div>
               <div className="text-justify text-base font-normal text-white">
-                +1 (416) 557-7622
+                +1 (289) 269-3933
               </div>
             </div>
             <div>
               <div className="text-base font-normal text-white">
-                Gholam Jafari St, Tehran Province, Tajrish, Iran
+                Office 41, No. 27, Gholam Jafari Street, Tajrish Square, Tehran,
+                Iran
               </div>
               <div className="text-justify text-base font-normal text-white">
-                021-880-301-67
+                +98 (912) 0539563
               </div>
             </div>
             <div>
               <div className="text-justify text-base font-normal text-white">
-                Saadat Abad Ave, Isfahan, Iran
+                Office C, 5th Floor, Tala Complex, Sa&apos;adat Abad Street,
+                Isfahan, Iran
               </div>
               <div className="text-justify text-base font-normal text-white">
-                031-313-119-14
+                +98 (313) 1311914
               </div>
             </div>
             <div className="flex h-[22px] w-[330px] flex-row items-center gap-6 pt-4 text-white">

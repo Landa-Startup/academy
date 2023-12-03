@@ -34,7 +34,7 @@ export default function Fourth() {
       <ScrollButton
         scrollTo="Roadmap-4"
         color="white"
-        addedClass="mx-auto md:ml-28 mt-32 md:mt-0 "
+        addedClass="mx-auto md:ml-28 mt-32 md:mt-0  lg:ml-[177px]"
       />
       <svg
         className="absolute left-[550px] top-0 hidden md:block"
