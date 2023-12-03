@@ -103,7 +103,7 @@ export default function FooterSecondary() {
               <Link
                 aria-label="Instagram"
                 href={
-                  'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='
+                  'https://www.instagram.com/landaacademy/'
                 }
                 className="hover:text-[#CCE8BB]"
                 target="_blank"
@@ -112,7 +112,7 @@ export default function FooterSecondary() {
               </Link>
               <Link
                 aria-label="Email"
-                href={'mailto:info@landaholding.com'}
+                href={'mailto:academy@landaholding.com'}
                 className="hover:text-[#CCE8BB]"
               >
                 <Envelope />
@@ -127,7 +127,7 @@ export default function FooterSecondary() {
               </Link>
               <Link
                 aria-label="Linkedin"
-                href={'https://www.linkedin.com/company/landa-startup-inc'}
+                href={'https://www.linkedin.com/company/landa-startup-school/'}
                 className="hover:text-[#CCE8BB]"
                 target="_blank"
               >

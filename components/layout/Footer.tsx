@@ -88,7 +88,7 @@ export default function Footer() {
               <Link
                 aria-label="Instagram"
                 href={
-                  'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='
+                  'https://www.instagram.com/landaacademy/'
                 }
                 className="hover:text-[#CCE8BB]"
                 target="_blank"
@@ -112,7 +112,7 @@ export default function Footer() {
               </Link>
               <Link
                 aria-label="Linkedin"
-                href={'https://www.linkedin.com/company/landa-startup-inc'}
+                href={'https://www.linkedin.com/company/landa-startup-school/'}
                 className="hover:text-[#CCE8BB]"
                 target="_blank"
               >
