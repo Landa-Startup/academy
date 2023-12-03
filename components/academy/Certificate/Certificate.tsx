@@ -11,10 +11,10 @@ export default function Certificate({
   issueDate: string;
 }) {
   return (
-    <div className="flex h-[520px] w-[700px] items-center justify-center border-[15px] border-[#FDD30A] bg-white font-barlow text-black">
-      <div className="flex h-[470px] w-[650px] flex-col items-center justify-center border-[10px] border-[#80C555]">
-        <div className="rounded-full border border-dashed border-black p-2">
-          <div className="flex flex-col items-center justify-center rounded-full border border-black bg-[#F0F6ED] p-5">
+    <div className="flex h-[520px]  MD:w-[700px] items-center justify-center border-[15px] border-[#FDD30A] bg-white font-barlow text-black">
+      <div className="flex h-[470px] w-full mx-2 py-3 flex-col items-center justify-center border-[10px] border-[#80C555]">
+        <div className="rounded-full w-32 h-32 border border-dashed border-black p-2">
+          <div className="flex w-full h-full flex-col items-center justify-center rounded-full border border-black bg-[#F0F6ED]">
             <Image
               className="object-contain"
               src="/static/images/Academy/Logo.svg"
@@ -42,7 +42,7 @@ export default function Certificate({
             Academy
           </p>
         </div>
-        <div className="flex w-full justify-between px-16">
+        <div className="flex w-full justify-between px-3">
           <div className="flex flex-col items-center justify-center">
             <span className="font-sacramento text-4xl text-[#80C555]">
               moradimehr.
@@ -56,7 +56,7 @@ export default function Certificate({
                 https://academy.landaholding.com/verify/TY65JD7b
               </Link>
             </div> */}
-            <Image alt="Qr code" src={qrCode} width={70} height={70} />{' '}
+            <Image alt="Qr code" src={qrCode} width={50} height={50} />{' '}
             <span className="bar font-barlow text-xs font-semibold">
               Issued on: {issueDate}
             </span>

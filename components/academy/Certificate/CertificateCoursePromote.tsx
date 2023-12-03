@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import Button from './common/Button';
+import Button from '../../common/Button';
 
 export default function CertificateCoursePromote({
   course,
