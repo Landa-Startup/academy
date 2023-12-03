@@ -13,7 +13,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
 
   const menuItems = [
     { label: 'HOME', href: '/' },
-    { label: "GALLERY", href: "/gallery" },
+    { label: 'GALLERY', href: '/gallery' },
     { label: 'CONTACT', href: '/contact' },
     // { label: "ABOUT", href: "/about" },
     { label: 'OUR TEAM', href: '/our-team' }
@@ -45,8 +45,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         aria-label="Menu Toggle"
         ref={drawerRef}
       />
-      <div className="drawer-content relative flex flex-col md:px-32 md:pt-5">
-        <div className="navbar flex w-full items-center justify-between bg-transparent text-black">
+      <div className="drawer-content relative flex flex-col">
+        <div className="navbar flex w-full items-center justify-between bg-[#26323880] text-black backdrop-blur-sm">
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -68,10 +68,10 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </label>
           </div>
           <Logo />
-          <div className="hidden xl:flex">
-            <ul className="menu menu-horizontal flex justify-center space-x-10 font-condensed text-xl">
+          <div className="hidden xl:flex xl:justify-center">
+            <ul className="menu menu-horizontal flex justify-center font-condensed text-xl">
               {menuItems.map((item) => (
-                <li className="h-9 text-2xl" key={item.label}>
+                <li className="mx-2 text-2xl" key={item.label}>
                   <Link
                     href={item.href}
                     className="hover:bg-black hover:text-white"
