@@ -8,8 +8,8 @@ import LinkedIn from '../icons/footer/LinkedIn';
 
 export default function FooterSecondary() {
   return (
-    <div className="flex h-[680px] snap-center flex-col bg-[#3D5656] p-8 py-32 font-barlow">
-      <div className="flex flex-col justify-between space-y-5 md:flex-row md:p-20">
+    <div className="flex h-[850px] snap-center flex-col justify-between bg-[#3D5656] py-8 font-barlow md:h-[380px]">
+      <div className="flex flex-col justify-between space-y-5 px-12 py-5 md:flex-row">
         <div className="flex flex-col gap-4 md:w-[344px]">
           <div className="h-[25px] text-justify text-xl font-medium text-[#FEED9D]">
             About Landa
