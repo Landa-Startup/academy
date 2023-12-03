@@ -30,6 +30,7 @@ function PhotoModal({ isOpen, onRequestClose, imageUrl, closeModal }: any) {
   //     setCurrentIndex(currentIndex + 1);
   //   }
   // };
+
   return (
     <Modal
       isOpen={isOpen}
