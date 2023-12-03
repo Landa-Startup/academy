@@ -10,7 +10,7 @@ interface Course {
   title: string;
   description: string;
   price: string;
-  discount: string;
+  discount: { discount_value: number };
   discountPercent: string;
   duration: string;
   sessions: string;
@@ -58,9 +58,9 @@ export default function Page({ params }: { params: { slug: string } }) {
                   <div className="mx-20 my-5 bg-[#F1F8EC] py-5">
                     <p className="my-1 text-2xl">Course Price</p>
                     <p className="my-1 text-3xl line-through decoration-[#FDD30A] decoration-wavy">
-                      {`${course.discount}T`}
+                      {`${course.price}`}
                     </p>
-                    <p className="my-1 text-3xl">{`${course.price}T`}</p>
+                    <p className="my-1 text-3xl">{`price after discount here`}</p>
                   </div>
                   <div className="mx-20  my-5 bg-[#F1F8EC] py-5">
                     <p className="my-1 text-2xl">Contact Us</p>
