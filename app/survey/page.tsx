@@ -1,20 +1,19 @@
+import SurveyForm from '@/components/academy/SurveyForm';
 import Banner from '@/components/common/Banner';
-import Button from '@/components/common/Button';
 import Hat from '@/components/icons/Hat';
 import FooterSecondary from '@/components/layout/FooterSecondary';
 import { Metadata } from 'next';
-import React from 'react';
 
 export const metadata: Metadata = {
   title: 'Landa Academy | Survey',
   description: ''
 };
 
-const SurveyPage = () => {
+export default function SurveyPage() {
   return (
     <div>
       <Banner image="" title="Courses Survey" />
-      <div className="relative mx-auto my-16 flex w-[720px] flex-col items-center bg-[#F1F8EC] px-11 py-14">
+      <div className="relative mx-5 my-16 flex flex-col items-center bg-[#F1F8EC] px-8 py-14 md:mx-auto md:w-[720px] md:px-11">
         <div className="absolute -top-10 rounded-full bg-[#F1F8EC] px-3 pt-3">
           <Hat />
         </div>
@@ -30,59 +29,9 @@ const SurveyPage = () => {
             the future courses that will be held.
           </p>
         </div>
-        <form className="mt-4 w-full space-y-8">
-          <div>
-            <input
-              className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
-              type="text"
-              id="fullName"
-              name="fullName"
-              placeholder="Full Name"
-            />
-          </div>
-          <div>
-            <input
-              className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email address"
-            />
-          </div>
-          <div>
-            <input
-              className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              placeholder="Phone Number"
-            />
-          </div>
-          <div className="flex flex-col space-y-4">
-            <label htmlFor="skills" className="text-[#B2B2B2]">
-              Which skills would you like to learn at Landa Academy?
-            </label>
-            <select
-              className="inline-flex h-[40px] w-full items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
-              id="skills"
-              name="skills"
-            >
-              <option value="webDevelopment">Web Development</option>
-              <option value="dataScience">Data Science</option>
-              <option value="mobileAppDevelopment">
-                Mobile App Development
-              </option>
-              <option value="uiUxDesign">UI/UX Design</option>
-            </select>
-          </div>
-          <Button addedClass="mx-auto" text="submit" size="not" goto="submit">
-            Submit
-          </Button>
-        </form>
+        <SurveyForm />
       </div>
       <FooterSecondary />
     </div>
   );
-};
-
-export default SurveyPage;
+}

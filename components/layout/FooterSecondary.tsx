@@ -8,8 +8,8 @@ import LinkedIn from '../icons/footer/LinkedIn';
 
 export default function FooterSecondary() {
   return (
-    <div className="flex h-[680px] snap-center flex-col bg-[#3D5656] p-8 py-32 font-barlow">
-      <div className="flex flex-col justify-between space-y-5 md:flex-row md:p-20">
+    <div className="flex h-[850px] snap-center flex-col justify-between bg-[#3D5656] py-8 font-barlow md:h-[380px]">
+      <div className="flex flex-col justify-between space-y-5 px-12 py-5 md:flex-row">
         <div className="flex flex-col gap-4 md:w-[344px]">
           <div className="h-[25px] text-justify text-xl font-medium text-[#FEED9D]">
             About Landa
@@ -88,7 +88,7 @@ export default function FooterSecondary() {
                 Gholam Jafari St, Tehran Province, Tajrish, Iran
               </div>
               <div className="text-justify text-base font-normal text-white">
-                02188030167
+                021-880-301-67
               </div>
             </div>
             <div>
@@ -96,14 +96,14 @@ export default function FooterSecondary() {
                 Saadat Abad Ave, Isfahan, Iran
               </div>
               <div className="text-justify text-base font-normal text-white">
-                03131311914
+                031-313-119-14
               </div>
             </div>
             <div className="flex h-[22px] w-[330px] flex-row items-center gap-6 pt-4 text-white">
               <Link
                 aria-label="Instagram"
                 href={
-                  'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='
+                  'https://www.instagram.com/landaacademy/'
                 }
                 className="hover:text-[#CCE8BB]"
                 target="_blank"
@@ -112,7 +112,7 @@ export default function FooterSecondary() {
               </Link>
               <Link
                 aria-label="Email"
-                href={'mailto:info@landaholding.com'}
+                href={'mailto:academy@landaholding.com'}
                 className="hover:text-[#CCE8BB]"
               >
                 <Envelope />
@@ -127,7 +127,7 @@ export default function FooterSecondary() {
               </Link>
               <Link
                 aria-label="Linkedin"
-                href={'https://www.linkedin.com/company/landa-startup-inc'}
+                href={'https://www.linkedin.com/company/landa-startup-school/'}
                 className="hover:text-[#CCE8BB]"
                 target="_blank"
               >

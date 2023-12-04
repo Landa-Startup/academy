@@ -24,7 +24,7 @@ export default function ContactUsDescription() {
       </div>
       <div className="flex flex-row space-x-3">
         <Link
-          href={'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='}
+          href={'https://www.instagram.com/landaacademy/'}
           target="_blank"
         >
           <IconInstagram />
@@ -32,38 +32,38 @@ export default function ContactUsDescription() {
         <Link href={'https://wa.me/989120539563'} target="_blank">
           <IconWhatApp />
         </Link>
-        <Link href={'mailto:info@landaholding.com'}>
+        <Link href={'mailto:academy@landaholding.com'}>
           <IconEmailB />
         </Link>
         <Link
-          href={'https://www.linkedin.com/company/landa-startup-inc'}
+          href={'https://www.linkedin.com/company/landa-startup-school/'}
           target="_blank"
         >
           <IconLinkedinB />
         </Link>
       </div>
       <div className="mt-10 flex flex-col gap-4">
-        <div className="flex  gap-2">
-          <Phone />
+        <div className="flex gap-2">
+          <Phone addedClass='-mt-5'/>
           <div className="flex flex-col">
             <span className="font-semibold">Phone Call</span>
             <ul className="gap-1">
               <li>
                 <Link href="tel:+14165577622">
                   <span>Toronto:</span>
-                  <span className="text-yellow-400">+1 (416) 557-7622</span>
+                  <span className="text-yellow-400">+1 (289) 269-3933</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
                   <span>Tehran:</span>
-                  <span className="text-yellow-400">02188030167</span>
+                  <span className="text-yellow-400">+98 (912) 0539563</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
                   <span>Isfahan:</span>
-                  <span className="text-yellow-400">03131311914</span>
+                  <span className="text-yellow-400">+98 (313) 1311914</span>
                 </Link>
               </li>
             </ul>
@@ -76,7 +76,7 @@ export default function ContactUsDescription() {
             <li>
               <a
                 className="text-yellow-400"
-                href="mailto:info@landaholding.com"
+                href="mailto:academy@landaholding.com"
               >
                 info@landaholding.com
               </a>
@@ -89,9 +89,9 @@ export default function ContactUsDescription() {
           <div className="ml-2 flex flex-col">
             <span className="font-semibold">Address</span>
             <ul className="mx-4 list-disc space-y-3">
-              <li>No. 200, 7646 Yonge Street, Toronto, ON L4J 1V9, Canada</li>
-              <li>No. 27, Gholam Jafari St, Tajrish Sq,Tehran, Iran</li>
-              <li>Tala Complex, Saadat Abad St, Isfahan, Iran</li>
+              <li>No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9, Canada</li>
+              <li>Office 41, No. 27, Gholam Jafari Street, Tajrish Square, Tehran, Iran</li>
+              <li>Office C, 5th Floor, Tala Complex, Sa'adat Abad Street, Isfahan, Iran</li>
             </ul>
           </div>
         </div>

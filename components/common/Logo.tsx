@@ -1,24 +1,24 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 
 export default function Logo() {
   return (
-    <div className="m-2 flex h-full items-center justify-start px-2 text-left">
-      <Link href={"/"}>
-        <div className="flex flex-col items-end md:flex-row">
+    <div className="flex h-full items-center justify-start px-2 text-left">
+      <Link href={'/'}>
+        <div className="flex h-16 w-16 flex-col items-center justify-center md:w-24 md:flex-row">
           <Image
             loading="lazy"
-            className="h-10 w-10 md:h-14 md:w-12"
-            src={"/static/images/Academy/Logo.svg"}
+            className="object-cover"
+            src={'/static/images/Academy/Logo.svg'}
             alt="Logo"
-            width={125}
-            height={106}
+            width={800}
+            height={800}
           />
           <span
             className={
-              "text-[12px] font-bold tracking-[0.375px] text-lime-400 md:text-xl"
+              'text-[12px] font-bold tracking-[0.375px] text-lime-400 md:text-xl'
             }
           ></span>
         </div>

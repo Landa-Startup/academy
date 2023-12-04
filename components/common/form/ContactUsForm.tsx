@@ -31,7 +31,6 @@ export default function ContactUsForm() {
   const [send, setSend] = useState(false);
   const [showNotification, setShowNotification] = useState(true);
   const [csrfToken, setCsrfToken] = useState('');
-
   useEffect(() => {
     async function fetchCsrfToken() {
       const token = await GetCsrfToken(
@@ -39,10 +38,8 @@ export default function ContactUsForm() {
       );
       setCsrfToken(token);
     }
-
     fetchCsrfToken();
   }, []);
-
   const onSubmit = async (formData: ContactUSFormData) => {
     setIsSubmitting(true);
     setSend(true);
@@ -71,7 +68,6 @@ export default function ContactUsForm() {
       }, 10000); // 10 seconds in milliseconds
     }
   };
-
   return (
     <div>
       <h2 className="text-center font-gilda text-5xl font-light">Reach us</h2>
@@ -167,13 +163,13 @@ export default function ContactUsForm() {
           </div>
           <textarea
             id="message"
-            {...register('message', { required: 'Message is required.' })}
+            {...register('message')}
             rows={4}
             cols={20}
             className={`textarea textarea-bordered col-span-1 w-full bg-white drop-shadow-lg md:col-span-2 ${
               errors.message ? 'border-red-500' : ''
             }`}
-            placeholder="Message*"
+            placeholder="Message"
           ></textarea>
           {errors.message && (
             <span className="text-sm text-yellow-500 ">

@@ -8,23 +8,9 @@ import LinkedIn from '../icons/footer/LinkedIn';
 
 export default function Footer() {
   return (
-    <div className="flex h-screen snap-center flex-col bg-[#3D5656] p-8 py-32 font-barlow">
-      <div className="flex flex-col justify-between space-y-5 md:flex-row md:p-20">
-        <div className="flex flex-col gap-4 md:w-[344px]">
-          <div className="h-[25px] text-justify text-xl font-medium text-[#FEED9D]">
-            About Landa
-            <br />
-          </div>
-          <div className="mt-1 text-justify text-base font-normal text-white">
-            In Landa Academy, individuals will be trained based on their
-            interests and capabilities. Necessary actions are taken at the Landa
-            Acceleration Center to accelerate their unique abilities. Then,
-            investment is made based on the investment priorities of developing
-            the nurtured capabilities of individuals.
-            <br />
-          </div>
-        </div>
-        <div className="col-span-1 flex flex-col space-y-1">
+    <div className="flex h-screen snap-center flex-col justify-around bg-[#3D5656] font-barlow">
+      <div className="mt-16 grid grid-cols-1 gap-5 px-10 py-5 md:mt-0 md:grid-cols-2 md:gap-10 md:px-28 md:py-0 md:pt-20 backdrop:md:flex-row">
+        <div className="flex flex-col space-y-1">
           <div className="text-justify text-xl font-medium text-[#FEED9D]">
             Explore
             <br />
@@ -36,12 +22,7 @@ export default function Footer() {
             >
               Home
             </Link>
-            <Link
-              href={'/'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              Blog
-            </Link>
+
             <Link
               href={'/about'}
               className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
@@ -55,24 +36,28 @@ export default function Footer() {
               Contact
             </Link>
             <Link
-              href={'/'}
+              href={'/our-team'}
               className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
             >
               Our Team
             </Link>
-            <Link
-              href={'/'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              Verification
-            </Link>
           </div>
         </div>
-
-        <div className="col-span-1 flex flex-col space-y-1">
-          <div className="h-[30px] w-[93px] text-justify text-xl font-medium text-[#FEED9D]">
+        <div className="flex flex-col md:gap-4">
+          <div className="h-[25px] text-justify text-xl font-medium text-[#FEED9D]">
+            About Landa Academy
+          </div>
+          <div className="text-justify font-barlow text-xl font-normal leading-9 text-white">
+            In Landa Academy, individuals will be trained based on their
+            interests and capabilities. Necessary actions are taken at the Landa
+            Acceleration Center to accelerate their unique abilities. Then,
+            investment is made based on the investment priorities of developing
+            the nurtured capabilities of individuals.
+          </div>
+        </div>
+        <div className="col-span-1 flex flex-col">
+          <div className="h-[30px] text-justify text-xl font-medium text-[#FEED9D]">
             Contact
-            <br />
           </div>
           <div className="flex w-[330px] flex-col gap-2 divide-y-2 divide-[#CCE8BB]">
             <div>
@@ -88,7 +73,7 @@ export default function Footer() {
                 Gholam Jafari St, Tehran Province, Tajrish, Iran
               </div>
               <div className="text-justify text-base font-normal text-white">
-                02188030167
+                021-880-301-67
               </div>
             </div>
             <div>
@@ -96,14 +81,14 @@ export default function Footer() {
                 Saadat Abad Ave, Isfahan, Iran
               </div>
               <div className="text-justify text-base font-normal text-white">
-                03131311914
+                031-313-119-14
               </div>
             </div>
             <div className="flex h-[22px] w-[330px] flex-row items-center gap-6 pt-4 text-white">
               <Link
                 aria-label="Instagram"
                 href={
-                  'https://instagram.com/landa_holding?igshid=YTQwZjQ0NmI0OA=='
+                  'https://www.instagram.com/landaacademy/'
                 }
                 className="hover:text-[#CCE8BB]"
                 target="_blank"
@@ -127,7 +112,7 @@ export default function Footer() {
               </Link>
               <Link
                 aria-label="Linkedin"
-                href={'https://www.linkedin.com/company/landa-startup-inc'}
+                href={'https://www.linkedin.com/company/landa-startup-school/'}
                 className="hover:text-[#CCE8BB]"
                 target="_blank"
               >
@@ -136,6 +121,16 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <iframe
+          className="hidden md:block"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210.02430568667313!2d51.66838252946836!3d32.622465703123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fbc37235b31d7c9%3A0x100c725fb8a86761!2sIrimmigration.ca!5e0!3m2!1sen!2sfi!4v1701586760612!5m2!1sen!2sfi"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen={false}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
       <CopyRight />
     </div>

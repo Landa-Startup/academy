@@ -1,14 +1,13 @@
-import Certificate from '@/components/Certificate';
-import CertificateCoursePromote from '@/components/CertificateCoursePromote';
+import Certificate from '@/components/academy/Certificate/Certificate';
+// import CertificateCoursePromote from '@/components/CertificateCoursePromote';
 import Image from 'next/image';
 export default function CertificateAchievement({
   name,
   courseTitle,
   issuedDate,
-  courseImage,
-  description,
-  qrcode_image,
-  slug
+  // courseImage,
+  // description,
+  qrcode_image // slug
 }: {
   name: string;
   courseTitle: string;
@@ -20,8 +19,9 @@ export default function CertificateAchievement({
 }) {
   return (
     <div className="relative flex h-screen flex-col justify-around text-white">
-      <div className="grid grid-cols-2 justify-items-center">
-        <div className="flex flex-col gap-11">
+      <div className="flex flex-col-reverse justify-between px-6">
+        <div className="flex flex-col gap-5">
+          {/* CERTIFICATE INFO */}
           <div className="flex flex-col justify-start gap-5 rounded-sm bg-[#fdd40a1a] p-10">
             <h2 className="font-gilda text-4xl text-[#FDD30A]">
               CERTIFICATE OF ACHIEVEMENT
@@ -46,12 +46,34 @@ export default function CertificateAchievement({
               </p>
             </div>
           </div>
-          <CertificateCoursePromote
+          {/* CERTIFICATE INFO */}
+          {/* <CertificateCoursePromote
             course={courseTitle}
             image={courseImage}
             description={description}
             slug={slug}
-          />
+          /> */}
+          {/* <div className="rounded-sm bg-[#fdd40a1a] p-6 font-gilda text-black">
+            <span className="text-xl">Event sharing</span>
+            <div className="my-6 flex gap-5">
+              <IconInstagram />
+              <IconWhatApp />
+              <IconLinkedin />
+            </div>
+            <div className="flex gap-2">
+              <input
+                className="h-[50px] w-[350px] border border-[#E5E5E5] bg-[#FAFAFA] p-5"
+                type="text"
+                placeholder="HPP//ddkksso.ddkke.aalhb 23wwe..."
+              />
+              <button className="h-[50px] w-[118px] self-end rounded-sm border border-black text-xs">
+                Copy the link
+              </button>
+            </div>
+            <p className='ml-2 mt-2'>
+              Send this link to someone to share your Certificate with them.
+            </p>
+          </div> */}
         </div>
         <div className="relative">
           <div className="flex flex-col gap-5">

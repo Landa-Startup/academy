@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* paused scroll animation on hover */
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
+
 /* Define custom fonts with @font-face */
 @font-face {
   font-family: 'Gilda Display';
@@ -132,6 +139,45 @@ img {
   }
 }
 
+/* scroll slider animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 8));
+  }
+}
+
+/* Extra space to disable hover effect */
+
+.slider::before,
+.slider::after {
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 12%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+/* Extra space to disable hover effect */
+
 .fade-in {
   animation: fadeIn 0.3s ease-in-out;
+}
+
+/* infinite scroll slider animation */
+.scroll {
+  animation: scroll 40s linear infinite;
 }

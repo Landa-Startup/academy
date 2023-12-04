@@ -1,3 +1,4 @@
+/* eslint-disable-next-line max-lines */
 import React from 'react';
 
 export default function Telephone() {

@@ -44,7 +44,7 @@ const ScrollUpButton = () => {
       } fixed bottom-4 right-10 flex h-12 w-12 items-center justify-center rounded-full border border-primary text-primary`}
       style={{
         background: showButton
-          ? `conic-gradient(from 90deg, #f5e9da 0% ${scrollProgress}%, transparent ${scrollProgress}% 100%)`
+          ? `conic-gradient(from 90deg, #e2f3d4 0% ${scrollProgress}%, transparent ${scrollProgress}% 100%)`
           : '',
       }}
     >
