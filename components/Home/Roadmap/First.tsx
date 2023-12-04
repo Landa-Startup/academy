@@ -21,8 +21,8 @@ export default function Second() {
             Registration and Participation in Optional Courses
           </div>
           <div className="inline-flex items-start justify-start gap-2">
-            <div className="mt-5 h-5 w-5 rounded-full bg-yellow-400" />
-            <div className="mt-4 w-[280px] font-barlow text-base font-normal text-gray-600 md:w-[500px]  md:text-2xl">
+            <div className="mt-[23px] h-5 w-5 rounded-full bg-yellow-400" />
+            <div className="mt-4 w-[349px] font-barlow text-base font-normal text-gray-600 md:w-[500px]  md:text-2xl leading-[32px]">
               Embark on your adventurous journey at Landa Academy by
               participating in our tailored crash courses designed by mentors
               from the Landa Holding.
@@ -36,7 +36,7 @@ export default function Second() {
           </div>
         </div>
       </div>
-      <ScrollButton scrollTo="Roadmap-2" addedClass="mx-auto md:ml-28 lg:ml-[134px] mb-[100px]  md:ml-28 mt-[81px] md:mt-0 " />
+      <ScrollButton scrollTo="Roadmap-2" addedClass="mx-auto md:ml-28 lg:ml-[134px] mb-[100px]  md:ml-28 mt-[21px] md:mt-0 " />
       <svg
         className="absolute bottom-0 right-[345px] hidden md:block"
         xmlns="http://www.w3.org/2000/svg"

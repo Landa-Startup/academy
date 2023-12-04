@@ -14,7 +14,7 @@ export default function page() {
   return (
     <div>
       <Banner
-        image="/static/images/Academy/Banner/gallery.png"
+        image="/static/images/Academy/Banner/gallery.jpg"
         title="Gallery"
       />
       <GalleryButtonsContainer />

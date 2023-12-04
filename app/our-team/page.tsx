@@ -13,7 +13,7 @@ export default function TeamPage() {
   return (
     <div>
       <Banner
-        image="/static/images/Academy/Banner/OurTeam.jpg"
+        image="/static/images/Academy/Banner/OurTeam.png"
         title="Our Team"
       />
       <TeamPersons />
