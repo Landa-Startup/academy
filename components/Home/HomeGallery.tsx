@@ -8,14 +8,14 @@ export default function Gallery() {
   return (
     <div className="relative flex h-screen snap-start flex-col justify-end gap-5 bg-neutral-50/95 py-5">
       <div className="flex flex-col items-center gap-3">
-        <div className="text-center font-gilda text-base font-normal tracking-[5.6px] text-lime-400 md:w-[413px] md:text-3xl md:tracking-[11.20px]">
-          LANDA ACADEMY
+        <div className="text-center font-gilda text-base font-normal tracking-[5.6px] text-lime-400  md:w-[413px]   md:text-3xl md:tracking-[11.20px]">
+          LANDA ACADEMY 
         </div>
-        <div className="-mt-3 text-center font-gilda text-3xl font-normal tracking-[1.6px] text-black md:text-[64px] md:leading-[50px] md:tracking-[3.20px]">
+        <div className="-mt-[4px] text-center font-gilda text-4xl font-normal tracking-[1.6px] text-black md:text-[64px] md:leading-[50px] md:tracking-[3.20px]">
           Our Gallery
         </div>
       </div>
-      <div className="m mx-8 grid grid-cols-2 justify-items-center gap-2 md:mx-32 md:grid-cols-3">
+      <div className="m mx-8  grid grid-cols-2 justify-items-center gap-2 md:mx-32 md:grid-cols-3 mb-[184px]">
         {homeGalleryImage.map((image, index) => (
           <Image
             key={index}
@@ -24,12 +24,12 @@ export default function Gallery() {
             height={200}
             alt="Gallery Photo"
             quality={100}
-            className="h-[155px] w-[173px] object-cover md:h-[200px] md:w-[389px]"
+            className="h-[155px] w-[173px] object-cover md:h-[200px] md:w-[389px]  "
             src={image.src}
           />
         ))}
       </div>
-      <div className="mx-auto">
+      <div className="mx-auto ">
         <Button size="visit" bgColor="Yellow" text="See More" goto="/gallery" />
       </div>
     </div>
