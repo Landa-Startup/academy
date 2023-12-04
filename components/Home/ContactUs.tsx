@@ -117,11 +117,11 @@ export default function ContactUs() {
       onSubmit={handleSubmit(onSubmit)}
       className="relative mx-auto flex h-screen snap-start flex-col items-center justify-start gap-[37px] bg-[#F1F8EC] py-28 md:w-[1440px]"
     >
-      <div className="inline-flex flex-col  items-center self-center">
-        <div className="text-center font-gilda text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:h-[58px] md:w-[413px] md:text-3xl md:tracking-[11.20px]">
+      <div className="inline-flex flex-col  items-center self-center ">
+        <div className="text-center font-gilda text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:h-[58px] md:w-[413px] md:text-3xl md:tracking-[11.20px] ">
           LANDA ACADEMY
         </div>
-        <div className="text-center font-gilda text-3xl font-normal leading-[50px] tracking-[1.6px] text-black md:h-[58px] md:w-[413px] md:text-5xl md:tracking-[3.20px] ">
+        <div className="text-center font-gilda text-3xl font-normal leading-[50px] tracking-[1.6px] text-black md:h-[58px] md:w-[413px] md:text-5xl md:tracking-[3.20px]  ">
           Contact Us
         </div>
       </div>
