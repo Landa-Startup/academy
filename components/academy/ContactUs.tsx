@@ -72,27 +72,21 @@ export default function ContactUs() {
     sendFormData.append('last_name', formData.lastName);
     sendFormData.append('contact_reason', formData.contactReason);
     sendFormData.append('phone_number', formData.phoneNumber);
-    console.log(phone);
-    console.log(selectedOption);
+
 
     try {
-      console.log('new form data ', formData);
-
       await apiClient.post('common/contactUs-form', sendFormData, {
         headers: {
-          'content-type': 'application/json',
+          'content-type': 'application/json', 
           'X-CSRFToken': csrfToken
         }
       });
-
-      console.log(phone);
 
       setIsSuccess(true);
       setShowNotification(true);
       setSend(false);
       reset(initialContactUsData); // Reset the form after successful submission
       setFormData(initialContactUsData);
-      console.log('Form data sent successfully!');
       setTimeout(() => {
         setShowNotification(false);
       }, 10000); // 10 seconds in milliseconds
@@ -101,8 +95,6 @@ export default function ContactUs() {
       setShowNotification(true);
       setSend(false);
       setIsSuccess(false);
-      //TODO: remove below code after testing
-      console.error('Error sending form data:', error);
       reset(initialContactUsData); // Reset the form after successful submission
       setFormData(initialContactUsData); // reset states after successful submission
       setTimeout(() => {
