@@ -3,38 +3,42 @@ import React from 'react';
 
 export default function CertificateNew() {
   return (
-    <div className="text-xl relative border-[6px] w-full h-[600px] border-[#80C555] flex items-center justify-around">
-      <div className="flex justify-between flex-col h-[30rem]">
-        <div className="w-[30rem] h-[18rem] flex flex-col justify-between">
+    <div className="px-4 md:px-0 relative md:flex h-[600px] w-full md:items-center md:justify-around border-[6px] border-[#80C555] text-xl">
+      <div className="flex h-full md:h-[30rem] flex-col md:justify-between">
+        <div className="flex h-[18rem] my-10 md:w-[30rem] flex-col justify-between">
           <p className="text-lg">Aug 30.2023</p>
-          <p className="text-3xl font-semibold font-gilda">Ali Khavari</p>
-          <p className="text-2xl">has successfully completed </p>
-          <p className="text-3xl font-semibold font-gilda">SEO Course</p>
-          <p className="text-2xl">
+          <p className="font-gilda text-2xl md:text-3xl font-semibold">
+            Ali Khavari
+          </p>
+          <p className="text-xl md:text-2xl">has successfully completed </p>
+          <p className="font-gilda md:text-2xl text-3xl font-semibold">
+            SEO Course
+          </p>
+          <p className="text-xl md:text-2xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
             minus, corporis facilis omnis quaerat aliquam cum commodi
             perferendis.
           </p>
         </div>
-        <div className="w-[10rem] flex flex-col items-center text-sm">
+        <div className="flex w-[10rem] flex-col items-center text-xs md:text-sm">
           <p className="border-b-2">RASOUL MORADIMEHR</p>
           <p>Managing Director</p>
         </div>
       </div>
       <div className="w-[50rem]">
-        <div className="w-44 h-48 flex items-center justify-end pb-4 flex-col bg-[#CCE8BB] absolute top-0 right-32">
-          <p className="text-3xl">CERTIFICATE</p>
-          <p className="text-base">OF PARTICIPATION</p>
+        <div className="absolute right-9 md:right-32 top-0 flex h-24 md:h-48 md:w-44 flex-col items-center justify-end bg-[#CCE8BB] pb-4">
+          <p className="text-sm md:text-3xl">CERTIFICATE</p>
+          <p className="text-xs md:text-base">OF PARTICIPATION</p>
         </div>
         {/* logo */}
         <div>
           <Image
             loading="lazy"
-            className="absolute right-3 bottom-0"
+            className="absolute bottom-0 right-0 md:right-3"
             src={`/static/images/Academy/Logo.svg`}
             alt="Landa"
-            width={344}
-            height={467}
+            width={100}
+            height={100}
           />
         </div>
       </div>

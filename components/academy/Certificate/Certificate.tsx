@@ -11,10 +11,10 @@ export default function Certificate({
   issueDate: string;
 }) {
   return (
-    <div className="flex h-[520px]  MD:w-[700px] items-center justify-center border-[15px] border-[#FDD30A] bg-white font-barlow text-black">
-      <div className="flex h-[470px] w-full mx-2 py-3 flex-col items-center justify-center border-[10px] border-[#80C555]">
-        <div className="rounded-full w-32 h-32 border border-dashed border-black p-2">
-          <div className="flex w-full h-full flex-col items-center justify-center rounded-full border border-black bg-[#F0F6ED]">
+    <div className="MD:w-[700px] flex  h-[520px] items-center justify-center border-[15px] border-[#FDD30A] bg-white font-barlow text-black">
+      <div className="mx-2 flex h-[470px] w-full flex-col items-center justify-center border-[10px] border-[#80C555] py-3">
+        <div className="h-32 w-32 rounded-full border border-dashed border-black p-2">
+          <div className="flex h-full w-full flex-col items-center justify-center rounded-full border border-black bg-[#F0F6ED]">
             <Image
               className="object-contain"
               src="/static/images/Academy/Logo.svg"
