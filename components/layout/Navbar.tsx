@@ -50,7 +50,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       />
       <div className="drawer-content relative flex flex-col">
         <div className="navbar flex w-full items-center justify-between bg-[#26323880] px-12 text-black backdrop-blur-sm">
-          <div className="flex-none lg:hidden">
+          <div className="mt-5 flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
               className="btn btn-square btn-ghost -mt-5"
