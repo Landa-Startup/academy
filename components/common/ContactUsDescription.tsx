@@ -47,19 +47,19 @@ export default function ContactUsDescription() {
             <ul className="gap-1">
               <li>
                 <Link href="tel:+14165577622">
-                  <span>Toronto:</span>
+                  <span className="mr-1">Toronto:</span>
                   <span className="text-yellow-400">+1 (289) 269-3933</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
-                  <span>Tehran:</span>
+                  <span className="mr-1">Tehran:</span>
                   <span className="text-yellow-400">+98 (912) 0539563</span>
                 </Link>
               </li>
               <li>
                 <Link href="tel:+14165577622">
-                  <span>Isfahan:</span>
+                  <span className="mr-1">Isfahan:</span>
                   <span className="text-yellow-400">+98 (313) 1311914</span>
                 </Link>
               </li>
