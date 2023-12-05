@@ -99,14 +99,14 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <div className="menu flex h-full w-80 flex-col justify-between bg-[#CFFDE1] text-xl">
-          <div className="p-4">
-            <div className="mb-4 flex items-center justify-center border-b-2 border-[#3D5656] pb-7 pt-3">
-              <span className="font-barlow text-xl font-bold tracking-[1px] text-[#3D5656]">
+        <div className="menu flex h-full w-80 flex-col justify-between bg-[#CFFDE1] p-0 text-xl">
+          <div>
+            <div className="flex items-center justify-center border-b-2 border-[#3D5656] py-6">
+              <span className="font-barlow text-3xl font-bold tracking-[1px] text-[#3D5656]">
                 Landa Academy
               </span>
             </div>
-            <ul>
+            <ul className="m-8 flex flex-col gap-10">
               {menuItems.map((item) => (
                 <li
                   className="first:text-[#80C555]"
