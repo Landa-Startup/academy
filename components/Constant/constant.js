@@ -32,10 +32,10 @@ export const persons = [
   },
   {
     image: '/static/images/Academy/our-team/Personals/a3.png',
-    position: 'Secretary',
+    position: 'manager assistant',
     name: 'Lida Parvizi',
     linkedIn: 'https://www.linkedin.com/in/lida-parvizi-ab7b8721a/',
-    category: 'secretary'
+    category: 'manager assistant'
   },
   {
     image: '/static/images/Academy/our-team/Personals/a4.png',
@@ -80,7 +80,7 @@ export const persons = [
     category: 'programmers'
   },
   {
-    image: '/static/images/Academy/our-team/Personals/a.82.png',
+    image: '/static/images/Academy/our-team/Personals/a9.png',
     position: 'Digital Marketer',
     name: 'Ehsan Aliakbari',
     linkedIn: 'https://www.linkedin.com/in/ehsan-aliakbari',
@@ -101,14 +101,6 @@ export const persons = [
     linkedIn: 'https://www.linkedin.com/in/marshian03',
     category: 'product designer'
   },
-
-  {
-    image: '/static/images/Academy/our-team/Personals/a15.png',
-    position: 'Junior Back-end',
-    name: 'Fatemeh Safi',
-    linkedIn: '',
-    category: 'programmers'
-  },
   {
     image: '/static/images/Academy/our-team/Personals/a16.png',
     position: 'Full Stack',
@@ -124,14 +116,6 @@ export const persons = [
       'https://www.linkedin.com/in/fahimeh-sajadi-50a399202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     category: 'programmers'
   },
-  {
-    image: '/static/images/Academy/our-team/Personals/a18.png',
-    position: 'Front-end',
-    name: 'Saman Karchegani',
-    linkedIn: 'https://www.linkedin.com/in/saman-kchn',
-    category: 'programmers'
-  },
-
   {
     image: '/static/images/Academy/our-team/Personals/a19.png',
     position: 'Front-end',
@@ -157,26 +141,11 @@ export const persons = [
     category: 'designers'
   },
   {
-    image: '/static/images/Academy/our-team/Personals/a22.png',
-    position: 'Graphic Designer',
-    name: 'Aynaz Reisi',
-    linkedIn: '',
-    category: 'designers'
-  },
-
-  {
     image: '/static/images/Academy/our-team/Personals/a23.png',
     position: 'Content Creator',
     name: 'Mahtab Hafizi',
     linkedIn: '',
     category: 'content creators'
-  },
-  {
-    image: '/static/images/Academy/our-team/Personals/a24.png',
-    position: 'UI designer',
-    name: 'Saba Mokhtari',
-    linkedIn: '',
-    category: 'programmers'
   },
   {
     image: '/static/images/Academy/our-team/Personals/a25.png',
@@ -185,14 +154,6 @@ export const persons = [
     linkedIn: 'https://www.linkedin.com/in/tiam-safarian-616933230/',
     category: 'content creators'
   },
-  {
-    image: '/static/images/Academy/our-team/Personals/a26.png',
-    position: 'Word Press Developer',
-    name: 'Roham Arabloo',
-    linkedIn: '',
-    category: 'programmers'
-  },
-
   {
     image: '/static/images/Academy/our-team/Personals/a27.png',
     position: 'Full Stack',
@@ -205,13 +166,6 @@ export const persons = [
     position: 'Front-end',
     name: 'Mahdi Salmanzadeh',
     linkedIn: 'https://www.linkedin.com/in/mehdisa/',
-    category: 'programmers'
-  },
-  {
-    image: '/static/images/Academy/our-team/Personals/a29.png',
-    position: 'Front-end',
-    name: 'Mahrokh Lotfi',
-    linkedIn: '',
     category: 'programmers'
   },
   {
