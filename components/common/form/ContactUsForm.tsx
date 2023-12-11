@@ -70,7 +70,7 @@ export default function ContactUsForm() {
   };
   return (
     <div>
-      <h2 className="text-center font-gilda text-5xl font-light">Reach us</h2>
+      <h2 className="text-center font-gilda text-5xl font-light">Reach Us</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-5 md:grid-cols-2">
           <div className="flex flex-col">

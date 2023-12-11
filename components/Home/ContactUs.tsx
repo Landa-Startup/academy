@@ -11,13 +11,15 @@ import PhoneInputWithCountrySelect from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import Button from '../common/Button';
 import "./ContactUs.css"
+ import TextArea from '../common/TextArea';
 
 
 interface ContactUsType {
   firstName: string;
   lastName: string;
   phoneNumber: string;
-  contactReason: string;
+  email: string;
+  description:string;
 }
 
 export default function ContactUs() {
@@ -25,7 +27,8 @@ export default function ContactUs() {
     firstName: '',
     lastName: '',
     phoneNumber: '',
-    contactReason: ''
+    email: '',
+    description:''
   };
 
   const {
@@ -68,11 +71,12 @@ export default function ContactUs() {
     setSend(true);
     const sendFormData = new FormData();
     formData.phoneNumber = String(phone);
-    formData.contactReason = String(selectedOption);
+    formData.email = String(selectedOption);
     sendFormData.append('first_name', formData.firstName);
     sendFormData.append('last_name', formData.lastName);
-    sendFormData.append('contact_reason', formData.contactReason);
+    sendFormData.append('email', formData.email);
     sendFormData.append('phone_number', formData.phoneNumber);
+    sendFormData.append('description', formData.description);
     console.log(phone);
     console.log(selectedOption);
 
@@ -115,20 +119,21 @@ export default function ContactUs() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="relative mx-auto flex h-screen snap-start flex-col items-center justify-start gap-[37px] bg-[#F1F8EC] py-28 md:w-[1440px]"
+      className="relative mx-auto flex h-screen snap-start flex-col items-center justify-start  gap-[8px] bg-[#F1F8EC] py-28 md:w-[1440px] "
     >
       <div className="inline-flex flex-col  items-center self-center ">
-        <div className="text-center font-gilda text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:h-[58px] md:w-[413px] md:text-3xl md:tracking-[11.20px] ">
+        <div className="text-center font-gilda text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:h-[58px] md:w-[413px] md:text-3xl md:tracking-[11.20px] mt-[-2.25] ">
           LANDA ACADEMY
         </div>
-        <div className="text-center font-gilda text-3xl font-normal leading-[50px] tracking-[1.6px] text-black md:h-[58px] md:w-[413px] md:text-5xl md:tracking-[3.20px]  ">
+        <div className="text-center font-gilda text-3xl font-normal leading-[50px] tracking-[1.6px] text-black md:h-[58px] md:w-[413px] md:text-5xl md:tracking-[3.20px]   ">
           Contact Us
         </div>
       </div>
-      <div className="relative z-10 grid grid-cols-1  gap-5 md:grid-cols-2">
+      <div className="relative  grid grid-cols-1 gap-[-2rem]   md:grid-cols-2 ">
+        <div className='col-span-1 w-full md:w-1/2 lg:ml-[21rem]'>
         <Input
           register={register}
-          errors={errors}
+          errors={errors} 
           nameInput="firstName"
           type="text"
           label=""
@@ -136,26 +141,22 @@ export default function ContactUs() {
           patternValue=""
           patternMessage="Enter a Valid First Name"
           placeholder="First Name"
-          className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px]"
+          className="inline-flex w-full h-[40px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]"
           labelClass="text-[#6b6b6b]"
         />
+        </div>
         <Input
           register={register}
           errors={errors}
           nameInput="lastName"
           type="text"
           label=""
-          required="Last Name is Required."
+          required= "Last Name is Required."
           patternValue=""
           patternMessage="Enter a Valid Last Name"
           placeholder="Last Name"
-          className="inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px]"
+          className="inline-flex h-[40px] w-[360px] lg:ml-[0rem] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] "
           labelClass="text-[#6b6b6b] dark:text-current"
-        />
-
-        <ContactUsDropdown
-          selectedOption={selectedOption}
-          handleOptionChange={handleOptionChange}
         />
         <PhoneInputWithCountrySelect
           value={phone}
@@ -164,7 +165,31 @@ export default function ContactUs() {
           defaultCountry="IR"
           international
           countryCallingCodeEditable={false}
-          className="!important] inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] md:w-[389px] [&>*:nth-child(1)]:border-r-2 [&>*:nth-child(2)]:bg-yellow-50 "
+          className="!important] inline-flex h-[40px] w-[360px] items-center justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px]  lg:ml-[21rem] [&>*:nth-child(1)]:border-r-2 [&>*:nth-child(2)]:bg-yellow-50 "
+        />
+        <Input
+          register={register}
+          errors={errors}
+          nameInput="email"
+          type="email"
+          label=""
+          required= "email is Required."
+          patternValue="/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i"
+          patternMessage="Enter a valid email address. "
+          placeholder="Email Address"
+          className="inline-flex h-[40px] w-[360px] lg:ml-[0rem] items-center  justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[50px] lg:mt-0 mt-5 "
+          labelClass="text-[#6b6b6b] dark:text-current"
+        />
+        <TextArea
+          register={register}
+          errors={errors}
+          nameTextArea="description"
+          title=""
+          required=""
+          patternValue=""
+          patternMessage=""
+          placeholder="Description"
+          className=" h-[84px] w-[360px]   justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[185px] md:w-[746px] lg:mr-[323px] lg:ml-[335px]  lg:mb-[-38px] lg:mt-[-0.5rem] "        
         />
       </div>
       <Button
