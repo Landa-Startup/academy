@@ -23,12 +23,7 @@ export default function Footer() {
               Home
             </Link>
 
-            <Link
-              href={'/about'}
-              className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
-            >
-              About
-            </Link>
+           
             <Link
               href={'/contact'}
               className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"

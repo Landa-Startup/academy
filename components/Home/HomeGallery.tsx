@@ -6,7 +6,7 @@ import { homeGalleryImage } from '../Constant/constant';
 
 export default function Gallery() {
   return (
-    <div className="relative flex h-screen snap-start flex-col justify-end gap-5 bg-neutral-50/95 py-5">
+    <div className="relative flex h-screen snap-start flex-col justify-end  bg-neutral-50/95 py-5">
       <div className="flex flex-col items-center gap-3 lg:mb-25">
         <div className="text-center font-gilda text-base font-normal tracking-[5.6px] text-lime-400  md:w-[413px]   md:text-3xl md:tracking-[11.20px]">
           LANDA ACADEMY 
@@ -15,7 +15,7 @@ export default function Gallery() {
           Our Gallery
         </div>
       </div>
-      <div className="m mx-8  grid grid-cols-2 justify-items-center gap-2 md:mx-32 md:grid-cols-3 mb-[184px] lg:mb-[-22px]">
+      <div className="m mx-8  grid grid-cols-2 justify-items-center gap-2 md:mx-32 md:grid-cols-3 mb-[184px] lg:mb-[-50px] lg:mt-5">
         {homeGalleryImage.map((image, index) => (
           <Image
             key={index}
