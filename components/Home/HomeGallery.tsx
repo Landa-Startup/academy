@@ -15,7 +15,7 @@ export default function Gallery() {
           Our Gallery
         </div>
       </div>
-      <div className="m mx-8  grid grid-cols-2 justify-items-center gap-2 md:mx-32 md:grid-cols-3 mb-[184px] lg:mb-[-50px]">
+      <div className="m mx-8  grid grid-cols-2 justify-items-center gap-2 md:mx-32 md:grid-cols-3 mb-[184px] lg:mb-[-50px] lg:mt-5">
         {homeGalleryImage.map((image, index) => (
           <Image
             key={index}
