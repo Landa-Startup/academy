@@ -11,7 +11,7 @@ export default function GalleryImageCard({
   title: string;
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState("");
 
   const openModal = (imageUrl: any) => {
     setSelectedImage(imageUrl);

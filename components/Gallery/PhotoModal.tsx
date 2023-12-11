@@ -3,6 +3,8 @@ import Image from 'next/image';
 // import React, { useState } from 'react';
 import Modal from 'react-modal';
 import XLg from '../icons/common/XLg';
+import Chevron from '../common/Chevron';
+import { useState } from 'react';
 
 const customStyles = {
   content: {
@@ -10,26 +12,37 @@ const customStyles = {
     left: '50%',
     right: 'auto',
     bottom: 'auto',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    padding: '0px'
   }
 };
 
 Modal.setAppElement('.drawer'); // Set the root element for accessibility
 
-function PhotoModal({ isOpen, onRequestClose, imageUrl, closeModal }: any) {
-  // const [currentIndex, setCurrentIndex] = useState(0);
+function PhotoModal({
+  isOpen,
+  onRequestClose,
+  imageUrl,
+  closeModal
+}: {
+  isOpen: boolean;
+  onRequestClose: () => void;
+  imageUrl: string;
+  closeModal: () => void;
+}) {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // const handlePrevClick = () => {
-  //   if (currentIndex > 0) {
-  //     setCurrentIndex(currentIndex - 1);
-  //   }
-  // };
+  const handlePrevClick = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
 
-  // const handleNextClick = () => {
-  //   if (currentIndex < imageUrl.length - 1) {
-  //     setCurrentIndex(currentIndex + 1);
-  //   }
-  // };
+  const handleNextClick = () => {
+    if (currentIndex < imageUrl.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
 
   return (
     <Modal
@@ -38,12 +51,14 @@ function PhotoModal({ isOpen, onRequestClose, imageUrl, closeModal }: any) {
       style={customStyles}
       contentLabel="Photo Modal"
     >
-      <XLg onClick={closeModal} />
+      <div className="absolute left-3 top-3 z-10">
+        <XLg onClick={closeModal} />
+      </div>
       <div className="flex items-center gap-2">
-        {/* <div onClick={handlePrevClick}>
+        <div className="absolute left-0 top-1/2 z-10" onClick={handlePrevClick}>
           <Chevron direction="left" />
-        </div> */}
-        <div className="relative h-[240px] w-[350px] md:h-[480px] md:w-[700px]">
+        </div>
+        <div className="relative h-full w-[350px] select-none md:w-[700px]">
           <Image
             className="rounded-md"
             src={imageUrl}
@@ -52,9 +67,12 @@ function PhotoModal({ isOpen, onRequestClose, imageUrl, closeModal }: any) {
             height={1000}
           />
         </div>
-        {/* <div onClick={handlePrevClick}>
+        <div
+          className="absolute right-0 top-1/2 z-10"
+          onClick={handleNextClick}
+        >
           <Chevron direction="right" />
-        </div> */}
+        </div>
       </div>
     </Modal>
   );
