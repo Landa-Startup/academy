@@ -31,7 +31,7 @@ export default function Button({
       <button
     className={`btn2 ${isVisitSize
       ? 'mt-[19px] h-[32px] w-[135px] pb-4 pl-[72px] pr-[71px] pt-[15px] md:h-[60px] md:w-[219px]'
-      : ' mt-[-20px] h-11 pb-4 pl-[72px] pr-[71px] pt-[15px] md:flex'
+      : ' mt-[40px] h-11 pb-4 pl-[72px] pr-[71px] pt-[15px] md:flex md:mt-[1px]'
       } ${bgColor === 'Primary' ? 'bg-primary' : 'bg-[#FDD30A]'
       } relative inset-0 flex items-center justify-center overflow-hidden border border-white px-10 py-5 text-center font-condensed text-base font-normal uppercase leading-none tracking-wider text-white hover:text-white ${addedClass}`}
     type={type}

@@ -39,7 +39,7 @@ export default function Third() {
       <ScrollButton
         scrollTo="Roadmap-3"
         color="white"
-        addedClass="absolute bottom-[0px] right-[160px]"
+        addedClass="absolute bottom-[0px]    "
       />
       <svg
         className="absolute left-[620px] top-0 hidden md:block"

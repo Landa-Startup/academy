@@ -8,7 +8,7 @@ export default function Banner({
   title: string;
 }) {
   return (
-    <div className="relative">
+    <div className="w-full">
       {/* Background Image with Blur and Overlay */}
       <div
         style={{
