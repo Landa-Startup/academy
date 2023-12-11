@@ -1,3 +1,4 @@
+import Button from '../common/Button';
 import CourseItem from './CourseItem';
 import React from 'react';
 // interface SliderNew {
@@ -113,6 +114,7 @@ const SliderMenu = () => {
             ))}
           </div>
         </div>
+        <Button size='not' text='Visit More' addedClass='mx-auto'/>
       </div>
       <div className="mt-4 flex justify-center"></div>
     </div>

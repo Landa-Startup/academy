@@ -10,12 +10,12 @@ export default function TeamRolesContainer({
 }) {
   const [selectedRole, setSelectedRole] = useState<string | null>('All');
   function handleRoleClick(role: string) {
-    console.log("role:", role)
+    console.log('role:', role);
     onRoleSelect(role);
     setSelectedRole(role);
   }
   return (
-    <div className="flex flex-wrap justify-center gap-1 bg-slate-50 pb-5 pt-10">
+    <div className="hidden mx-5 gap-1 overflow-x-auto bg-slate-50 pb-5 pt-10 md:mx-auto md:justify-center">
       {roles.map((role, index) => (
         <button
           onClick={() => handleRoleClick(role)}
