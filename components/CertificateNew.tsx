@@ -3,15 +3,15 @@ import React from 'react';
 
 export default function CertificateNew() {
   return (
-    <div className="px-4 md:px-0 relative md:flex h-[600px] w-full md:items-center md:justify-around border-[6px] border-[#80C555] text-xl">
-      <div className="flex h-full md:h-[30rem] flex-col md:justify-between">
-        <div className="flex h-[18rem] my-10 md:w-[30rem] flex-col justify-between">
+    <div className="relative h-[600px] w-full border-[6px] border-[#80C555] px-4 text-xl md:flex md:items-center md:justify-around md:px-0">
+      <div className="flex h-full flex-col md:h-[30rem] md:justify-between">
+        <div className="my-10 flex h-[18rem] flex-col justify-between md:w-[30rem]">
           <p className="text-lg">Aug 30.2023</p>
-          <p className="font-gilda text-2xl md:text-3xl font-semibold">
+          <p className="font-gilda text-2xl font-semibold md:text-3xl">
             Ali Khavari
           </p>
           <p className="text-xl md:text-2xl">has successfully completed </p>
-          <p className="font-gilda md:text-2xl text-3xl font-semibold">
+          <p className="font-gilda text-3xl font-semibold md:text-2xl">
             SEO Course
           </p>
           <p className="text-xl md:text-2xl">
@@ -26,7 +26,7 @@ export default function CertificateNew() {
         </div>
       </div>
       <div className="w-[50rem]">
-        <div className="absolute right-9 md:right-32 top-0 flex h-24 md:h-48 md:w-44 flex-col items-center justify-end bg-[#CCE8BB] pb-4">
+        <div className="absolute right-9 top-0 flex h-24 flex-col items-center justify-end bg-[#CCE8BB] pb-4 md:right-32 md:h-48 md:w-44">
           <p className="text-sm md:text-3xl">CERTIFICATE</p>
           <p className="text-xs md:text-base">OF PARTICIPATION</p>
         </div>

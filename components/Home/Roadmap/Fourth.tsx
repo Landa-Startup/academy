@@ -23,8 +23,8 @@ export default function Fifth() {
         height={430}
       />
       <div className="order-3 inline-flex items-start justify-start">
-        <div className="mb-4 ml-[-1.5rem] mr-[-8px] mt-[38px] h-5 w-5 shrink-0 rounded-full md:mt-[7px] bg-yellow-400" />
-        <div className="letter-spacing: 0.8px; m-[32px] ml-[13.5px] mr-[0] md:mt-0  font-barlow font-medium leading-7 text-black md:w-[500px] md:text-2xl ">
+        <div className="mb-4 ml-[-1.5rem] mr-[-8px] mt-[38px] h-5 w-5 shrink-0 rounded-full bg-yellow-400 md:mt-[7px]" />
+        <div className="letter-spacing: 0.8px; m-[32px] ml-[13.5px] mr-[0] font-barlow  font-medium leading-7 text-black md:mt-0 md:w-[500px] md:text-2xl ">
           Following a year of active participation within Landa, you will
           receive a credible and verifiable
           <span className="mx-1 font-semibold ">Canadian work experience
