@@ -7,8 +7,8 @@ import Envelope from '../icons/footer/Envelope';
 import Whatsapp from '../icons/footer/Whatsapp';
 import LinkedIn from '../icons/footer/LinkedIn';
 import './Navbar.css';
-import Image from 'next/image';
-import CaretDown from '../icons/CaretDown';
+// import Image from 'next/image';
+// import CaretDown from '../icons/CaretDown';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
@@ -49,7 +49,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         ref={drawerRef}
       />
       <div className="drawer-content relative flex flex-col ">
-        <div className="navbar flex flex-row w-full items-center justify-between  bg-[#26323880] px-12 text-black backdrop-blur-sm">
+        <div className="navbar flex w-full flex-row items-center justify-between  bg-[#26323880] px-12 text-black backdrop-blur-sm">
           <div className="flex-none lg:hidden ">
             <label
               htmlFor="my-drawer-3"
@@ -94,7 +94,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             />
             <CaretDown />
           </div> */}
-          <div className='w-1/7'></div>
+          <div className="w-1/7"></div>
         </div>
         <div className="children">{children}</div>
       </div>

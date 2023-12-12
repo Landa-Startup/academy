@@ -73,7 +73,7 @@ export default function Footer() {
             </div>
             <div>
               <div className="text-justify text-base font-normal text-white">
-                Office C, 5th Floor, Tala Complex, Sa'adat Abad Street, Isfahan, Iran
+                Office C, 5th Floor, Tala Complex, Sa&apos;adat Abad Street, Isfahan, Iran
               </div>
               <div className="text-justify text-base font-normal text-white">
                 +98 (313) 1311914
