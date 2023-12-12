@@ -37,12 +37,12 @@ export default function Button({
     type={type}
 
       >
-        <span className="absolute inset-0 bg-black"></span>
+        <span className="absolute inset-0 bg-black "></span>
         <span className="absolute inset-0 flex items-center justify-center text-center font-condensed text-base font-medium leading-none text-white">
           {text}
         </span>
         {isVisitSize && (
-          <span className="absolute inset-0 flex items-center justify-center text-center font-condensed text-base font-medium leading-none text-white">
+          <span className=" absolute inset-0 flex items-center justify-center text-center font-condensed text-base font-medium leading-none text-white">
             {text}
           </span>
         )}

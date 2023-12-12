@@ -30,11 +30,11 @@ export default function Hero({
         </div>
         <Image
           loading="lazy"
-          className="-mr-20 h-[400px] self-end md:mr-0 md:h-[560px]"
+          className="  self-end md:mr-[-221px] md:h-[560px] lg:mt-[-2rem]"
           src={`/static/images/Academy/Logo.svg`}
           alt="Landa"
-          width={344}
-          height={467}
+          width={820}
+          height={867}
         />
         <Link
           aria-label="Scroll To Next Section"

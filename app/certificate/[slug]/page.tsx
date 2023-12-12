@@ -4,7 +4,7 @@ import Banner from '@/components/common/Banner';
 // import { Metadata } from 'next';
 import FooterSecondary from '@/components/layout/FooterSecondary';
 // import { usePathname } from 'next/navigation';
-// import { useEffect, useState } from 'react';
+// import { useEffect } from 'react';
 import CertificateAchievementNew from '@/components/CertificateAchievementNew';
 
 // interface Certificate {
