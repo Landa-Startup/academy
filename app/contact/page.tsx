@@ -22,7 +22,7 @@ export default function ContactUsPage() {
       />
 
       {/* Main Content Grid */}
-      <div className="container mx-auto grid grid-cols-1 gap-6 bg-[#FAFAFA] px-5 py-28 text-black md:grid-cols-2 lg:px-28">
+      <div className="container mx-auto grid grid-cols-1 gap-6 bg-[#FAFAFA] px-5 py-8 text-black md:grid-cols-2 md:py-28 lg:px-28">
         {/* ContactUsDescription Component */}
         <ContactUsDescription />
 

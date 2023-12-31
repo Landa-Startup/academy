@@ -1,7 +1,7 @@
 import React from 'react';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
-import ScrollUpButton from '@/components/common/ScrollUpButton';
+// import ScrollUpButton from '@/components/common/ScrollUpButton';
 
 export default function RootLayout({
   children
@@ -19,7 +19,7 @@ export default function RootLayout({
           {/* Navbar */}
           <main>{children}</main> {/* Main Content */}
           <div className="bottom-0 w-full">
-            <ScrollUpButton /> {/* Scroll Up Button */}
+            {/* <ScrollUpButton /> Scroll Up Button */}
           </div>
         </Navbar>
       </body>
