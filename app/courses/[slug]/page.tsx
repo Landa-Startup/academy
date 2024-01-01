@@ -10,6 +10,8 @@ import UlList from '@/components/List/UlList';
 
 const L = ["Basic concepts related to SEO", "SEO tools", "Keyword research", "On-Page and Off-Page SEO Optimization", "Familiarity with Technical SEO", "Understanding Google Algorithms and Bots", "Speed Optimization", "Semantic Structure in HTML", "Meta Tags", "Comprehensive Training on Search Console", "Schema Structure", "Keyword Planner", "Enhancing Website Security", "DNS Server"]
 
+const L1 = ["Web Server", "Hosting Server", "Domain", "Social Media Marketing (SMM)", "Google Panda Algorithm", "Choosing the Right Domain", "nalysis and Resolution of All Technical Site Issues", "Schema Markup", "Familiarity with MOZ", "Black Hat SEO", "And dozens of other related topics"]
+
 export default function Page({
   params: { slug }
 }:
@@ -197,7 +199,7 @@ export default function Page({
                       <div className="collapse-title bg-[#F1F8EC] 	text-2xl font-medium text-[#3D5656]">
                         Second Day
                       </div>
-                      <div className="collapse-content bg-white text-[#3D5656]">
+                      {/* <div className="collapse-content bg-white text-[#3D5656]">
                         <ul className="my-5 list-image-[url(/static/images/Academy/green.png)]  pl-2 text-xl 	leading-9 text-black">
                           <li>Web Server</li>
                           <li>Hosting Server</li>
@@ -213,7 +215,9 @@ export default function Page({
                           <li>Black Hat SEO</li>
                           <li>And dozens of other related topics</li>
                         </ul>
-                      </div>
+                      </div> */}
+
+                      <UlList list={L1} style1='collapse-content bg-white text-[#3D5656]' style2='my-5 list-image-[url(/static/images/Academy/green.png)]  pl-2 text-xl 	leading-9 text-black' style3=''/>           
                     </div>
                   </div>
                 </div>
