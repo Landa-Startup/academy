@@ -112,7 +112,7 @@ export default function ContactUs() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="relative mx-auto flex h-screen snap-start flex-col items-center justify-start    bg-[#F1F8EC] py-20 md:w-[1440px] "
+      className="relative mx-auto flex h-screen snap-start flex-col items-center justify-between bg-[#F1F8EC] py-20 md:w-[1440px] "
     >
       <div className="inline-flex flex-col  items-center self-center ">
         <div className="mt-[-2.25] text-center font-gilda text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:h-[58px] md:w-[413px] md:text-3xl md:tracking-[11.20px] ">
@@ -122,7 +122,7 @@ export default function ContactUs() {
           Contact Us
         </div>
       </div>
-      <div className="relative  grid grid-cols-1 gap-[-2rem]   md:grid-cols-2 ">
+      <div className="relative  grid grid-cols-1 gap-[-2rem] z-10 md:grid-cols-2 ">
         <div className="col-span-1 w-full md:w-1/2 lg:ml-[21rem]">
           <Input
             register={register}
@@ -182,7 +182,7 @@ export default function ContactUs() {
           patternValue=""
           patternMessage=""
           placeholder="Description"
-          className=" h-[84px] w-[360px]   justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[185px] md:w-[746px] lg:mb-[-38px] lg:ml-[335px]  lg:mr-[323px] lg:mt-[-0.5rem] "
+          className=" h-[84px] w-[360px] justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[185px] md:w-[746px] lg:mb-[-38px] lg:ml-[335px] lg:mr-[323px] lg:mt-[-0.5rem] mb-4"
         />
       </div>
       <Button

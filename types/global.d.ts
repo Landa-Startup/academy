@@ -152,6 +152,19 @@ interface TableData {
   time: string;
 }
 
+interface Course {
+  title: string;
+  description: string;
+  price: string;
+  discount: { discount_value: number };
+  discountPercent: string;
+  duration: string;
+  sessions: string;
+  sessionDuration: string;
+  sessionDurationType: string;
+  payUrl: string;
+}
+
 export {
   ContactUSFormData,
   Type,
@@ -163,5 +176,6 @@ export {
   Entrepreuneur,
   LoginFormData,
   DecodedToken,
-  TableData
+  TableData,
+  Course
 };

@@ -49,8 +49,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         ref={drawerRef}
       />
       <div className="drawer-content relative flex flex-col ">
-        <div className="navbar flex w-full flex-row items-center justify-between  bg-[#26323880] px-12 text-black backdrop-blur-sm">
-          <div className="flex-none lg:hidden ">
+        <div className="navbar flex w-full flex-row items-center justify- gap-[22.5rem]  bg-[#26323880] text-black backdrop-blur-sm">
+          <div className="flex-none mt-4 ml-7 lg:hidden ">
             <label
               htmlFor="my-drawer-3"
               className="btn btn-square btn-ghost -mt-5"
@@ -59,7 +59,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block h-8 w-8 stroke-current"
+                className="inline-block h-12 w-12 stroke-current text-white"
               >
                 <path
                   strokeLinecap="round"
@@ -71,7 +71,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </label>
           </div>
           <Logo />
-          <div className="hidden xl:flex xl:justify-self-center">
+          <div className="hidden lg:flex lg:self-center">
             <ul className="menu menu-horizontal flex justify-center font-condensed text-xl text-white">
               {menuItems.map((item) => (
                 <li className="mx-2 text-2xl" key={item.label}>
@@ -94,11 +94,10 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             />
             <CaretDown />
           </div> */}
-          <div className="w-1/7"></div>
         </div>
         <div className="children">{children}</div>
       </div>
-      <div className="drawer-side">
+      <div className="drawer-side h-full">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
         <div className="menu flex h-full w-80 flex-col justify-between bg-[#CFFDE1] p-0 text-xl">
           <div>
