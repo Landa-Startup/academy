@@ -6,7 +6,7 @@ import { homeGalleryImage } from '../Constant/constant';
 
 export default function Gallery() {
   return (
-    <div className="relative flex h-screen snap-start flex-col justify-end gap-5 bg-neutral-50/95 py-5">
+    <div className="relative flex h-screen snap-start flex-col justify-center my-auto gap-10 bg-neutral-50/95 py-5">
       <div className="lg:mb-25 flex flex-col items-center gap-3">
         <div className="text-center font-gilda text-base font-normal tracking-[5.6px] text-lime-400  md:w-[413px]   md:text-3xl md:tracking-[11.20px]">
           LANDA ACADEMY 

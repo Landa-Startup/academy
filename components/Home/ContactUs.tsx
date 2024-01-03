@@ -115,7 +115,7 @@ export default function ContactUs() {
       className="relative mx-auto flex h-screen snap-start flex-col items-center justify-between bg-[#F1F8EC] py-20 md:w-[1440px] "
     >
       <div className="inline-flex flex-col  items-center self-center ">
-        <div className="mt-[-2.25] text-center font-gilda text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:h-[58px] md:w-[413px] md:text-3xl md:tracking-[11.20px] ">
+        <div className="mt-4 text-center font-gilda text-base font-normal leading-[50px] tracking-[5.6px] text-lime-400 md:h-[58px] md:w-[413px] md:text-3xl md:tracking-[11.20px] ">
           LANDA ACADEMY
         </div>
         <div className="text-center font-gilda text-3xl font-normal leading-[50px] tracking-[1.6px] text-black md:h-[58px] md:w-[413px] md:text-5xl md:tracking-[3.20px]   ">
@@ -178,19 +178,22 @@ export default function ContactUs() {
           errors={errors}
           nameTextArea="description"
           title=""
-          required=""
+          required="Description is Required."
           patternValue=""
           patternMessage=""
           placeholder="Description"
           className=" h-[84px] w-[360px] justify-start border border-yellow-400 bg-yellow-50 pl-5 md:h-[185px] md:w-[746px] lg:mb-[-38px] lg:ml-[335px] lg:mr-[323px] lg:mt-[-0.5rem] mb-4"
         />
       </div>
+      <div className='mt-8'>
       <Button
         onSubmit={handleSubmit(onSubmit)}
         type="submit"
-        size="visit"
+        size="no visit"
         text={send ? 'Submitting ....' : 'Submit'}
+        goto=''
       />
+      </div>
       <Image
         loading="lazy"
         className="bottom-0 md:absolute md:-left-16"

@@ -5,7 +5,7 @@ import IconStar from '@/components/icons/IconStar';
 import IconYellow from '@/components/icons/IconYellow';
 import FooterSecondary from '@/components/layout/FooterSecondary';
 import React, { useEffect, useState } from 'react';
-import { Course } from '@/types/global';
+// import { Course } from '@/types/global';
 import UlList from '@/components/List/UlList';
 
 const L = ["Basic concepts related to SEO", "SEO tools", "Keyword research", "On-Page and Off-Page SEO Optimization", "Familiarity with Technical SEO", "Understanding Google Algorithms and Bots", "Speed Optimization", "Semantic Structure in HTML", "Meta Tags", "Comprehensive Training on Search Console", "Schema Structure", "Keyword Planner", "Enhancing Website Security", "DNS Server"]
@@ -18,11 +18,11 @@ export default function Page({
 {
   params: { slug: string}
 }) {
-  const [course, setCourse] = useState<Course | null>(null);
+  const [course, setCourse] = useState<any>(null);
 
   const lowerSlug = slug.toLowerCase();
 
-  console.log(lowerSlug)
+  // console.log(lowerSlug)
 
   let formattedSlug = "english";
 
@@ -68,7 +68,9 @@ export default function Page({
       .then((response) => response.json())
       .then((data) => setCourse(data))
       .catch((error) => console.error('Error fetching data:', error));
-  }); // The empty dependency array ensures this effect runs once when the component mounts
+  },[]); // The empty dependency array ensures this effect runs once when the component mounts
+
+  // console.log(course);
 
   if (!course) {
     // You can add a loading state here
@@ -90,7 +92,7 @@ export default function Page({
                 <div>
                   <div>
                     <p className="text-2xl">
-                      {`A two-day ${course.title} course consisting of ${course.sessions} sessions, each lasting ${course.sessionDuration} ${course.sessionDurationType}, will be conducted.`}
+                      {`A ${course?.days.length} day ${course.title} course consisting of ${course.sessions} sessions, each lasting ${course.sessionDuration} ${course.sessionDurationType}, will be conducted.`}
                     </p>
                   </div>
                   <div className="mx-20 my-5 bg-[#F1F8EC] py-5">
@@ -159,7 +161,8 @@ export default function Page({
                   </div>
                   <div>
                     <p className="my-5 text-xl leading-8">
-                      {course.description}
+                      {/* {course.description} */}
+                      Course Dedcription
                     </p>
                   </div>
                   <div className="mb-10 mt-16 flex">
@@ -217,7 +220,7 @@ export default function Page({
                         </ul>
                       </div> */}
 
-                      <UlList list={L1} style1='collapse-content bg-white text-[#3D5656]' style2='my-5 list-image-[url(/static/images/Academy/green.png)]  pl-2 text-xl 	leading-9 text-black' style3=''/>           
+                      <UlList list={L1} style1='collapse-content bg-white text-[#3D5656]' style2='my-5 list-image-[url(/static/images/Academy/green.png)]  pl-2 text-xl leading-9 text-black' style3=''/>           
                     </div>
                   </div>
                 </div>

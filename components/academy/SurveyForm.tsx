@@ -143,7 +143,7 @@ export default function SurveyForm() {
           </span>
         )}
       </div>
-      <div className="flex flex-col space-y-4">
+      <div className="flex flex-col items-center space-y-4">
         <label htmlFor="skills" className="text-[#B2B2B2]">
           Which skills would you like to learn at Landa Academy?
         </label>
@@ -153,12 +153,12 @@ export default function SurveyForm() {
           }`}
           id="skills"
           {...register('favorite_skill', {
+            required: 'Your skill is required.',
             pattern: {
               value:
                 /^(webDevelopment|dataScience|mobileAppDevelopment|uiUxDesign)$/,
               message: 'Enter a valid skill.'
             },
-            required: 'Your skill is required.'
           })}
         >
           <option disabled value="">
