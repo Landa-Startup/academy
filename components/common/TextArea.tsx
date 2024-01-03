@@ -9,6 +9,7 @@ export default function TextArea({
   patternValue,
   patternMessage,
   placeholder,
+  className
 }: {
   title: string;
   register: any;
@@ -18,6 +19,7 @@ export default function TextArea({
   patternValue: string;
   patternMessage: string;
   placeholder: string;
+  className:string
 }) {
   // Create a regular expression pattern for validation
   const pattern = new RegExp(patternValue);
@@ -28,7 +30,7 @@ export default function TextArea({
       <label className="text-[#6b6b6b] dark:text-current">{title}</label>
       <textarea
         className={
-          'textarea textarea-bordered textarea-lg w-full mt-3 mb-1 drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]' +
+          `${className ? className : "textarea textarea-bordered flex flex-col textarea-lg w-full mt-3 mb-1 drop-shadow-lg placeholder-[#b2b1b0] dark:placeholder-[#9CA3AF]"}` +
           (errors[nameTextArea] ? ' border-red-500' : '')
         }
         {...register(nameTextArea, {

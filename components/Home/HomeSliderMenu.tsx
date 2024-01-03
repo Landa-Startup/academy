@@ -1,3 +1,5 @@
+// 'use client'
+// import React, { useState, useEffect } from 'react';
 import Button from '../common/Button';
 import CourseItem from './CourseItem';
 import React from 'react';
@@ -7,7 +9,17 @@ import React from 'react';
 //   date : string;
 // }
 
+// interface Course {
+//   title: string;
+//   thumbnail: string;
+//   date: string;
+//   active?: boolean;
+//   price: number;
+//   slug: string;
+// }
+
 const SliderMenu = () => {
+
   const cardData = [
     {
       title: 'Business',
@@ -95,6 +107,16 @@ const SliderMenu = () => {
     }
   ];
 
+  // const [data, setData] = useState<Course[]>([]);
+
+  // useEffect(() => {
+  //   // Fetch data from the API when the component mounts
+  //   fetch('https://academy-back.landaholding.com/course/list?format=json')
+  //     .then((response) => response.json())
+  //     .then((data) => setData(data))
+  //     .catch((error) => console.error('Error fetching data:', error));
+  // }, []);
+
   return (
     <div className="h-screen snap-start bg-[#3D5656] py-10" id="Courses">
       <div className="container mx-auto">
@@ -109,12 +131,12 @@ const SliderMenu = () => {
         {/* mx-2 flex gap-4 relative overflow-hidden whitespace-nowrap md:h-[486px] md:gap-12 */}
         <div className="slider relative m-auto grid w-11/12 overflow-hidden whitespace-nowrap md:h-[486px]">
           <div className="w-[calc(250px * 16)] scroll hover:pause flex">
-            {cardData.map((card, index) => (
-              <CourseItem key={index} title={card.title} image={card.image} />
+            {cardData.map(({title, image} : {title: string, image: string}, index: number) => (
+              <CourseItem key={index} title={title} image={image} />
             ))}
           </div>
         </div>
-        <Button size='not' text='Visit More' addedClass='mx-auto'/>
+        <Button size='visit' goto='/courses' text='Visit More' addedClass='mx-auto'/>
       </div>
       <div className="mt-4 flex justify-center"></div>
     </div>

@@ -3,8 +3,8 @@ import Banner from '@/components/common/Banner';
 // import CertificateAchievement from '@/components/academy/Certificate/CertificateAchievement';
 // import { Metadata } from 'next';
 import FooterSecondary from '@/components/layout/FooterSecondary';
-import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
+// import { usePathname } from 'next/navigation';
+// import { useEffect } from 'react';
 import CertificateAchievementNew from '@/components/CertificateAchievementNew';
 
 // interface Certificate {
@@ -27,8 +27,8 @@ import CertificateAchievementNew from '@/components/CertificateAchievementNew';
 // };
 
 export default function Page() {
-  const pathname = usePathname();
-  const slug = pathname?.replace('/certificate/', '');
+  // const pathname = usePathname();
+  // const slug = pathname?.replace('/certificate/', '');
   // const [certificate, setCertificate] = useState<Certificate>({
   //   user: { first_name: '', last_name: '' },
   //   course: { title: '', thumbnail: '', description: '', slug: '' },
@@ -37,17 +37,17 @@ export default function Page() {
   //   courseImage: '',
   //   qrcode_image: ''
   // });
-  useEffect(() => {
-    async function fetchTags() {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}certifications/certificate/${slug}?format=json`
-      );
-      const data = await response.json();
-      console.log(data.certificate);
-      // setCertificate(data);
-    }
-    fetchTags();
-  }, [slug]);
+  // useEffect(() => {
+  //   async function fetchTags() {
+  //     const response = await fetch(
+  //       `${process.env.NEXT_PUBLIC_DJANGO_HOST_URL}certifications/certificate/${slug}?format=json`
+  //     );
+  //     const data = await response.json();
+  //     console.log(data.certificate);
+  //     // setCertificate(data);
+  //   }
+  //   fetchTags();
+  // }, [slug]);
   return (
     <div>
       <Banner

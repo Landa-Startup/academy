@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function Logo() {
   return (
-    <div className="flex h-full items-center justify-start px-2 text-left">
+    <div className="flex h-full items-center justify-start px-0 text-left">
       <Link href={'/'}>
         <div className="flex h-16 w-[125px] flex-col items-center justify-center md:w-24 md:flex-row">
           <Image

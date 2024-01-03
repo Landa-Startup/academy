@@ -1,9 +1,14 @@
 import Link from 'next/link';
 
 const CourseItem = ({ title, image }: { title: string; image: string }) => {
+
+  console.log(`/courses/${title}`);
+
+  const formattedTitle = title.replace(/ /g, "-"); 
+
   return (
     <Link
-      href={'/academy/' + title}
+      href={`/courses/${formattedTitle}`}
       style={{
         backgroundImage: `url('${image}')`,
         backgroundPosition: 'center',
