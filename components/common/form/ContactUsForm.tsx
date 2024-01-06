@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { ContactUSFormData } from '../../../app/types/global';
+import { ContactUSFormData } from '../../../types/global';
 import GetCsrfToken from '@/utils/get-csrf-token';
 import apiClient from '@/utils/api';
 import NotificationSendForm from './NotificationSendForm';
@@ -44,7 +44,7 @@ export default function ContactUsForm() {
     setIsSubmitting(true);
     setSend(true);
     try {
-      await apiClient.post('contactUs-form', JSON.stringify(formData), {
+      await apiClient.post('/common/contactUs-form', JSON.stringify(formData), {
         headers: {
           'X-CSRFToken': csrfToken,
           'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ export default function ContactUsForm() {
   };
   return (
     <div>
-      <h2 className="text-center font-gilda text-5xl font-light">Reach us</h2>
+      <h2 className="text-center font-gilda text-5xl font-light">Get in touch</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="my-6 grid grid-cols-1 gap-x-6 gap-y-5 md:grid-cols-2">
           <div className="flex flex-col">

@@ -5,32 +5,72 @@ import IconStar from '@/components/icons/IconStar';
 import IconYellow from '@/components/icons/IconYellow';
 import FooterSecondary from '@/components/layout/FooterSecondary';
 import React, { useEffect, useState } from 'react';
+// import { Course } from '@/types/global';
+import UlList from '@/components/List/UlList';
 
-interface Course {
-  title: string;
-  description: string;
-  price: string;
-  discount: { discount_value: number };
-  discountPercent: string;
-  duration: string;
-  sessions: string;
-  sessionDuration: string;
-  sessionDurationType: string;
-  payUrl: string;
-}
+const L = ["Basic concepts related to SEO", "SEO tools", "Keyword research", "On-Page and Off-Page SEO Optimization", "Familiarity with Technical SEO", "Understanding Google Algorithms and Bots", "Speed Optimization", "Semantic Structure in HTML", "Meta Tags", "Comprehensive Training on Search Console", "Schema Structure", "Keyword Planner", "Enhancing Website Security", "DNS Server"]
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const [course, setCourse] = useState<Course | null>(null);
+const L1 = ["Web Server", "Hosting Server", "Domain", "Social Media Marketing (SMM)", "Google Panda Algorithm", "Choosing the Right Domain", "nalysis and Resolution of All Technical Site Issues", "Schema Markup", "Familiarity with MOZ", "Black Hat SEO", "And dozens of other related topics"]
+
+export default function Page({
+  params: { slug }
+}:
+{
+  params: { slug: string}
+}) {
+  const [course, setCourse] = useState<any>(null);
+
+  const lowerSlug = slug.toLowerCase();
+
+  // console.log(lowerSlug)
+
+  let formattedSlug = "english";
+
+
+  switch (lowerSlug) {
+    case "english":
+      formattedSlug = "english"
+      break;
+    case "python-course":
+      formattedSlug = "seo"
+      break;
+    case "ux-workshop":
+      formattedSlug = "seo"
+      break;
+    case "icdl-Workshop":
+      formattedSlug = "seo"
+      break;
+    case "ai-webinar":
+      formattedSlug = "seo"
+      break;
+    case "front-end-course":
+      formattedSlug = "seo"
+      break;
+    case "digital-marketing":
+      formattedSlug = "seo"
+      break;
+    case "business":
+      formattedSlug = "seo"
+      break;
+    default:
+      formattedSlug = "english"
+      break;
+  } // on the backend we have only the seo and english courses . 
+    // the code above makes sure to redirect to one of these courses pages ,
+    // in case of clicking on the other course cards .
+
 
   useEffect(() => {
     // Fetch data from the API when the component mounts
     fetch(
-      `https://academy-back.landaholding.com/course/details/${params.slug}/?format=json`
+      `https://academy-back.landaholding.com/course/details/${formattedSlug}/?format=json`
     )
       .then((response) => response.json())
       .then((data) => setCourse(data))
       .catch((error) => console.error('Error fetching data:', error));
-  }); // The empty dependency array ensures this effect runs once when the component mounts
+  },[]); // The empty dependency array ensures this effect runs once when the component mounts
+
+  // console.log(course);
 
   if (!course) {
     // You can add a loading state here
@@ -52,7 +92,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                 <div>
                   <div>
                     <p className="text-2xl">
-                      {`A two-day ${course.title} course consisting of ${course.sessions} sessions, each lasting ${course.sessionDuration} ${course.sessionDurationType}, will be conducted.`}
+                      {`A ${course?.days.length} day ${course.title} course consisting of ${course.sessions} sessions, each lasting ${course.sessionDuration} ${course.sessionDurationType}, will be conducted.`}
                     </p>
                   </div>
                   <div className="mx-20 my-5 bg-[#F1F8EC] py-5">
@@ -121,7 +161,8 @@ export default function Page({ params }: { params: { slug: string } }) {
                   </div>
                   <div>
                     <p className="my-5 text-xl leading-8">
-                      {course.description}
+                      {/* {course.description} */}
+                      Course Dedcription
                     </p>
                   </div>
                   <div className="mb-10 mt-16 flex">
@@ -134,7 +175,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                       <div className="collapse-title bg-[#F1F8EC]	text-2xl font-medium text-[#3D5656]">
                         First Day
                       </div>
-                      <div className="collapse-content bg-white text-[#3D5656]">
+                      {/* <div className="collapse-content bg-white text-[#3D5656]">
                         <ul className="my-5 list-image-[url(/static/images/Academy/green.png)] pl-5	text-xl	leading-9 text-black	 ">
                           <li>Basic concepts related to SEO</li>
                           <li>SEO tools</li>
@@ -151,7 +192,8 @@ export default function Page({ params }: { params: { slug: string } }) {
                           <li>Enhancing Website Security</li>
                           <li>DNS Server</li>
                         </ul>
-                      </div>
+                      </div> */}
+                      <UlList list={L} style1="collapse-content bg-white text-[#3D5656]" style2="my-5 list-image-[url(/static/images/Academy/green.png)] pl-5	text-xl	leading-9 text-black" style3="" />
                     </div>
                   </div>
                   <div>
@@ -160,7 +202,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                       <div className="collapse-title bg-[#F1F8EC] 	text-2xl font-medium text-[#3D5656]">
                         Second Day
                       </div>
-                      <div className="collapse-content bg-white text-[#3D5656]">
+                      {/* <div className="collapse-content bg-white text-[#3D5656]">
                         <ul className="my-5 list-image-[url(/static/images/Academy/green.png)]  pl-2 text-xl 	leading-9 text-black">
                           <li>Web Server</li>
                           <li>Hosting Server</li>
@@ -176,7 +218,9 @@ export default function Page({ params }: { params: { slug: string } }) {
                           <li>Black Hat SEO</li>
                           <li>And dozens of other related topics</li>
                         </ul>
-                      </div>
+                      </div> */}
+
+                      <UlList list={L1} style1='collapse-content bg-white text-[#3D5656]' style2='my-5 list-image-[url(/static/images/Academy/green.png)]  pl-2 text-xl leading-9 text-black' style3=''/>           
                     </div>
                   </div>
                 </div>

@@ -16,7 +16,7 @@ export default function TeamPersons() {
     'Accountant',
     'Public Relations',
     'Digital Marketer',
-    'Secretary'
+    'manager assistant'
   ];
 
   const [selectedRole, setSelectedRole] = useState<string>('All');

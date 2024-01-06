@@ -7,8 +7,8 @@ import Envelope from '../icons/footer/Envelope';
 import Whatsapp from '../icons/footer/Whatsapp';
 import LinkedIn from '../icons/footer/LinkedIn';
 import './Navbar.css';
-import Image from 'next/image';
-import CaretDown from '../icons/CaretDown';
+// import Image from 'next/image';
+// import CaretDown from '../icons/CaretDown';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   const drawerRef = useRef<HTMLInputElement>(null);
@@ -16,10 +16,10 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
   const menuItems = [
     { label: 'HOME', href: '/' },
     // { label: 'Blog', href: '/blog' },
-    { label: 'COURSES', href: '/courses' },
+    // { label: 'COURSES', href: '/courses' },
     { label: 'GALLERY', href: '/gallery' },
     { label: 'CONTACT', href: '/contact' },
-    { label: 'ABOUT', href: '/about' },
+    // { label: 'ABOUT', href: '/about' },
     { label: 'OUR TEAM', href: '/our-team' }
   ];
 
@@ -48,9 +48,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         aria-label="Menu Toggle"
         ref={drawerRef}
       />
-      <div className="drawer-content relative flex flex-col">
-        <div className="navbar flex w-full items-center justify-between bg-[#26323880] px-12 text-black backdrop-blur-sm">
-          <div className="mt-5 flex-none lg:hidden">
+      <div className="drawer-content relative flex flex-col ">
+        <div className="navbar flex w-full flex-row items-center justify-between  bg-[#26323880] px-12 text-black backdrop-blur-sm">
+          <div className="flex-none lg:hidden ">
             <label
               htmlFor="my-drawer-3"
               className="btn btn-square btn-ghost -mt-5"
@@ -71,7 +71,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </label>
           </div>
           <Logo />
-          <div className="hidden xl:flex xl:justify-center">
+          <div className="hidden xl:flex xl:justify-self-center">
             <ul className="menu menu-horizontal flex justify-center font-condensed text-xl text-white">
               {menuItems.map((item) => (
                 <li className="mx-2 text-2xl" key={item.label}>
@@ -85,7 +85,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               ))}
             </ul>
           </div>
-          <div className="flex gap-2">
+          {/* <div className="flex gap-2">
             <Image
               alt="us"
               src={'/static/images/Academy/usFlag.png'}
@@ -93,7 +93,8 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               height={34}
             />
             <CaretDown />
-          </div>
+          </div> */}
+          <div className="w-1/7"></div>
         </div>
         <div className="children">{children}</div>
       </div>

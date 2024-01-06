@@ -15,7 +15,7 @@ export default function TeamRolesContainer({
     setSelectedRole(role);
   }
   return (
-    <div className="hidden mx-5 gap-1 overflow-x-auto bg-slate-50 pb-5 pt-10 md:mx-auto md:justify-center">
+    <div className="mx-5 hidden gap-1 overflow-x-auto bg-slate-50 pb-5 pt-10 md:mx-auto md:justify-center">
       {roles.map((role, index) => (
         <button
           onClick={() => handleRoleClick(role)}

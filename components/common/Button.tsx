@@ -1,5 +1,7 @@
+// 
 'use client';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+// import Link from 'next/link';
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
 // Define the ButtonProps type
@@ -25,18 +27,20 @@ export default function Button({
 }: ButtonProps) {
   // Determine the button size and apply appropriate styles
   const isVisitSize = size === 'visit';
+  const router = useRouter();
 // <BUtton goto={'/survey'} />
   return (
-    <Link href={goto}>
-      <button
-    className={`btn2 ${isVisitSize
-      ? 'mt-[19px] h-[32px] w-[135px] pb-4 pl-[72px] pr-[71px] pt-[15px] md:h-[60px] md:w-[219px]'
-      : ' mt-[40px] h-11 pb-4 pl-[72px] pr-[71px] pt-[15px] md:flex md:mt-[1px]'
-      } ${bgColor === 'Primary' ? 'bg-primary' : 'bg-[#FDD30A]'
-      } relative inset-0 flex items-center justify-center overflow-hidden border border-white px-10 py-5 text-center font-condensed text-base font-normal uppercase leading-none tracking-wider text-white hover:text-white ${addedClass}`}
-    type={type}
-
-      >
+    <button
+      onClick={() => {
+        goto ? router.push(goto) : ""
+      }}
+      className={`btn2 ${isVisitSize
+        ? 'mt-[19px] h-[32px] w-[135px] pb-4 pl-[72px] pr-[71px] pt-[15px] md:h-[60px] md:w-[219px]'
+        : ' mt-[40px] h-11 pb-4 pl-[72px] pr-[71px] pt-[15px] md:mt-[1px] md:flex'
+        } ${bgColor === 'Primary' ? 'bg-primary' : 'bg-[#FDD30A]'
+        } relative inset-0 flex items-center justify-center overflow-hidden border border-white px-10 py-5 text-center font-condensed text-base font-normal uppercase leading-none tracking-wider text-white hover:text-white ${addedClass}`}
+      type={type}
+    >
         <span className="absolute inset-0 bg-black"></span>
         <span className="absolute inset-0 flex items-center justify-center text-center font-condensed text-base font-medium leading-none text-white">
           {text}
@@ -46,7 +50,6 @@ export default function Button({
             {text}
           </span>
         )}
-      </button>
-    </Link>
+    </button>
   );
 }

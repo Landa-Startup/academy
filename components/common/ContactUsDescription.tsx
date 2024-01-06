@@ -85,7 +85,7 @@ export default function ContactUsDescription() {
           <Location />
           <div className="ml-2 flex w-11/12 flex-col">
             <span className="font-semibold">Address</span>
-            <ul className="list-disc space-y-3">
+            <ul className="mx-4 list-disc space-y-3">
               <li>
                 No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9,
                 Canada

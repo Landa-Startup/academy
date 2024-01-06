@@ -22,14 +22,14 @@ export default function Second() {
           </div>
           <div className="inline-flex items-start justify-start gap-2">
             <div className="mt-[23px] h-5 w-5 rounded-full bg-yellow-400" />
-            <div className="mt-4 w-[349px] font-barlow text-base font-normal text-gray-600 md:w-[500px]  md:text-2xl leading-[32px]">
+            <div className="mt-4 w-[349px] font-barlow text-base font-normal leading-[32px] text-gray-600  md:w-[500px] md:text-2xl">
               Embark on your adventurous journey at Landa Academy by
               participating in our tailored crash courses designed by mentors
               from the Landa Holding.
             </div>
           </div>
           <div className="inline-flex items-start justify-start gap-2 ">
-            <div className="mt-[2px] lg:mt-2.5 h-5 w-5 rounded-full bg-yellow-400" />
+            <div className="mt-[2px] h-5 w-5 rounded-full bg-yellow-400 lg:mt-2.5" />
             <div className="font-barlow text-base font-normal text-gray-600 md:w-[500px] md:text-2xl  ">
               Obtain a valid certificate of achievement
             </div>
