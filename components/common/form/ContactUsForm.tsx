@@ -44,7 +44,7 @@ export default function ContactUsForm() {
     setIsSubmitting(true);
     setSend(true);
     try {
-      await apiClient.post('contactUs-form', JSON.stringify(formData), {
+      await apiClient.post('/common/contactUs-form', JSON.stringify(formData), {
         headers: {
           'X-CSRFToken': csrfToken,
           'Content-Type': 'application/json'
