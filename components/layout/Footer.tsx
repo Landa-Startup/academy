@@ -8,7 +8,7 @@ import LinkedIn from '../icons/footer/LinkedIn';
 
 export default function Footer() {
   return (
-    <div className="flex h-screen snap-center flex-col justify-around bg-[#3D5656] font-barlow">
+    <div className="relative flex h-screen snap-start flex-col justify-around bg-[#3D5656] font-barlow">
       <div className="mt-16 grid grid-cols-1 gap-5 px-10 py-5 md:mt-0 md:grid-cols-2 md:gap-10 md:px-28 md:py-0 md:pt-20 backdrop:md:flex-row">
         <div className="flex flex-col space-y-1">
           <div className="text-justify text-xl font-medium text-[#FEED9D]">

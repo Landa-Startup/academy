@@ -11,7 +11,7 @@ export default function Fifth() {
       id="Roadmap-4"
       
     >
-      <div className="self-start order-2 mt-20 ml-[5.5rem] font-barlow text-2xl font-normal leading-snug text-black md:absolute md:w-[420px] md:text-4xl">
+      <div className="self-start order-2 mt-20  font-barlow text-2xl font-normal leading-snug text-black md:absolute md:w-[420px] md:text-4xl">
         Work experience at the Canadian company
       </div>
       <Image
