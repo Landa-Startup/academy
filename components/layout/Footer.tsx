@@ -8,10 +8,10 @@ import LinkedIn from '../icons/footer/LinkedIn';
 
 export default function Footer() {
   return (
-    <div className="relative flex h-screen snap-start flex-col justify-around bg-[#3D5656] font-barlow">
-      <div className="mt-16 grid grid-cols-1 gap-5 px-10 py-5 md:mt-0 md:grid-cols-2 md:gap-10 md:px-28 md:py-0 md:pt-20 backdrop:md:flex-row">
+    <div className="relative flex snap-start flex-col justify-around bg-[#3D5656] font-barlow">
+      <div className="mt-16 grid grid-cols-1 gap-y-12 md:gap-5 px-10 py-5 md:mt-0 md:grid-cols-2 md:px-28 md:py-20 backdrop:md:flex-row">
         <div className="flex flex-col space-y-1">
-          <div className="text-justify text-xl font-medium text-[#FEED9D]">
+          <div className="text-justify text-xl mb-3 font-medium text-[#FEED9D]">
             Explore
             <br />
           </div>
@@ -22,8 +22,6 @@ export default function Footer() {
             >
               Home
             </Link>
-
-           
             <Link
               href={'/contact'}
               className="max-w-fit text-base font-normal text-white hover:text-[#CCE8BB]"
@@ -49,71 +47,107 @@ export default function Footer() {
             investment is made based on the investment priorities of developing
             the nurtured capabilities of individuals.
           </div>
-        </div>
-        <div className="col-span-1 flex flex-col">
-          <div className="h-[30px] text-justify text-xl font-medium text-[#FEED9D]">
-            Contact
-          </div>
-          <div className="flex w-[330px] flex-col gap-2 divide-y-2 divide-[#CCE8BB]">
-            <div>
-              <div className="text-justify text-base font-normal text-white">
-                No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9, Canada
-              </div>
-              <div className="text-justify text-base font-normal text-white">
-                +1 (289) 269-3933
-              </div>
-            </div>
-            <div>
-              <div className="text-base font-normal text-white">
-                Office 41, No. 27, Gholam Jafari Street, Tajrish Square, Tehran, Iran
-              </div>
-              <div className="text-justify text-base font-normal text-white">
-                +98 (912) 0539563
-              </div>
-            </div>
-            <div>
-              <div className="text-justify text-base font-normal text-white">
-                Office C, 5th Floor, Tala Complex, Sa&apos;adat Abad Street, Isfahan, Iran
-              </div>
-              <div className="text-justify text-base font-normal text-white">
-                +98 (313) 1311914
-              </div>
-            </div>
-            <div className="flex h-[22px] w-[330px] flex-row items-center gap-6 pt-4 text-white">
-              <Link
+          <div className="flex md:hidden h-[22px] w-[330px] flex-row items-center mt-10 gap-6 pt-4 text-white">
+            <Link
                 aria-label="Instagram"
                 href={
                   'https://www.instagram.com/landaacademy/'
                 }
                 className="hover:text-[#CCE8BB]"
                 target="_blank"
-              >
-                <Instagram />
-              </Link>
-              <Link
+            >
+              <Instagram />
+            </Link>
+            <Link
                 aria-label="Email"
                 href={'mailto:info@landaholding.com'}
                 className="hover:text-[#CCE8BB]"
-              >
-                <Envelope />
-              </Link>
-              <Link
+            >
+              <Envelope />
+            </Link>
+            <Link
                 aria-label="Whatsapp"
                 href={'https://wa.me/989120539563'}
                 className="hover:text-[#CCE8BB]"
                 target="_blank"
-              >
-                <Whatsapp />
-              </Link>
-              <Link
+            >
+              <Whatsapp />
+            </Link>
+            <Link
                 aria-label="Linkedin"
                 href={'https://www.linkedin.com/company/landa-startup-school/'}
                 className="hover:text-[#CCE8BB]"
                 target="_blank"
+            >
+              <LinkedIn />
+            </Link>
+          </div>
+        </div>
+        <div className="col-span-1 flex flex-col">
+          <div className="h-[30px] text-justify text-xl font-medium text-[#FEED9D] mb-3">
+            Contact
+          </div>
+          <div className="flex md:w-2/3 flex-col gap-4 divide-y-2 divide-[#CCE8BB]">
+            <div>
+              <div className="text-justify text-base font-normal text-white leading-6">
+                No. 200, 7646 Yonge Street, Thornhill, Toronto, ON L4J 1V9, Canada
+              </div>
+              <div className="text-justify text-base font-normal text-white leading-6">
+                +1 (289) 269-3933
+              </div>
+            </div>
+            <div>
+              <div className="text-base font-normal text-white leading-6">
+                Office 41, No. 27, Gholam Jafari Street, Tajrish Square, Tehran, Iran
+              </div>
+              <div className="text-justify text-base font-normal text-white leading-6">
+                +98 (912) 0539563
+              </div>
+            </div>
+            <div>
+              <div className="text-justify text-base font-normal text-white leading-6">
+                Office C, 5th Floor, Tala Complex, Sa&apos;adat Abad Street, Isfahan, Iran
+              </div>
+              <div className="text-justify text-base font-normal text-white leading-6">
+                +98 (313) 1311914
+              </div>
+            </div>
+            <div className="hidden md:flex h-[22px] w-[330px] flex-row items-center gap-6 pt-4 text-white">
+              <Link
+                  aria-label="Instagram"
+                  href={
+                    'https://www.instagram.com/landaacademy/'
+                  }
+                  className="hover:text-[#CCE8BB]"
+                  target="_blank"
+              >
+                <Instagram />
+              </Link>
+              <Link
+                  aria-label="Email"
+                  href={'mailto:info@landaholding.com'}
+                  className="hover:text-[#CCE8BB]"
+              >
+                <Envelope />
+              </Link>
+              <Link
+                  aria-label="Whatsapp"
+                  href={'https://wa.me/989120539563'}
+                  className="hover:text-[#CCE8BB]"
+                  target="_blank"
+              >
+                <Whatsapp />
+              </Link>
+              <Link
+                  aria-label="Linkedin"
+                  href={'https://www.linkedin.com/company/landa-startup-school/'}
+                  className="hover:text-[#CCE8BB]"
+                  target="_blank"
               >
                 <LinkedIn />
               </Link>
             </div>
+
           </div>
         </div>
         <iframe
