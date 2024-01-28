@@ -1,4 +1,4 @@
-// 
+//
 'use client';
 import { useRouter } from 'next/navigation';
 // import Link from 'next/link';
@@ -23,33 +23,35 @@ export default function Button({
   type = 'button',
   addedClass,
   bgColor,
-  goto=''
+  goto = ''
 }: ButtonProps) {
   // Determine the button size and apply appropriate styles
   const isVisitSize = size === 'visit';
   const router = useRouter();
-// <BUtton goto={'/survey'} />
+  // <BUtton goto={'/survey'} />
   return (
     <button
       onClick={() => {
-        goto ? router.push(goto) : ""
+        goto ? router.push(goto) : '';
       }}
-      className={`btn2 ${isVisitSize
-        ? 'mt-[19px] h-[32px] w-[135px] pb-4 pl-[72px] pr-[71px] pt-[15px] md:h-[60px] md:w-[219px]'
-        : ' mt-[40px] h-11 pb-4 pl-[72px] pr-[71px] pt-[15px] md:mt-[1px] md:flex'
-        } ${bgColor === 'Primary' ? 'bg-primary' : 'bg-[#FDD30A]'
-        } relative inset-0 flex items-center justify-center overflow-hidden border border-white px-10 py-5 text-center font-condensed text-base font-normal uppercase leading-none tracking-wider text-white hover:text-white ${addedClass}`}
+      className={`btn2 ${
+        isVisitSize
+          ? 'rounded-lg h-12 w-40 pb-4 pl-[72px] pr-[71px] pt-[15px]'
+          : ' mt-[40px] h-11 pb-4 pl-[72px] pr-[71px] pt-[15px] md:mt-[1px] md:flex'
+      } ${
+        bgColor === 'Primary' ? 'bg-primary' : 'bg-[#FDD30A]'
+      } relative inset-0 flex items-center justify-center overflow-hidden border px-10 py-5 text-center font-condensed text-base font-normal uppercase leading-none tracking-wider text-white hover:text-white ${addedClass}`}
       type={type}
     >
-        <span className="absolute inset-0 bg-black"></span>
-        <span className="absolute inset-0 flex items-center justify-center text-center font-condensed text-base font-medium leading-none text-white">
+      <span className="absolute inset-0 bg-black"></span>
+      <span className="absolute rounded-sm inset-0 flex items-center justify-center text-center font-condensed text-base font-medium leading-none text-white">
+        {text}
+      </span>
+      {isVisitSize && (
+        <span className="absolute inset-0 rounded-md flex items-center justify-center text-center font-condensed text-base font-medium leading-none text-white">
           {text}
         </span>
-        {isVisitSize && (
-          <span className="absolute inset-0 flex items-center justify-center text-center font-condensed text-base font-medium leading-none text-white">
-            {text}
-          </span>
-        )}
+      )}
     </button>
   );
 }

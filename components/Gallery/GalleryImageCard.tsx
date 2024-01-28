@@ -11,7 +11,7 @@ export default function GalleryImageCard({
   title: string;
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState("");
+  const [selectedImage, setSelectedImage] = useState('');
 
   const openModal = (imageUrl: any) => {
     setSelectedImage(imageUrl);
@@ -25,7 +25,7 @@ export default function GalleryImageCard({
   return (
     <>
       <div
-        className="group relative h-[100px] w-[170px] cursor-pointer md:h-[416px] md:w-[555px]"
+        className="group relative h-[200px] w-[340px] cursor-pointer md:h-[416px] md:w-[555px]"
         onClick={() => openModal(src)}
       >
         <Image

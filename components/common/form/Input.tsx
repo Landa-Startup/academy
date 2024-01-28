@@ -45,8 +45,8 @@ export default function Input({
       />
 
       {errors[nameInput] && (
-        <span className="mt-4 text-sm text-yellow-500 ">
-         {errors[nameInput].message}
+        <span className="mt-4 text-sm text-red-500">
+          {errors[nameInput].message}
         </span>
       )}
 

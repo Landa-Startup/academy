@@ -28,7 +28,7 @@ export default function Banner({
           <div className="flex flex-col items-center justify-center text-center md:m-auto lg:m-auto">
             {/* Text Content */}
             <p className="font-condensed text-base font-normal tracking-[5.60px] text-neutral-50">
-              LANDA HOLDING
+              LANDA ACADEMY
             </p>
             <p className="font-gilda text-[32px] font-normal text-neutral-50 md:text-[50px] lg:text-[74px] xl:text-[84px]">
               {title}

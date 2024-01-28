@@ -6,7 +6,7 @@ export default function RadioButtonGroup({
   register,
   errors,
   required,
-  nameRadioButton,
+  nameRadioButton
 }: {
   title: string;
   options: Array<{ value: string; label: string }>;
@@ -25,7 +25,7 @@ export default function RadioButtonGroup({
               type="radio"
               value={option.value}
               {...register(nameRadioButton, {
-                required: required,
+                required: required
               })}
               className="radio mr-2 text-indigo-600 drop-shadow-lg dark:text-indigo-400"
             />
@@ -34,7 +34,7 @@ export default function RadioButtonGroup({
         ))}
       </div>
       {errors[nameRadioButton] && (
-        <span className="mt-4 text-sm text-yellow-500">
+        <span className="mt-4 text-sm text-red-500">
           {errors[nameRadioButton].message}
         </span>
       )}

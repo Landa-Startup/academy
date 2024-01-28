@@ -7,7 +7,6 @@ export default function Third() {
     <div
       className="relative flex h-screen snap-start flex-col bg-[#80C555] text-white md:h-screen"
       id="Roadmap-2"
-
     >
       <div className="z-10 flex flex-col justify-evenly  px-10 pt-2 md:flex-row">
         <Image
@@ -21,7 +20,7 @@ export default function Third() {
           <div className="text-2xl font-normal leading-snug tracking-wider text-[#3D5656] md:mt-32 md:w-[592px] md:text-5xl">
             Joining Landa Academy and benefiting from its facilities.
           </div>
-          <ul className="font-barlow font-medium leading-[25px] tracking-[1px] text-[#FFFBE6] md:text-2xl md:leading-[50px]">
+          <ul className="font-barlow font-medium leading-[25px] tracking-[1px] text-[#FFFBE6] md:text-[1.25rem] md:leading-[50px]">
             <li>1.Personalized mentoring by industry professionals</li>
             <li>2.Co-working spaces</li>
             <li>3.Free participation at the next courses</li>

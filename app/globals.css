@@ -181,3 +181,12 @@ img {
 .scroll {
   animation: scroll 40s linear infinite;
 }
+
+
+/* responsive for large screen */
+@media (min-width: 1536px) {
+  html {
+    max-width: 1536px;
+    margin: 0 auto;
+  }
+}

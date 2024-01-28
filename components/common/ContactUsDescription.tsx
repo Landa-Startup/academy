@@ -12,7 +12,7 @@ export default function ContactUsDescription() {
     <div>
       <div className="mb-5 mt-10 flex flex-col md:my-0 md:w-[464px] md:items-start">
         <h1 className="font-gilda text-4xl font-light md:text-5xl">
-          Landa Holding
+          Landa Academy
         </h1>
         <p className="my-5 text-justify text-base">
           In Landa academy, individuals will be trained based on their interests

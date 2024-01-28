@@ -136,7 +136,7 @@ const SliderMenu = () => {
             ))}
           </div>
         </div>
-        <Button size='visit' goto='/courses' text='Visit More' addedClass='mx-auto'/>
+        <Button size='visit' goto='/courses' text='Visit More' addedClass='mx-auto -my-8'/>
       </div>
       <div className="mt-4 flex justify-center"></div>
     </div>

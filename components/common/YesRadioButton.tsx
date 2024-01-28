@@ -9,7 +9,7 @@ export default function YesRadioButton({
   selectedRadio,
   handleRadioChange,
   handleChangeFile,
-  fileName,
+  fileName
 }: {
   title: string;
   register: any;
@@ -43,7 +43,7 @@ export default function YesRadioButton({
             <input
               type="radio"
               value=""
-              {...register(name, { required:  'this file is requied!'})}
+              {...register(name, { required: 'this file is requied!' })}
               checked={selectedRadio === ''}
               onChange={handleRadioChange}
               className="radio mr-2 text-indigo-600 drop-shadow-lg  dark:text-indigo-400"
@@ -63,7 +63,7 @@ export default function YesRadioButton({
               onChange={handleChangeFile} // Use onChange event handler after register
             />
             {errors[fileName] && (
-              <span className="mt-4 text-sm text-yellow-500">
+              <span className="mt-4 text-sm text-red-500">
                 {errors[fileName].message}
               </span>
             )}
@@ -73,7 +73,7 @@ export default function YesRadioButton({
 
       {/* Error message for radio buttons */}
       {errors[name] && (
-        <span className="mt-4 text-sm text-yellow-500">
+        <span className="mt-4 text-sm text-red-500">
           {errors[name].message}
         </span>
       )}
